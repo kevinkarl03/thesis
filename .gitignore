@@ -3,6 +3,7 @@
 *.csv
 *.log
 *.xlsx
+loghub/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
