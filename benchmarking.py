@@ -1,3 +1,10 @@
+# =========================================================================
+# Main file for running evaluation that is done in this study, this will 
+# be able to run some selected parsers on all datasets, making for easy 
+# comparison of accuracy.
+# =========================================================================
+
+
 import sys
 sys.path.append("../../")
 from logparser.logparser.Drain import LogParser
