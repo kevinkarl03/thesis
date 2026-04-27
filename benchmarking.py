@@ -14,7 +14,9 @@ import pandas as pd
 
 
 input_dir = "logparser/data/loghub_2k/"  # The input directory of log file
-output_dir = "Drain_result/"  # The output directory of parsing results
+
+BASE_OUT_DIR = "Benchmark_results/"
+output_dir = BASE_OUT_DIR + "Drain_result/"  # The output directory of parser
 
 
 benchmark_settings = {
