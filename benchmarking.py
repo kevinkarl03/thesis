@@ -18,6 +18,8 @@ project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")
 parser_name = "Drain" 
 input_dir = "logparser/data/loghub_2k/"
 BASE_OUT_DIR = "Benchmark_results/"
+PARSER_RESULTS_DIR = BASE_OUT_DIR + "_Parser_results"
+
 
 
 
@@ -82,4 +84,9 @@ for dataset, setting in benchmark_settings.items():
 
 df_result = pd.DataFrame(benchmark_result, columns=["Dataset", "F1_measure", "Accuracy", "Precision", "Recall"])
 print(df_result)
-df_result.to_csv(f"{parser_name}_benchmark_result.csv")
+
+if not os.path.exists(PARSER_RESULTS_DIR):            
+    os.makedirs(PARSER_RESULTS_DIR)
+
+
+df_result.to_csv(f"{PARSER_RESULTS_DIR}/{parser_name}_benchmark_result.csv")
