@@ -70,16 +70,16 @@ for dataset, setting in benchmark_settings.items():
         groundtruth = os.path.join(indir, log_file + "_structured.csv")
         parsed_result = os.path.join(output_dir, log_file + "_structured.csv")
         
-        f1_measure, accuracy = evaluator.evaluate(
+        f1_measure, accuracy, precision, recall = evaluator.evaluate(
             groundtruth=groundtruth,
             parsedresult=parsed_result,
         )
-        benchmark_result.append([dataset, f1_measure, accuracy])
+        benchmark_result.append([dataset, f1_measure, accuracy, precision, recall])
         
     except Exception as e:
         print(f"Failed to parse {dataset}: {e}")
 
 
-df_result = pd.DataFrame(benchmark_result, columns=["Dataset", "F1_measure", "Accuracy"])
+df_result = pd.DataFrame(benchmark_result, columns=["Dataset", "F1_measure", "Accuracy", "Precision", "Recall"])
 print(df_result)
 df_result.to_csv(f"{parser_name}_benchmark_result.csv")
