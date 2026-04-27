@@ -18,6 +18,15 @@ output_dir = "Drain_result/"  # The output directory of parsing results
 
 
 benchmark_settings = {
+    "Welkin": {
+        "log_file": "Welkin/Welkin_2k.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [r'\d+(\.\d+)?(s|ms|µs|ns)',
+                  r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+                  r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.5,
+        "depth": 4,
+    },
     "HDFS": {
         "log_file": "HDFS/HDFS_2k.log",
         "log_format": "<Date> <Time> <Pid> <Level> <Component>: <Content>",
