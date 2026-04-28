@@ -4,6 +4,9 @@
 *.log
 *.xlsx
 loghub/
+*/plots/
+*.png
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
