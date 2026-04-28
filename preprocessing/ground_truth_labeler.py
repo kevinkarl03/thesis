@@ -2,8 +2,6 @@
 
 import sys
 sys.path.append('../../')
-from logparser.Drain import LogParser
-from logparser.utils import evaluator
 import os
 import pandas as pd
 
@@ -62,91 +60,71 @@ def clean_csv_quotations(input_file, output_file):
     print(f"Faktiskt antal rader i DataFrame: {len(df)}")
 
 
-if __name__ == "__main__":
-    INPUT = '../../data/welkin/Welkin_2k_dataset.csv'
-    OUTPUT = '../../data/welkin/Welkin_2k_CLEAN.csv'
-    clean_csv_quotations(INPUT, OUTPUT)
-
-# # # input_dir  = '../../data/loghub_2k/Spark/' # The input directory of log file
-# # input_dir  = '../../data/welkin/' # The input directory of log file
-# # output_dir = input_dir + 'results/'  # The output directory of parsing results
-# # log_file   = 'extracted_klog_2k.log'  # The input log file name
-# # # Regular expression list for optional preprocessing (default: [])
-# # regex      = [
-# #     r'blk_(|-)[0-9]+' , # block id
-# #     r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)', # IP
-# #     r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$', # Numbers
-# # ]
-
-# # log_format = '<LevelDate> <Time>       <Pid> <Source>] <Content>'
-# # st         = 0.1  # Similarity threshold
-# # depth      = 10  # Depth of all leaf nodes
-
-# # parser = LogParser(log_format, indir=input_dir, outdir=output_dir,  depth=depth, st=st, rex=regex)
-# # parser.parse(log_file)
-
-
-# import pandas as pd
-# import hashlib
-# import csv
-
-
-# def merge_manual_labels(parsed_file, labeled_file, output_file):
-#     print(f"1. Läser in bas-filen (den parsade loggen)...")
-#     df_parsed = pd.read_csv(parsed_file)
-
-#     print(f"2. Läser in din manuella Excel-fil...")
-#     df_labeled = pd.read_excel(labeled_file)
-
-#     # Vi skapar mappen: { "Exakt loggmeddelande": "Din manuella template" }
-#     label_map = dict(zip(
-#         df_labeled['Content'].astype(str).str.strip(), 
-#         df_labeled['Manual_EventTemplate'].astype(str).str.strip()
-#     ))
-
-#     print(f"3. Letar efter exakta matcher mellan logg och Excel...")
-
-#     # Här sker magin: För varje rad i bas-filen kollar vi om 'Content' finns i vår Excel-mapp
-#     df_parsed['EventTemplate'] = df_parsed['Content'].astype(str).str.strip().map(label_map)
-
-#     # 4. Fixa EventId (E1, E2, E3...) baserat på de templates som faktiskt hittades
-#     unique_templates = []
-#     for t in df_parsed['EventTemplate']:
-#         if pd.notna(t) and t not in unique_templates:
-#             unique_templates.append(t)
-    
-#     event_id_map = {template: f"E{i+1}" for i, template in enumerate(unique_templates)}
-#     df_parsed['EventId'] = df_parsed['EventTemplate'].map(event_id_map).fillna("UNKNOWN")
-
-#     # Ta bort ParameterList för att hålla filen ren
-#     if 'ParameterList' in df_parsed.columns:
-#         df_parsed = df_parsed.drop(columns=['ParameterList'])
-
-#     # 5. Spara resultatet (med de fula men säkra citattecknen)
-#     df_parsed.to_csv(output_file, index=False, quoting=csv.QUOTE_ALL)
-
-#     print("-" * 30)
-#     print(f"KLART! Sparad till: {output_file}")
-    
-#     # Debug: Visa vad som saknas
-#     missing_df = df_parsed[df_parsed['EventTemplate'].isna()]
-#     if not missing_df.empty:
-#         print(f"VARNING: {len(missing_df)} rader hittade ingen matchning i Excel-filen.")
-#         print("Här är de första unika meddelandena som saknas:")
-#         for msg in missing_df['Content'].unique()[:50]:
-#             print(f"{msg}")
-#     else:
-#         print("Snyggt! Alla rader matchades perfekt.")
-
 # if __name__ == "__main__":
-#     # Dina fil-sökvägar
-#     ORIGINAL = '../../data/welkin/extracted_klog_2k.log'
-#     STRUCTURED = '../../data/welkin/results/extracted_klog_2k.log_structured.csv'
-
-#     GROUND_TRUTH = '../../data/welkin/audit_sheet_READY_TO_EDIT.xlsx'
-#     OUTPUT = 'Welkin_2k_dataset.csv'
+#     INPUT = '../../data/welkin/Welkin_2k_dataset.csv'
+#     OUTPUT = '../../data/welkin/Welkin_2k_CLEAN.csv'
+#     clean_csv_quotations(INPUT, OUTPUT)
 
 
+
+import pandas as pd
+import hashlib
+import csv
+
+
+def merge_manual_labels(parsed_file, labeled_file, output_file):
+    print(f"1. Läser in bas-filen (den parsade loggen)...")
+    df_parsed = pd.read_csv(parsed_file)
+
+    print(f"2. Läser in din manuella Excel-fil...")
+    df_labeled = pd.read_excel(labeled_file)
+
+    # Vi skapar mappen: { "Exakt loggmeddelande": "Din manuella template" }
+    label_map = dict(zip(
+        df_labeled['Content'].astype(str).str.strip(), 
+        df_labeled['Manual_EventTemplate'].astype(str).str.strip()
+    ))
+
+    print(f"3. Letar efter exakta matcher mellan logg och Excel...")
+
+    # Här sker magin: För varje rad i bas-filen kollar vi om 'Content' finns i vår Excel-mapp
+    df_parsed['EventTemplate'] = df_parsed['Content'].astype(str).str.strip().map(label_map)
+
+    # 4. Fixa EventId (E1, E2, E3...) baserat på de templates som faktiskt hittades
+    unique_templates = []
+    for t in df_parsed['EventTemplate']:
+        if pd.notna(t) and t not in unique_templates:
+            unique_templates.append(t)
     
+    event_id_map = {template: f"E{i+1}" for i, template in enumerate(unique_templates)}
+    df_parsed['EventId'] = df_parsed['EventTemplate'].map(event_id_map).fillna("UNKNOWN")
 
-#     merge_manual_labels(STRUCTURED, GROUND_TRUTH, OUTPUT)
+    # Ta bort ParameterList för att hålla filen ren
+    if 'ParameterList' in df_parsed.columns:
+        df_parsed = df_parsed.drop(columns=['ParameterList'])
+
+    # 5. Spara resultatet (med de fula men säkra citattecknen)
+    df_parsed.to_csv(output_file, index=False, quoting=csv.QUOTE_ALL)
+
+    print("-" * 30)
+    print(f"KLART! Sparad till: {output_file}")
+    
+    # Debug: Visa vad som saknas
+    missing_df = df_parsed[df_parsed['EventTemplate'].isna()]
+    if not missing_df.empty:
+        print(f"VARNING: {len(missing_df)} rader hittade ingen matchning i Excel-filen.")
+        print("Här är de första unika meddelandena som saknas:")
+        for msg in missing_df['Content'].unique()[:50]:
+            print(f"{msg}")
+    else:
+        print("Snyggt! Alla rader matchades perfekt.")
+
+if __name__ == "__main__":
+    # Dina fil-sökvägar
+    STRUCTURED = 'Benchmark_results/Drain_results/Welkin_2k.log_structured.csv'
+    
+    GROUND_TRUTH = 'audit_sheet_READY_TO_EDIT.xlsx'
+    OUTPUT = 'Welkin_2k_dataset_v2.csv'
+
+    merge_manual_labels(STRUCTURED, GROUND_TRUTH, OUTPUT)
+    clean_csv_quotations(OUTPUT, OUTPUT)
