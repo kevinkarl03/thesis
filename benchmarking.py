@@ -112,9 +112,11 @@ if __name__ == "__main__":
     # parsers_to_run = ["AEL", "Brain", "Drain", "IPLoM", "LenMa", "LFA", "LKE", "LogCluster", "LogMine", "Logram", "LogSig", "MoLFI", "SHISO", "SLCT", "Spell", "ULP"]
 
     # Simpler parsers that i can run out of the box
-    parsers_to_run = ["AEL", "Brain", "Drain", "IPLoM", "LenMa", "LFA", "LogCluster", "LogMine", "Logram", "LogSig", "MoLFI", "SHISO", "SLCT", "Spell"]
+    # parsers_to_run = ["AEL", "Brain", "Drain", "IPLoM", "LenMa", "LFA", "LogCluster", "LogMine", "Logram", "LogSig", "MoLFI", "SHISO", "SLCT", "Spell"]
+    online_parsers = ["Brain", "Drain", "LenMa", "Logram", "SHISO", "Spell"]
     
-    for name in parsers_to_run:
+
+    for name in online_parsers:
         run_parser(name)
     
     print("\n" + "#"*50)
