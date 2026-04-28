@@ -12,7 +12,7 @@ benchmark_settings = {
         "support": 120,
     },
     "Welkin_v2": {
-        "log_file": "Welkin/Welkin_2k.log",
+        "log_file": "Welkin_v2/Welkin_2k_v2.log",
         "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
         "regex": [
             r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
