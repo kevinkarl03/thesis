@@ -116,3 +116,13 @@ def get_accuracy(series_groundtruth, series_parsedlog, debug=False):
     f_measure = 2 * precision * recall / (precision + recall)
     accuracy = float(accurate_events) / series_groundtruth.size
     return precision, recall, f_measure, accuracy
+
+# METRIC INTERPRETATION:
+# - Accuracy (Grouping Accuracy): Strict measure. A log is 'correct' only if its 
+#   entire cluster matches the Ground Truth perfectly.
+# - Precision: Measures 'Over-merging'. Low precision means different templates 
+#   were incorrectly grouped together.
+# - Recall: Measures 'Over-splitting'. Low recall means the same template was 
+#   incorrectly split into multiple clusters.
+# - F1-measure: The harmonic mean of Precision and Recall, representing the 
+#   overall balance of the parser.

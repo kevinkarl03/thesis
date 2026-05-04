@@ -31,7 +31,16 @@ def graph_heatmap(df_all, output_dir='../../postprocessing/plots'):
     plt.title('Accuracy Heatmap: Dataset vs Parser')
     plt.tight_layout()
     os.makedirs(output_dir, exist_ok=True)
-    plt.savefig(os.path.join(output_dir, 'performance_heatmap.png'))
+    plt.savefig(os.path.join(output_dir, 'accuracy_heatmap.png'))
+    plt.close()
+
+    pivot_df = df_all.pivot(index="Dataset", columns="Parser", values="F1_measure")
+    plt.figure(figsize=(12, 10))
+    sns.heatmap(pivot_df, annot=True, cmap="YlGnBu", fmt=".2f")
+    plt.title('F1-Measure Heatmap: Dataset vs Parser')
+    plt.tight_layout()
+    os.makedirs(output_dir, exist_ok=True)
+    plt.savefig(os.path.join(output_dir, 'f1_heatmap.png'))
     plt.close()
 
 
@@ -61,6 +70,23 @@ def graph_overall_ranking(df_all, output_dir='../../postprocessing/plots'):
     plt.savefig(os.path.join(output_dir, 'overall_ranking.png'))
     plt.close()
 
+def graph_welkin_ranking(df_all, output_dir='../../postprocessing/plots'):
+    
+    welkin_data = df_all[df_all['Dataset'].str.contains('Welkin', case=False)]
+    avg_perf = welkin_data.groupby('Parser')[['Accuracy', 'F1_measure']].mean().reset_index()
+    avg_melted = avg_perf.melt(id_vars='Parser', var_name='Metric', value_name='Score')
+
+    plt.figure(figsize=(8, 6))
+    sns.barplot(data=avg_melted, x='Parser', y='Score', hue='Metric')
+    plt.title('Parser Ranking on Welkin Dataset')
+    plt.ylim(0, 1)
+    plt.tight_layout()
+    os.makedirs(output_dir, exist_ok=True)
+    plt.savefig(os.path.join(output_dir, 'welkin_ranking.png'))
+    plt.close()
+
+
+
 
 
 
@@ -77,6 +103,8 @@ if __name__ == "__main__":
     graph_k8s_comparison(df_all, output_directory)
     
     graph_overall_ranking(df_all, output_directory)
+
+    graph_welkin_ranking(df_all, output_directory)
     print("="*50)
     print("== All Grapsh created ==")
     print("="*50)
