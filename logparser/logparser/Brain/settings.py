@@ -10,7 +10,7 @@ benchmark_settings = {
             r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
             r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
         "delimiter": [],
-        "theshold": 4,
+        "theshold": 3,
     },
     "Welkin_v2": {
         "log_file": "Welkin_v2/Welkin_2k_v2.log",
@@ -22,7 +22,7 @@ benchmark_settings = {
             r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
             r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
         "delimiter": [],
-        "theshold": 4,
+        "theshold": 3,
     },
     "Proxifier": {
         "log_file": "Proxifier/Proxifier_2k.log",

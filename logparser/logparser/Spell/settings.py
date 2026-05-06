@@ -8,7 +8,7 @@ benchmark_settings = {
             r'\d+(\.\d+)?(s|ms|µs|ns)',
             r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
             r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
-        "tau": 0.7,
+        "tau": 0.8,
     },
     "Welkin_v2": {
         "log_file": "Welkin_v2/Welkin_2k_v2.log",
@@ -19,7 +19,7 @@ benchmark_settings = {
             r'\d+(\.\d+)?(s|ms|µs|ns)',
             r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
             r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
-        "tau": 0.7,
+        "tau": 0.8,
     },
     "HDFS": {
         "log_file": "HDFS/HDFS_2k.log",
