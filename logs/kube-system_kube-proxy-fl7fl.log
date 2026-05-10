@@ -1,0 +1,32 @@
+I0403 14:48:03.190646       1 server_linux.go:63] "Using iptables proxy"
+I0403 14:48:03.731855       1 server.go:715] "Successfully retrieved node IP(s)" IPs=["172.16.1.153"]
+I0403 14:48:03.744955       1 conntrack.go:121] "Set sysctl" entry="net/netfilter/nf_conntrack_max" value=131072
+I0403 14:48:03.745226       1 conntrack.go:60] "Setting nf_conntrack_max" nfConntrackMax=131072
+I0403 14:48:03.745507       1 conntrack.go:121] "Set sysctl" entry="net/netfilter/nf_conntrack_tcp_timeout_established" value=86400
+I0403 14:48:03.745702       1 conntrack.go:121] "Set sysctl" entry="net/netfilter/nf_conntrack_tcp_timeout_close_wait" value=3600
+E0403 14:48:03.745839       1 server.go:245] "Kube-proxy configuration may be incomplete or incorrect" err="nodePortAddresses is unset; NodePort connections will be accepted on all local IPs. Consider using `--nodeport-addresses primary`"
+I0403 14:48:03.905402       1 server.go:254] "kube-proxy running in dual-stack mode" primary ipFamily="IPv4"
+I0403 14:48:03.905728       1 server_linux.go:145] "Using iptables Proxier"
+I0403 14:48:03.926403       1 proxier.go:243] "Setting route_localnet=1 to allow node-ports on localhost; to change this either disable iptables.localhostNodePorts (--iptables-localhost-nodeports) or set nodePortAddresses (--nodeport-addresses) to filter loopback addresses" ipFamily="IPv4"
+I0403 14:48:03.944893       1 server.go:516] "Version info" version="v1.33.6"
+I0403 14:48:03.945049       1 server.go:518] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0403 14:48:03.986077       1 config.go:199] "Starting service config controller"
+I0403 14:48:03.989331       1 shared_informer.go:350] "Waiting for caches to sync" controller="service config"
+I0403 14:48:03.989800       1 config.go:105] "Starting endpoint slice config controller"
+I0403 14:48:03.990010       1 shared_informer.go:350] "Waiting for caches to sync" controller="endpoint slice config"
+I0403 14:48:03.990185       1 config.go:440] "Starting serviceCIDR config controller"
+I0403 14:48:03.990218       1 shared_informer.go:350] "Waiting for caches to sync" controller="serviceCIDR config"
+I0403 14:48:04.003871       1 config.go:329] "Starting node config controller"
+I0403 14:48:04.003896       1 shared_informer.go:350] "Waiting for caches to sync" controller="node config"
+I0403 14:48:04.090041       1 shared_informer.go:357] "Caches are synced" controller="service config"
+I0403 14:48:04.090350       1 shared_informer.go:357] "Caches are synced" controller="endpoint slice config"
+I0403 14:48:04.091891       1 shared_informer.go:357] "Caches are synced" controller="serviceCIDR config"
+I0403 14:48:04.104732       1 shared_informer.go:357] "Caches are synced" controller="node config"
+I0408 01:10:13.636571       1 reflector.go:556] "Warning: watch ended with error" reflector="k8s.io/client-go/informers/factory.go:160" type="*v1.Service" err="an error on the server (\"unable to decode an event from the watch stream: http2: client connection lost\") has prevented the request from succeeding"
+I0408 01:10:13.621817       1 reflector.go:556] "Warning: watch ended with error" reflector="k8s.io/client-go/informers/factory.go:160" type="*v1.Node" err="an error on the server (\"unable to decode an event from the watch stream: http2: client connection lost\") has prevented the request from succeeding"
+I0408 01:10:13.624862       1 reflector.go:556] "Warning: watch ended with error" reflector="k8s.io/client-go/informers/factory.go:160" type="*v1.EndpointSlice" err="an error on the server (\"unable to decode an event from the watch stream: http2: client connection lost\") has prevented the request from succeeding"
+I0408 01:10:13.636728       1 reflector.go:556] "Warning: watch ended with error" reflector="k8s.io/client-go/informers/factory.go:160" type="*v1.ServiceCIDR" err="an error on the server (\"unable to decode an event from the watch stream: http2: client connection lost\") has prevented the request from succeeding"
+E0408 01:10:46.409558       1 reflector.go:200] "Failed to watch" err="failed to list *v1.ServiceCIDR: Get \"https://172.16.200.127:6443/apis/networking.k8s.io/v1/servicecidrs?labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=39703993\": net/http: TLS handshake timeout" logger="UnhandledError" reflector="k8s.io/client-go/informers/factory.go:160" type="*v1.ServiceCIDR"
+E0408 01:10:46.421025       1 reflector.go:200] "Failed to watch" err="failed to list *v1.Node: Get \"https://172.16.200.127:6443/api/v1/nodes?fieldSelector=metadata.name%3Dbackman-wc-control-plane-4qmtw&resourceVersion=39704037\": net/http: TLS handshake timeout" logger="UnhandledError" reflector="k8s.io/client-go/informers/factory.go:160" type="*v1.Node"
+E0408 01:10:46.421062       1 reflector.go:200] "Failed to watch" err="failed to list *v1.Service: Get \"https://172.16.200.127:6443/api/v1/services?fieldSelector=spec.clusterIP%21%3DNone&labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=39704102\": net/http: TLS handshake timeout" logger="UnhandledError" reflector="k8s.io/client-go/informers/factory.go:160" type="*v1.Service"
+E0408 01:10:46.410313       1 reflector.go:200] "Failed to watch" err="failed to list *v1.EndpointSlice: Get \"https://172.16.200.127:6443/apis/discovery.k8s.io/v1/endpointslices?labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=39704087\": net/http: TLS handshake timeout" logger="UnhandledError" reflector="k8s.io/client-go/informers/factory.go:160" type="*v1.EndpointSlice"

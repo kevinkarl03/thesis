@@ -1,0 +1,157 @@
+2026/03/19 13:37:56 [INFO] Starting node-cache image: 1.25.0
+2026/03/19 13:37:56 [INFO] Using Corefile /etc/Corefile
+2026/03/19 13:37:56 [INFO] Using Pidfile 
+2026/03/19 13:37:57 [INFO] Updated Corefile with 0 custom stubdomains and upstream servers /etc/resolv.conf
+2026/03/19 13:37:57 [INFO] Using config file:
+cluster.local:53 {
+  errors {
+    consolidate 5m ".* i/o timeout$" warning
+  }
+  cache {
+    success 9984 30
+    denial 9984 5
+  }
+  reload
+  loop
+  bind 169.254.20.10 10.233.0.10
+  forward . 10.233.39.248 {
+    force_tcp
+  }
+  prometheus :9253
+  health 169.254.20.10:8080
+}
+in-addr.arpa:53 {
+  errors {
+    consolidate 5m ".* i/o timeout$" warning
+  }
+  cache 30
+  reload
+  loop
+  bind 169.254.20.10 10.233.0.10
+  forward . 10.233.39.248 {
+    force_tcp
+  }
+  prometheus :9253
+}
+ip6.arpa:53 {
+  errors {
+    consolidate 5m ".* i/o timeout$" warning
+  }
+  cache 30
+  reload
+  loop
+  bind 169.254.20.10 10.233.0.10
+  forward . 10.233.39.248 {
+    force_tcp
+  }
+  prometheus :9253
+}
+.:53 {
+  errors {
+    consolidate 5m ".* i/o timeout$" warning
+  }
+  log . {combined} {
+    class error
+  }
+  cache 30
+  reload
+  loop
+  bind 169.254.20.10 10.233.0.10
+  forward . /etc/resolv.conf
+  prometheus :9253
+}
+2026/03/19 13:37:57 [INFO] Updated Corefile with 0 custom stubdomains and upstream servers /etc/resolv.conf
+2026/03/19 13:37:57 [INFO] Using config file:
+cluster.local:53 {
+  errors {
+    consolidate 5m ".* i/o timeout$" warning
+  }
+  cache {
+    success 9984 30
+    denial 9984 5
+  }
+  reload
+  loop
+  bind 169.254.20.10 10.233.0.10
+  forward . 10.233.39.248 {
+    force_tcp
+  }
+  prometheus :9253
+  health 169.254.20.10:8080
+}
+in-addr.arpa:53 {
+  errors {
+    consolidate 5m ".* i/o timeout$" warning
+  }
+  cache 30
+  reload
+  loop
+  bind 169.254.20.10 10.233.0.10
+  forward . 10.233.39.248 {
+    force_tcp
+  }
+  prometheus :9253
+}
+ip6.arpa:53 {
+  errors {
+    consolidate 5m ".* i/o timeout$" warning
+  }
+  cache 30
+  reload
+  loop
+  bind 169.254.20.10 10.233.0.10
+  forward . 10.233.39.248 {
+    force_tcp
+  }
+  prometheus :9253
+}
+.:53 {
+  errors {
+    consolidate 5m ".* i/o timeout$" warning
+  }
+  log . {combined} {
+    class error
+  }
+  cache 30
+  reload
+  loop
+  bind 169.254.20.10 10.233.0.10
+  forward . /etc/resolv.conf
+  prometheus :9253
+}
+2026/03/19 13:37:57 [INFO] Added interface - nodelocaldns
+.:53 on 169.254.20.10
+cluster.local.:53 on 169.254.20.10
+in-addr.arpa.:53 on 169.254.20.10
+ip6.arpa.:53 on 169.254.20.10
+.:53 on 10.233.0.10
+cluster.local.:53 on 10.233.0.10
+in-addr.arpa.:53 on 10.233.0.10
+ip6.arpa.:53 on 10.233.0.10
+[INFO] plugin/reload: Running configuration SHA512 = ef6b79c66349231281e8c784b508d3a61722ea34467018aa7fe6dcb577dc92feeddf57396c6347c563a3f1790aaf5c94209ae42c65d2f04869cf65b23dedd938
+CoreDNS-1.11.3
+linux/amd64, go1.22.9, 
+[INFO] Added back nodelocaldns rule - {raw PREROUTING [-p tcp -d 169.254.20.10 --dport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw PREROUTING [-p udp -d 169.254.20.10 --dport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {filter INPUT [-p tcp -d 169.254.20.10 --dport 53 -j ACCEPT -m comment --comment NodeLocal DNS Cache: allow DNS traffic]}
+[INFO] Added back nodelocaldns rule - {filter INPUT [-p udp -d 169.254.20.10 --dport 53 -j ACCEPT -m comment --comment NodeLocal DNS Cache: allow DNS traffic]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p tcp -s 169.254.20.10 --sport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p udp -s 169.254.20.10 --sport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {filter OUTPUT [-p tcp -s 169.254.20.10 --sport 53 -j ACCEPT -m comment --comment NodeLocal DNS Cache: allow DNS traffic]}
+[INFO] Added back nodelocaldns rule - {filter OUTPUT [-p udp -s 169.254.20.10 --sport 53 -j ACCEPT -m comment --comment NodeLocal DNS Cache: allow DNS traffic]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p tcp -d 169.254.20.10 --dport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p udp -d 169.254.20.10 --dport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p tcp -d 169.254.20.10 --dport 8080 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p tcp -s 169.254.20.10 --sport 8080 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw PREROUTING [-p tcp -d 10.233.0.10 --dport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw PREROUTING [-p udp -d 10.233.0.10 --dport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {filter INPUT [-p tcp -d 10.233.0.10 --dport 53 -j ACCEPT -m comment --comment NodeLocal DNS Cache: allow DNS traffic]}
+[INFO] Added back nodelocaldns rule - {filter INPUT [-p udp -d 10.233.0.10 --dport 53 -j ACCEPT -m comment --comment NodeLocal DNS Cache: allow DNS traffic]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p tcp -s 10.233.0.10 --sport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p udp -s 10.233.0.10 --sport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {filter OUTPUT [-p tcp -s 10.233.0.10 --sport 53 -j ACCEPT -m comment --comment NodeLocal DNS Cache: allow DNS traffic]}
+[INFO] Added back nodelocaldns rule - {filter OUTPUT [-p udp -s 10.233.0.10 --sport 53 -j ACCEPT -m comment --comment NodeLocal DNS Cache: allow DNS traffic]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p tcp -d 10.233.0.10 --dport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p udp -d 10.233.0.10 --dport 53 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p tcp -d 10.233.0.10 --dport 8080 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}
+[INFO] Added back nodelocaldns rule - {raw OUTPUT [-p tcp -s 10.233.0.10 --sport 8080 -j NOTRACK -m comment --comment NodeLocal DNS Cache: skip conntrack]}

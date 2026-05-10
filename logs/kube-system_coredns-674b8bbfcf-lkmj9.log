@@ -1,0 +1,21 @@
+maxprocs: Leaving GOMAXPROCS=2: CPU quota undefined
+.:53
+[INFO] plugin/reload: Running configuration SHA512 = 1b226df79860026c6a52e67daa10d7f0d57ec5b023288ec00c5e05f93523c894564e15b91770d3a07ae1cfbe861d15b37d4a0027e69c546ab112970993a3b03b
+CoreDNS-1.12.0
+linux/amd64, go1.23.3, 51e11f1
+[ERROR] plugin/errors: 2 cinderv3.internal.elastisys.se.openstacklocal. A: read udp 10.234.67.77:53469->1.0.0.1:53: i/o timeout
+[ERROR] plugin/errors: 2 cinderv3.internal.elastisys.se.openstacklocal. AAAA: read udp 10.234.67.77:59296->1.1.1.1:53: i/o timeout
+[ERROR] plugin/errors: 2 opensearch.ops.backman.dev-ck8s.com.openstacklocal. A: read udp 10.234.67.77:49848->1.0.0.1:53: i/o timeout
+[ERROR] plugin/errors: 2 s3.internal.elastisys.se.openstacklocal. AAAA: read udp 10.234.67.77:47986->1.0.0.1:53: i/o timeout
+[ERROR] plugin/errors: 2 opensearch.ops.backman.dev-ck8s.com.openstacklocal. A: read udp 10.234.67.77:38117->1.1.1.1:53: i/o timeout
+[ERROR] plugin/errors: 2 s3.internal.elastisys.se.openstacklocal. AAAA: read udp 10.234.67.77:37656->1.1.1.1:53: i/o timeout
+[ERROR] plugin/errors: 2 thanos-receiver.ops.backman.dev-ck8s.com. AAAA: read udp 10.234.67.77:44477->1.0.0.1:53: i/o timeout
+[WARNING] plugin/health: Local health request to "http://:8080/health" failed: Get "http://:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[ERROR] plugin/errors: 2 opensearch.ops.backman.dev-ck8s.com. A: read udp 10.234.67.77:43114->1.1.1.1:53: i/o timeout
+[ERROR] plugin/errors: 2 opensearch.ops.backman.dev-ck8s.com. A: read udp 10.234.67.77:60128->1.1.1.1:53: i/o timeout
+[ERROR] plugin/errors: 2 thanos-receiver.ops.backman.dev-ck8s.com. AAAA: read udp 10.234.67.77:40152->1.1.1.1:53: i/o timeout
+[WARNING] plugin/health: Local health request to "http://:8080/health" failed: Get "http://:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.EndpointSlice ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.Namespace ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.Service ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[ERROR] plugin/errors: 2 thanos-receiver.ops.backman.dev-ck8s.com. A: read udp 10.234.67.77:57196->1.0.0.1:53: i/o timeout

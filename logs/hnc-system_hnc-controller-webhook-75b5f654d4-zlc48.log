@@ -1,0 +1,81 @@
+{"level":"info","ts":1776221770.8384464,"logger":"setup","msg":"Starting main.go:init()"}
+{"level":"info","ts":1776221770.8421261,"logger":"setup","msg":"Finished main.go:init()"}
+{"level":"info","ts":1776221770.8421705,"logger":"setup","msg":"Parsing flags"}
+{"level":"info","ts":1776221770.8424642,"logger":"setup","msg":"Creating OpenCensus->Stackdriver exporter"}
+{"level":"error","ts":1776221772.844536,"logger":"setup","msg":"Could not create Stackdriver exporter","error":"stackdriver: google: could not find default credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.","stacktrace":"main.main\n\t/workspace/cmd/manager/main.go:100\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"info","ts":1776221772.8447986,"logger":"setup","msg":"Creating Prometheus exporter"}
+{"level":"info","ts":1776221772.845075,"logger":"setup","msg":"Configuring controller-manager"}
+{"level":"info","ts":1776221773.5660374,"logger":"controller-runtime.metrics","msg":"Metrics server is starting to listen","addr":":8080"}
+{"level":"info","ts":1776221773.5665636,"logger":"setup","msg":"Probe endpoints are configured on healthz and readyz"}
+{"level":"info","ts":1776221773.5666025,"logger":"setup","msg":"Starting manager"}
+{"level":"info","ts":1776221773.566664,"logger":"setup","msg":"Waiting for certificate generation to complete"}
+{"level":"info","ts":1776221773.5667048,"logger":"setup","msg":"Certs ready"}
+{"level":"info","ts":1776221773.5667326,"logger":"setup","msg":"Creating controllers","opts":{"MaxReconciles":10,"UseFakeClient":false,"NoWebhooks":false,"HNCCfgRefresh":0,"HRQ":false,"HRQSyncInterval":60000000000}}
+{"level":"info","ts":1776221773.5668721,"logger":"setup","msg":"Registering validating webhook (won't work when running locally; use --no-webhooks)"}
+{"level":"info","ts":1776221773.5670722,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-hnc-x-k8s-io-v1alpha2-hierarchyconfigurations"}
+{"level":"info","ts":1776221773.56714,"logger":"controller-runtime.webhook.webhooks","msg":"Starting webhook server"}
+{"level":"info","ts":1776221773.5672472,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-objects"}
+{"level":"info","ts":1776221773.567257,"msg":"Starting server","path":"/metrics","kind":"metrics","addr":"[::]:8080"}
+{"level":"info","ts":1776221773.5673459,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-hnc-x-k8s-io-v1alpha2-hncconfigurations"}
+{"level":"info","ts":1776221773.5673783,"msg":"Starting server","kind":"health probe","addr":"[::]:8081"}
+{"level":"info","ts":1776221773.56811,"logger":"controller-runtime.certwatcher","msg":"Updated current TLS certificate"}
+{"level":"info","ts":1776221773.5683198,"logger":"controller-runtime.webhook","msg":"Serving webhook server","host":"","port":9443}
+{"level":"info","ts":1776221773.5685122,"logger":"controller-runtime.certwatcher","msg":"Starting certificate watcher"}
+{"level":"info","ts":1776221774.065462,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-hnc-x-k8s-io-v1alpha2-subnamespaceanchors"}
+{"level":"info","ts":1776221774.065769,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-v1-namespace"}
+{"level":"info","ts":1776221774.0659347,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/mutate-namespace"}
+{"level":"info","ts":1776221774.0659904,"logger":"setup","msg":"Registering reconcilers"}
+{"level":"info","ts":1776221774.0667415,"logger":"controller.subnamespaceanchor","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor","source":"kind source: *v1alpha2.SubnamespaceAnchor"}
+{"level":"info","ts":1776221774.0668273,"logger":"controller.subnamespaceanchor","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor","source":"channel source: 0xc000033b80"}
+{"level":"info","ts":1776221774.066849,"logger":"controller.subnamespaceanchor","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor","source":"kind source: *v1.Namespace"}
+{"level":"info","ts":1776221774.0668583,"logger":"controller.subnamespaceanchor","msg":"Starting Controller","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor"}
+{"level":"info","ts":1776221774.364953,"logger":"controller.subnamespaceanchor","msg":"Starting workers","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor","worker count":1}
+{"level":"info","ts":1776221774.6674652,"logger":"setup","msg":"All controllers started; setup complete"}
+{"level":"info","ts":1776221774.6676736,"logger":"controller.hierarchyconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","source":"kind source: *v1alpha2.HierarchyConfiguration"}
+{"level":"info","ts":1776221774.6676838,"logger":"controller.hncconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration","source":"kind source: *v1alpha2.HNCConfiguration"}
+{"level":"info","ts":1776221774.6677587,"logger":"controller.hncconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration","source":"channel source: 0xc0002c48c0"}
+{"level":"info","ts":1776221774.6678023,"logger":"controller.hncconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration","source":"kind source: *v1.CustomResourceDefinition"}
+{"level":"info","ts":1776221774.6677356,"logger":"controller.hierarchyconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","source":"channel source: 0xc0002c4960"}
+{"level":"info","ts":1776221774.6678107,"logger":"controller.hncconfiguration","msg":"Starting Controller","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration"}
+{"level":"info","ts":1776221774.6678395,"logger":"controller.hierarchyconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","source":"kind source: *v1.Namespace"}
+{"level":"info","ts":1776221774.6678555,"logger":"controller.hierarchyconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","source":"kind source: *v1alpha2.SubnamespaceAnchor"}
+{"level":"info","ts":1776221774.6678631,"logger":"controller.hierarchyconfiguration","msg":"Starting Controller","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration"}
+I0415 02:56:30.472060       1 trace.go:205] Trace[2048549320]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (15-Apr-2026 02:56:14.668) (total time: 15803ms):
+Trace[2048549320]: ---"Objects listed" error:<nil> 15802ms (02:56:30.471)
+Trace[2048549320]: [15.803300304s] [15.803300304s] END
+{"level":"info","ts":1776221790.5689301,"logger":"controller.hierarchyconfiguration","msg":"Starting workers","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","worker count":10}
+{"level":"info","ts":1776221790.5702329,"logger":"controller.hncconfiguration","msg":"Starting workers","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration","worker count":1}
+{"level":"info","ts":1776221790.570849,"logger":"hncconfig.reconcile","msg":"Starting to sync objects","gvk":"rbac.authorization.k8s.io/v1, Kind=Role","mode":"Propagate"}
+{"level":"info","ts":1776221790.5710466,"logger":"hncconfig.reconcile","msg":"Starting to sync objects","gvk":"rbac.authorization.k8s.io/v1, Kind=RoleBinding","mode":"Propagate"}
+{"level":"info","ts":1776221790.5711622,"logger":"controller.rolebinding","msg":"Starting Controller","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"RoleBinding"}
+{"level":"info","ts":1776221790.5711684,"logger":"controller.rolebinding","msg":"Starting workers","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"RoleBinding","worker count":10}
+{"level":"info","ts":1776221790.571208,"logger":"controller.rolebinding","msg":"Starting EventSource","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"RoleBinding","source":"kind source: *unstructured.Unstructured"}
+{"level":"info","ts":1776221790.5712252,"logger":"controller.rolebinding","msg":"Starting EventSource","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"RoleBinding","source":"channel source: 0xc00024b5e0"}
+{"level":"info","ts":1776221790.5712216,"logger":"controller.role","msg":"Starting EventSource","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"Role","source":"kind source: *unstructured.Unstructured"}
+{"level":"info","ts":1776221790.5712583,"logger":"controller.role","msg":"Starting EventSource","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"Role","source":"channel source: 0xc00024b540"}
+{"level":"info","ts":1776221790.5712788,"logger":"controller.role","msg":"Starting Controller","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"Role"}
+{"level":"info","ts":1776221790.5712583,"logger":"hncconfig.reconcile","msg":"Starting to sync objects","gvk":"networking.k8s.io/v1, Kind=NetworkPolicy","mode":"Propagate"}
+{"level":"info","ts":1776221790.571454,"logger":"controller.networkpolicy","msg":"Starting EventSource","reconciler group":"networking.k8s.io","reconciler kind":"NetworkPolicy","source":"kind source: *unstructured.Unstructured"}
+{"level":"info","ts":1776221790.5714831,"logger":"controller.networkpolicy","msg":"Starting EventSource","reconciler group":"networking.k8s.io","reconciler kind":"NetworkPolicy","source":"channel source: 0xc00066d310"}
+{"level":"info","ts":1776221790.5714977,"logger":"controller.networkpolicy","msg":"Starting Controller","reconciler group":"networking.k8s.io","reconciler kind":"NetworkPolicy"}
+{"level":"info","ts":1776221790.8664384,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":4,"ns":"default"}
+{"level":"info","ts":1776221790.8665106,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":4,"ns":"default","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1776221790.8666043,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":4,"ns":"default","reason":"managed annotations have changed","affected":[]}
+{"level":"info","ts":1776221790.8667758,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":13,"ns":"production"}
+{"level":"info","ts":1776221790.8667831,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":13,"ns":"production","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1776221790.8668344,"logger":"hierarchyconfig.reconcile","msg":"Updated managed label","rid":13,"ns":"production","newLabels":{"pod-security.kubernetes.io/audit":"restricted","pod-security.kubernetes.io/enforce":"restricted","pod-security.kubernetes.io/warn":"restricted"}}
+{"level":"info","ts":1776221790.866858,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":13,"ns":"production","reason":"managed labels have changed","affected":[]}
+{"level":"info","ts":1776221790.8669026,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":13,"ns":"production","reason":"managed annotations have changed","affected":[]}
+{"level":"info","ts":1776221791.0651557,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":19,"ns":"staging"}
+{"level":"info","ts":1776221791.0651937,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":19,"ns":"staging","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1776221791.0652497,"logger":"hierarchyconfig.reconcile","msg":"Updated managed label","rid":19,"ns":"staging","newLabels":{"pod-security.kubernetes.io/audit":"restricted","pod-security.kubernetes.io/enforce":"restricted","pod-security.kubernetes.io/warn":"restricted"}}
+{"level":"info","ts":1776221791.065285,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":19,"ns":"staging","reason":"managed labels have changed","affected":[]}
+{"level":"info","ts":1776221791.0653675,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":19,"ns":"staging","reason":"managed annotations have changed","affected":[]}
+{"level":"info","ts":1776221791.564212,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":21,"ns":"cilium-secrets"}
+{"level":"info","ts":1776221791.5642488,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":21,"ns":"cilium-secrets","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1776221791.564373,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":21,"ns":"cilium-secrets","reason":"managed annotations have changed","affected":[]}
+{"level":"info","ts":1776221791.565429,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":20,"ns":"test"}
+{"level":"info","ts":1776221791.5654562,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":20,"ns":"test","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1776221791.5655885,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":20,"ns":"test","reason":"managed annotations have changed","affected":[]}
+{"level":"info","ts":1776221791.6647432,"logger":"controller.role","msg":"Starting workers","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"Role","worker count":10}
+{"level":"info","ts":1776221791.733719,"logger":"controller.networkpolicy","msg":"Starting workers","reconciler group":"networking.k8s.io","reconciler kind":"NetworkPolicy","worker count":10}

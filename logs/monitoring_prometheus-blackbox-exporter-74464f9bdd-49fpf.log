@@ -1,0 +1,5 @@
+time=2026-03-20T11:53:18.130Z level=INFO source=main.go:88 msg="Starting blackbox_exporter" version="(version=0.27.0, branch=HEAD, revision=46ea0224f57b708fdff317f8872765a77ef64034)"
+time=2026-03-20T11:53:18.130Z level=INFO source=main.go:89 msg="(go=go1.24.4, platform=linux/amd64, user=root@c1b8adb9ca25, date=20250630-12:45:28, tags=unknown)"
+time=2026-03-20T11:53:18.131Z level=INFO source=main.go:101 msg="Loaded config file"
+time=2026-03-20T11:53:18.329Z level=INFO source=tls_config.go:347 msg="Listening on" address=[::]:9115
+time=2026-03-20T11:53:18.329Z level=INFO source=tls_config.go:350 msg="TLS is disabled." http2=false address=[::]:9115

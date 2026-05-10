@@ -1,0 +1,66 @@
+I0414 15:52:42.332897       1 controller.go:284] "configured acme dns01 nameservers" logger="cert-manager.controller.build-context" nameservers=["10.233.0.10:53"]
+I0414 15:52:42.334823       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+I0414 15:52:42.334947       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+I0414 15:52:42.335068       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+I0414 15:52:42.335081       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+I0414 15:52:42.342383       1 controller.go:88] "enabled controllers: [certificaterequests-approver certificaterequests-issuer-acme certificaterequests-issuer-ca certificaterequests-issuer-selfsigned certificaterequests-issuer-vault certificaterequests-issuer-venafi certificates-issuing certificates-key-manager certificates-metrics certificates-readiness certificates-request-manager certificates-revision-manager certificates-trigger challenges clusterissuers ingress-shim issuers orders]" logger="cert-manager.controller"
+I0414 15:52:42.342679       1 controller.go:437] "serving insecurely as tls certificate data not provided" logger="cert-manager.controller"
+I0414 15:52:42.342821       1 controller.go:101] "listening for insecure connections" logger="cert-manager.controller" address="0.0.0.0:9402"
+I0414 15:52:42.343739       1 controller.go:176] "starting leader election" logger="cert-manager.controller"
+I0414 15:52:42.368137       1 controller.go:169] "starting healthz server" logger="cert-manager.controller" address="[::]:9403"
+I0414 15:52:42.368137       1 controller.go:125] "starting metrics server" logger="cert-manager.controller" address="[::]:9402"
+I0414 15:52:42.371702       1 leaderelection.go:257] attempting to acquire leader lease kube-system/cert-manager-controller...
+I0414 15:52:42.635982       1 leaderelection.go:271] successfully acquired lease kube-system/cert-manager-controller
+I0414 15:52:42.641812       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="ingress-shim"
+I0414 15:52:42.646709       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificates-issuing"
+I0414 15:52:42.672851       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificaterequests-issuer-acme"
+I0414 15:52:42.733674       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificaterequests-issuer-ca"
+I0414 15:52:42.770076       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificaterequests-issuer-selfsigned"
+I0414 15:52:42.774973       1 controller.go:223] "skipping disabled controller" logger="cert-manager.controller" controller="certificatesigningrequests-issuer-vault"
+I0414 15:52:42.775008       1 controller.go:223] "skipping disabled controller" logger="cert-manager.controller" controller="certificatesigningrequests-issuer-venafi"
+I0414 15:52:42.775069       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificaterequests-issuer-vault"
+I0414 15:52:42.834049       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificaterequests-approver"
+I0414 15:52:42.838884       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificates-metrics"
+I0414 15:52:42.868168       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificates-request-manager"
+I0414 15:52:42.931393       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="orders"
+I0414 15:52:42.935614       1 controller.go:223] "skipping disabled controller" logger="cert-manager.controller" controller="certificatesigningrequests-issuer-acme"
+I0414 15:52:42.935709       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificaterequests-issuer-venafi"
+I0414 15:52:42.973140       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificates-key-manager"
+I0414 15:52:43.032448       1 controller.go:223] "skipping disabled controller" logger="cert-manager.controller" controller="certificatesigningrequests-issuer-ca"
+I0414 15:52:43.032484       1 controller.go:223] "skipping disabled controller" logger="cert-manager.controller" controller="certificatesigningrequests-issuer-selfsigned"
+I0414 15:52:43.032593       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificates-trigger"
+I0414 15:52:43.037146       1 controller.go:223] "skipping disabled controller" logger="cert-manager.controller" controller="gateway-shim"
+I0414 15:52:43.037519       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="issuers"
+I0414 15:52:43.068122       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificates-readiness"
+I0414 15:52:43.068529       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="certificates-revision-manager"
+I0414 15:52:43.129922       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="clusterissuers"
+I0414 15:52:43.169081       1 controller.go:240] "starting controller" logger="cert-manager.controller" controller="challenges"
+I0414 15:52:43.174235       1 reflector.go:376] Caches populated for *v1.Challenge from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.230973       1 reflector.go:376] Caches populated for *v1.PartialObjectMetadata from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.231639       1 reflector.go:376] Caches populated for *v1.PartialObjectMetadata from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.232251       1 reflector.go:376] Caches populated for *v1.ClusterIssuer from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.268514       1 reflector.go:376] Caches populated for *v1.Secret from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.268855       1 reflector.go:376] Caches populated for *v1.Ingress from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.269626       1 reflector.go:376] Caches populated for *v1.Issuer from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.330155       1 reflector.go:376] Caches populated for *v1.Order from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.330712       1 util.go:96] "owning resource not found in cache" logger="cert-manager.controller.certificaterequests-issuer-acme.handleOwnedResource" resource_name="alertmanager-certs-1-1294200182" resource_namespace="alertmanager" resource_kind="Order" resource_version="v1" related_resource_namespace="alertmanager" related_resource_name="alertmanager-certs-1" related_resource_kind="CertificateRequest"
+I0414 15:52:43.330747       1 util.go:96] "owning resource not found in cache" logger="cert-manager.controller.certificaterequests-issuer-acme.handleOwnedResource" resource_name="ingress-nginx-probe-ingress-tls-1-2678042119" resource_namespace="ingress-nginx" resource_kind="Order" resource_version="v1" related_resource_namespace="ingress-nginx" related_resource_name="ingress-nginx-probe-ingress-tls-1" related_resource_kind="CertificateRequest"
+I0414 15:52:43.330841       1 util.go:96] "owning resource not found in cache" logger="cert-manager.controller.certificaterequests-issuer-acme.handleOwnedResource" resource_name="traefik-probe-ingress-tls-1-3071684622" resource_namespace="traefik-system" resource_kind="Order" resource_version="v1" related_resource_namespace="traefik-system" related_resource_name="traefik-probe-ingress-tls-1" related_resource_kind="CertificateRequest"
+I0414 15:52:43.331269       1 reflector.go:376] Caches populated for *v1.Certificate from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.331283       1 reflector.go:376] Caches populated for *v1.CertificateRequest from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0414 15:52:43.370610       1 reflector.go:376] Caches populated for *v1.PartialObjectMetadata from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+E0414 15:52:43.768474       1 controller.go:157] "re-queuing item due to error processing" err="ACME client for issuer not initialised/available" logger="cert-manager.controller"
+E0414 15:52:43.769950       1 controller.go:157] "re-queuing item due to error processing" err="ACME client for issuer not initialised/available" logger="cert-manager.controller"
+I0414 15:52:43.770922       1 setup.go:225] "ACME server URL host and ACME private key registration host differ. Re-checking ACME account registration" logger="cert-manager.controller" resource_name="letsencrypt-prod" resource_namespace="" resource_kind="ClusterIssuer" resource_version="v1" related_resource_name="letsencrypt-prod" related_resource_namespace="cert-manager" related_resource_kind="Secret"
+I0414 15:52:43.869573       1 setup.go:225] "ACME server URL host and ACME private key registration host differ. Re-checking ACME account registration" logger="cert-manager.controller" resource_name="letsencrypt-prod-traefik" resource_namespace="" resource_kind="ClusterIssuer" resource_version="v1" related_resource_name="letsencrypt-prod" related_resource_namespace="cert-manager" related_resource_kind="Secret"
+I0414 15:52:43.869706       1 setup.go:225] "ACME server URL host and ACME private key registration host differ. Re-checking ACME account registration" logger="cert-manager.controller" resource_name="letsencrypt-staging-traefik" resource_namespace="" resource_kind="ClusterIssuer" resource_version="v1" related_resource_name="letsencrypt-staging" related_resource_namespace="cert-manager" related_resource_kind="Secret"
+E0414 15:52:43.929908       1 controller.go:157] "re-queuing item due to error processing" err="ACME client for issuer not initialised/available" logger="cert-manager.controller"
+I0414 15:52:43.930174       1 setup.go:225] "ACME server URL host and ACME private key registration host differ. Re-checking ACME account registration" logger="cert-manager.controller" resource_name="letsencrypt-staging" resource_namespace="" resource_kind="ClusterIssuer" resource_version="v1" related_resource_name="letsencrypt-staging" related_resource_namespace="cert-manager" related_resource_kind="Secret"
+I0414 15:52:45.055623       1 setup.go:315] "verified existing registration with ACME server" logger="cert-manager.controller" resource_name="letsencrypt-prod" resource_namespace="" resource_kind="ClusterIssuer" resource_version="v1" related_resource_name="letsencrypt-prod" related_resource_namespace="cert-manager" related_resource_kind="Secret"
+I0414 15:52:45.144685       1 setup.go:315] "verified existing registration with ACME server" logger="cert-manager.controller" resource_name="letsencrypt-prod-traefik" resource_namespace="" resource_kind="ClusterIssuer" resource_version="v1" related_resource_name="letsencrypt-prod" related_resource_namespace="cert-manager" related_resource_kind="Secret"
+I0414 15:52:45.211003       1 setup.go:315] "verified existing registration with ACME server" logger="cert-manager.controller" resource_name="letsencrypt-staging" resource_namespace="" resource_kind="ClusterIssuer" resource_version="v1" related_resource_name="letsencrypt-staging" related_resource_namespace="cert-manager" related_resource_kind="Secret"
+I0414 15:52:45.239727       1 setup.go:315] "verified existing registration with ACME server" logger="cert-manager.controller" resource_name="letsencrypt-staging-traefik" resource_namespace="" resource_kind="ClusterIssuer" resource_version="v1" related_resource_name="letsencrypt-staging" related_resource_namespace="cert-manager" related_resource_kind="Secret"
+E0415 00:02:23.931450       1 leaderelection.go:429] Failed to update lock optimistically: etcdserver: request timed out, falling back to slow path
+E0415 06:42:41.239770       1 leaderelection.go:429] Failed to update lock optimistically: etcdserver: request timed out, falling back to slow path
+E0415 14:22:43.888085       1 leaderelection.go:429] Failed to update lock optimistically: etcdserver: request timed out, falling back to slow path
+E0416 00:08:03.584924       1 leaderelection.go:429] Failed to update lock optimistically: etcdserver: request timed out, falling back to slow path

@@ -1,0 +1,9 @@
+I0416 07:58:11.243016       1 main.go:157] Version: v7.0.2
+I0416 07:58:11.245429       1 main.go:200] Metrics path successfully registered at /metrics
+I0416 07:58:11.545845       1 main.go:262] Metrics http server successfully started on :8080, /metrics
+I0416 07:58:11.575307       1 leaderelection.go:250] attempting to acquire leader lease kube-system/snapshot-controller-leader...
+I0416 07:58:11.682833       1 leaderelection.go:260] successfully acquired lease kube-system/snapshot-controller-leader
+I0416 07:58:11.683849       1 snapshot_controller_base.go:212] Starting snapshot controller
+I0416 07:58:13.277879       1 request.go:697] Waited for 1.002589519s due to client-side throttling, not priority and fairness, request: PUT:https://10.233.0.1:443/apis/snapshot.storage.k8s.io/v1/namespaces/alertmanager/volumesnapshots/velero-alertmanager-kube-prometheus-stack-alertmanager-db-6lvsg
+I0416 08:13:13.180510       1 request.go:697] Waited for 1.104037661s due to client-side throttling, not priority and fairness, request: PUT:https://10.233.0.1:443/apis/snapshot.storage.k8s.io/v1/namespaces/alertmanager/volumesnapshots/velero-alertmanager-kube-prometheus-stack-alertmanager-db-87g5p
+I0416 08:28:13.181169       1 request.go:697] Waited for 1.105605474s due to client-side throttling, not priority and fairness, request: PUT:https://10.233.0.1:443/apis/snapshot.storage.k8s.io/v1/namespaces/alertmanager/volumesnapshots/velero-alertmanager-kube-prometheus-stack-alertmanager-db-lmtcn

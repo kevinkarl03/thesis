@@ -1,0 +1,159 @@
+{"level":"info","ts":1775030562.808855,"logger":"setup","msg":"Starting main.go:init()"}
+{"level":"info","ts":1775030562.9086566,"logger":"setup","msg":"Finished main.go:init()"}
+{"level":"info","ts":1775030562.9087718,"logger":"setup","msg":"Parsing flags"}
+{"level":"info","ts":1775030562.9093714,"logger":"setup","msg":"Creating OpenCensus->Stackdriver exporter"}
+{"level":"error","ts":1775030564.9108791,"logger":"setup","msg":"Could not create Stackdriver exporter","error":"stackdriver: google: could not find default credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.","stacktrace":"main.main\n\t/workspace/cmd/manager/main.go:100\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"info","ts":1775030564.9111772,"logger":"setup","msg":"Creating Prometheus exporter"}
+{"level":"info","ts":1775030564.911479,"logger":"setup","msg":"Configuring controller-manager"}
+{"level":"info","ts":1775030565.5119789,"logger":"controller-runtime.metrics","msg":"Metrics server is starting to listen","addr":":8080"}
+{"level":"info","ts":1775030565.5124414,"logger":"setup","msg":"Probe endpoints are configured on healthz and readyz"}
+{"level":"info","ts":1775030565.5124862,"logger":"setup","msg":"Starting manager"}
+{"level":"info","ts":1775030565.5125628,"logger":"setup","msg":"Waiting for certificate generation to complete"}
+{"level":"info","ts":1775030565.5126448,"logger":"setup","msg":"Certs ready"}
+{"level":"info","ts":1775030565.5126832,"logger":"setup","msg":"Creating controllers","opts":{"MaxReconciles":10,"UseFakeClient":false,"NoWebhooks":false,"HNCCfgRefresh":0,"HRQ":false,"HRQSyncInterval":60000000000}}
+{"level":"info","ts":1775030565.513012,"logger":"setup","msg":"Registering validating webhook (won't work when running locally; use --no-webhooks)"}
+{"level":"info","ts":1775030565.512976,"msg":"Starting server","kind":"health probe","addr":"[::]:8081"}
+{"level":"info","ts":1775030565.5132158,"msg":"Starting server","path":"/metrics","kind":"metrics","addr":"[::]:8080"}
+{"level":"info","ts":1775030565.5132196,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-hnc-x-k8s-io-v1alpha2-hierarchyconfigurations"}
+{"level":"info","ts":1775030565.5132625,"logger":"controller-runtime.webhook.webhooks","msg":"Starting webhook server"}
+{"level":"info","ts":1775030565.5133982,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-objects"}
+{"level":"info","ts":1775030565.513518,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-hnc-x-k8s-io-v1alpha2-hncconfigurations"}
+{"level":"info","ts":1775030565.5139954,"logger":"controller-runtime.certwatcher","msg":"Updated current TLS certificate"}
+{"level":"info","ts":1775030565.6840699,"logger":"controller-runtime.certwatcher","msg":"Starting certificate watcher"}
+{"level":"info","ts":1775030565.709294,"logger":"controller-runtime.webhook","msg":"Serving webhook server","host":"","port":9443}
+{"level":"info","ts":1775030566.212531,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-hnc-x-k8s-io-v1alpha2-subnamespaceanchors"}
+{"level":"info","ts":1775030566.2128348,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-v1-namespace"}
+{"level":"info","ts":1775030566.212988,"logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/mutate-namespace"}
+{"level":"info","ts":1775030566.2130392,"logger":"setup","msg":"Registering reconcilers"}
+{"level":"info","ts":1775030566.2138538,"logger":"controller.subnamespaceanchor","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor","source":"kind source: *v1alpha2.SubnamespaceAnchor"}
+{"level":"info","ts":1775030566.214001,"logger":"controller.subnamespaceanchor","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor","source":"channel source: 0xc000419180"}
+{"level":"info","ts":1775030566.2142756,"logger":"controller.subnamespaceanchor","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor","source":"kind source: *v1.Namespace"}
+{"level":"info","ts":1775030566.2142987,"logger":"controller.subnamespaceanchor","msg":"Starting Controller","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor"}
+{"level":"info","ts":1775030566.315798,"logger":"controller.subnamespaceanchor","msg":"Starting workers","reconciler group":"hnc.x-k8s.io","reconciler kind":"SubnamespaceAnchor","worker count":1}
+{"level":"info","ts":1775030566.8117685,"logger":"controller.hierarchyconfiguration","msg":"Starting Controller","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration"}
+{"level":"info","ts":1775030566.8118036,"logger":"controller.hierarchyconfiguration","msg":"Starting workers","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","worker count":10}
+{"level":"info","ts":1775030566.811917,"logger":"controller.hncconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration","source":"kind source: *v1alpha2.HNCConfiguration"}
+{"level":"info","ts":1775030566.81195,"logger":"controller.hncconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration","source":"channel source: 0xc0005e1900"}
+{"level":"info","ts":1775030566.8119674,"logger":"controller.hncconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration","source":"kind source: *v1.CustomResourceDefinition"}
+{"level":"info","ts":1775030566.811975,"logger":"controller.hncconfiguration","msg":"Starting Controller","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration"}
+{"level":"info","ts":1775030566.8123934,"logger":"controller.hierarchyconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","source":"kind source: *v1alpha2.HierarchyConfiguration"}
+{"level":"info","ts":1775030566.812429,"logger":"controller.hierarchyconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","source":"channel source: 0xc0005e19a0"}
+{"level":"info","ts":1775030566.8124597,"logger":"controller.hierarchyconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","source":"kind source: *v1.Namespace"}
+{"level":"info","ts":1775030566.8124714,"logger":"controller.hierarchyconfiguration","msg":"Starting EventSource","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","source":"kind source: *v1alpha2.SubnamespaceAnchor"}
+{"level":"info","ts":1775030566.812486,"logger":"setup","msg":"All controllers started; setup complete"}
+{"level":"info","ts":1775030567.185214,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":12,"ns":"default"}
+{"level":"info","ts":1775030567.1852753,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":12,"ns":"default","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1775030567.1853082,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":12,"ns":"default","reason":"managed annotations have changed","affected":[]}
+{"level":"info","ts":1775030567.2859788,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":17,"ns":"production"}
+{"level":"info","ts":1775030567.2860126,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":17,"ns":"production","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1775030567.2861488,"logger":"hierarchyconfig.reconcile","msg":"Updated managed label","rid":17,"ns":"production","newLabels":{"pod-security.kubernetes.io/audit":"restricted","pod-security.kubernetes.io/enforce":"restricted","pod-security.kubernetes.io/warn":"restricted"}}
+{"level":"info","ts":1775030567.2862103,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":17,"ns":"production","reason":"managed labels have changed","affected":[]}
+{"level":"info","ts":1775030567.2862272,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":17,"ns":"production","reason":"managed annotations have changed","affected":[]}
+{"level":"info","ts":1775030567.28642,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":18,"ns":"staging"}
+{"level":"info","ts":1775030567.286433,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":18,"ns":"staging","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1775030567.2864554,"logger":"hierarchyconfig.reconcile","msg":"Updated managed label","rid":18,"ns":"staging","newLabels":{"pod-security.kubernetes.io/audit":"restricted","pod-security.kubernetes.io/enforce":"restricted","pod-security.kubernetes.io/warn":"restricted"}}
+{"level":"info","ts":1775030567.2864668,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":18,"ns":"staging","reason":"managed labels have changed","affected":[]}
+{"level":"info","ts":1775030567.2864847,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":18,"ns":"staging","reason":"managed annotations have changed","affected":[]}
+{"level":"info","ts":1775030568.0837572,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":20,"ns":"cilium-secrets"}
+{"level":"info","ts":1775030568.0838022,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":20,"ns":"cilium-secrets","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1775030568.083878,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":20,"ns":"cilium-secrets","reason":"managed annotations have changed","affected":[]}
+I0401 08:03:02.512418       1 trace.go:205] Trace[759653031]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (01-Apr-2026 08:02:46.812) (total time: 15699ms):
+Trace[759653031]: ---"Objects listed" error:<nil> 15698ms (08:03:02.511)
+Trace[759653031]: [15.699497209s] [15.699497209s] END
+{"level":"info","ts":1775030582.6132534,"logger":"controller.hncconfiguration","msg":"Starting workers","reconciler group":"hnc.x-k8s.io","reconciler kind":"HNCConfiguration","worker count":1}
+{"level":"info","ts":1775030582.6141388,"logger":"hncconfig.reconcile","msg":"Starting to sync objects","gvk":"rbac.authorization.k8s.io/v1, Kind=Role","mode":"Propagate"}
+{"level":"info","ts":1775030582.6144335,"logger":"hncconfig.reconcile","msg":"Starting to sync objects","gvk":"rbac.authorization.k8s.io/v1, Kind=RoleBinding","mode":"Propagate"}
+{"level":"info","ts":1775030582.614594,"logger":"controller.rolebinding","msg":"Starting Controller","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"RoleBinding"}
+{"level":"info","ts":1775030582.6146154,"logger":"controller.rolebinding","msg":"Starting workers","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"RoleBinding","worker count":10}
+{"level":"info","ts":1775030582.6146224,"logger":"controller.role","msg":"Starting EventSource","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"Role","source":"kind source: *unstructured.Unstructured"}
+{"level":"info","ts":1775030582.614672,"logger":"controller.role","msg":"Starting EventSource","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"Role","source":"channel source: 0xc000418410"}
+{"level":"info","ts":1775030582.6146903,"logger":"controller.role","msg":"Starting Controller","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"Role"}
+{"level":"info","ts":1775030582.6146877,"logger":"controller.rolebinding","msg":"Starting EventSource","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"RoleBinding","source":"kind source: *unstructured.Unstructured"}
+{"level":"info","ts":1775030582.614703,"logger":"controller.rolebinding","msg":"Starting EventSource","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"RoleBinding","source":"channel source: 0xc000418a00"}
+{"level":"info","ts":1775030582.6147227,"logger":"hncconfig.reconcile","msg":"Starting to sync objects","gvk":"networking.k8s.io/v1, Kind=NetworkPolicy","mode":"Propagate"}
+{"level":"info","ts":1775030582.6149032,"logger":"controller.networkpolicy","msg":"Starting EventSource","reconciler group":"networking.k8s.io","reconciler kind":"NetworkPolicy","source":"kind source: *unstructured.Unstructured"}
+{"level":"info","ts":1775030582.6150374,"logger":"controller.networkpolicy","msg":"Starting EventSource","reconciler group":"networking.k8s.io","reconciler kind":"NetworkPolicy","source":"channel source: 0xc0004193b0"}
+{"level":"info","ts":1775030582.6150875,"logger":"controller.networkpolicy","msg":"Starting Controller","reconciler group":"networking.k8s.io","reconciler kind":"NetworkPolicy"}
+{"level":"info","ts":1775030583.221456,"logger":"controller.networkpolicy","msg":"Starting workers","reconciler group":"networking.k8s.io","reconciler kind":"NetworkPolicy","worker count":10}
+{"level":"info","ts":1775030583.2227154,"logger":"controller.role","msg":"Starting workers","reconciler group":"rbac.authorization.k8s.io","reconciler kind":"Role","worker count":10}
+W0408 01:10:01.862445       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of rbac.authorization.k8s.io/v1, Kind=RoleBinding ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:10:01.862581       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1alpha2.SubnamespaceAnchor ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:10:01.862575       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of rbac.authorization.k8s.io/v1, Kind=Role ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:10:01.862658       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1alpha2.HierarchyConfiguration ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:10:01.862663       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of networking.k8s.io/v1, Kind=NetworkPolicy ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:10:01.862697       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1alpha2.HNCConfiguration ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:10:01.862769       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1.CustomResourceDefinition ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:10:01.862976       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1.Namespace ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+I0408 01:10:20.776557       1 trace.go:205] Trace[2057797442]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:10:03.411) (total time: 17364ms):
+Trace[2057797442]: ---"Objects listed" error:<nil> 17364ms (01:10:20.776)
+Trace[2057797442]: [17.364515731s] [17.364515731s] END
+I0408 01:10:20.908630       1 trace.go:205] Trace[252944579]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:10:03.268) (total time: 17640ms):
+Trace[252944579]: ---"Objects listed" error:<nil> 17640ms (01:10:20.908)
+Trace[252944579]: [17.640240807s] [17.640240807s] END
+I0408 01:10:21.008903       1 trace.go:205] Trace[114824511]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:10:02.911) (total time: 18097ms):
+Trace[114824511]: ---"Objects listed" error:<nil> 18097ms (01:10:21.008)
+Trace[114824511]: [18.097674284s] [18.097674284s] END
+I0408 01:10:21.008935       1 trace.go:205] Trace[1146186068]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:10:02.879) (total time: 18129ms):
+Trace[1146186068]: ---"Objects listed" error:<nil> 18129ms (01:10:21.008)
+Trace[1146186068]: [18.129774947s] [18.129774947s] END
+I0408 01:10:21.109117       1 trace.go:205] Trace[312764177]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:10:02.756) (total time: 18352ms):
+Trace[312764177]: ---"Objects listed" error:<nil> 18351ms (01:10:21.108)
+Trace[312764177]: [18.352145921s] [18.352145921s] END
+I0408 01:10:21.283943       1 trace.go:205] Trace[1887487467]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:10:03.392) (total time: 17891ms):
+Trace[1887487467]: ---"Objects listed" error:<nil> 17817ms (01:10:21.210)
+Trace[1887487467]: [17.89153337s] [17.89153337s] END
+I0408 01:10:21.410918       1 trace.go:205] Trace[1416917357]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:10:03.175) (total time: 18235ms):
+Trace[1416917357]: ---"Objects listed" error:<nil> 18235ms (01:10:21.410)
+Trace[1416917357]: [18.235481297s] [18.235481297s] END
+{"level":"error","ts":1775610647.2854455,"msg":"http: TLS handshake error from 10.234.68.201:50836: read tcp 10.234.71.10:9443->10.234.68.201:50836: read: connection reset by peer"}
+I0408 01:11:17.917876       1 trace.go:205] Trace[1171385193]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:10:03.046) (total time: 74871ms):
+Trace[1171385193]: ---"Objects listed" error:<nil> 74870ms (01:11:17.916)
+Trace[1171385193]: [1m14.871532075s] [1m14.871532075s] END
+W0408 01:14:02.834187       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1alpha2.HNCConfiguration ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:14:02.834267       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1.Namespace ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:14:02.834273       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of networking.k8s.io/v1, Kind=NetworkPolicy ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:14:02.834190       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1.CustomResourceDefinition ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:14:02.834187       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of rbac.authorization.k8s.io/v1, Kind=Role ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:14:02.834369       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of rbac.authorization.k8s.io/v1, Kind=RoleBinding ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:14:02.834376       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1alpha2.SubnamespaceAnchor ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:14:02.834475       1 reflector.go:442] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250: watch of *v1alpha2.HierarchyConfiguration ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+I0408 01:14:13.809252       1 trace.go:205] Trace[394194151]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:14:03.731) (total time: 10078ms):
+Trace[394194151]: ---"Objects listed" error:<nil> 10077ms (01:14:13.809)
+Trace[394194151]: [10.07806357s] [10.07806357s] END
+{"level":"error","ts":1775610867.4854815,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"cert-manager","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610867.4854534,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"alertmanager","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610867.4897296,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"falco","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610867.4901154,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"eva-postgres","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610867.5087633,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"cilium-secrets","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610867.5088444,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"fluentd-system","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610867.5087817,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"gatekeeper-system","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610867.509126,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"default","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610867.5092692,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"fluentd","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610867.583669,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"bifrost","error":"etcdserver: request timed out"}
+I0408 01:14:29.308944       1 trace.go:205] Trace[534333184]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:250 (08-Apr-2026 01:14:03.659) (total time: 25649ms):
+Trace[534333184]: ---"Objects listed" error:<nil> 25558ms (01:14:29.217)
+Trace[534333184]: [25.649542123s] [25.649542123s] END
+{"level":"error","ts":1775610881.4833643,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"openstack-system","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610881.4914882,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"kube-public","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610881.4916089,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"monitoring","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610881.4920359,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"kube-system","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610881.4914966,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"gpu-operator","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610881.5018554,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"hnc-system","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610881.5024626,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"kyverno","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610881.5027657,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"kube-node-lease","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610881.507767,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"ingress-nginx","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610881.5081894,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"kured","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.3875215,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"cert-manager","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.3893054,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"sentry","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.389777,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"eva-postgres","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.3979127,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"falco","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.414784,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"fluentd-system","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.415092,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"gatekeeper-system","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.4160697,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"cilium-secrets","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.4196126,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"alertmanager","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.5284474,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"traefik-system","error":"etcdserver: request timed out"}
+{"level":"error","ts":1775610926.535014,"logger":"controller.hierarchyconfiguration","msg":"Reconciler error","reconciler group":"hnc.x-k8s.io","reconciler kind":"HierarchyConfiguration","name":"hierarchy","namespace":"velero","error":"etcdserver: request timed out"}
+{"level":"info","ts":1776077436.3104823,"logger":"hierarchyconfig.reconcile","msg":"New namespace found","rid":806,"ns":"test"}
+{"level":"info","ts":1776077436.3106346,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":806,"ns":"test","reason":"relative of newly found namespace","affected":[]}
+{"level":"info","ts":1776077436.3110206,"logger":"hierarchyconfig.reconcile","msg":"Enqueuing","rid":806,"ns":"test","reason":"managed annotations have changed","affected":[]}
+{"level":"info","ts":1776077436.3110976,"logger":"hierarchyconfig.reconcile","msg":"Namespace has changed","rid":806,"ns":"test"}

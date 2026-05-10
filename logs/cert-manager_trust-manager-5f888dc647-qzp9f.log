@@ -1,0 +1,24 @@
+time=2026-04-16T07:58:14.994Z level=INFO msg="successfully loaded default package from filesystem" id=cert-manager-debian-bookworm-20230311+deb12u1.0-a3413a37a8e09cc2 path=/packages/cert-manager-package-debian.json
+time=2026-04-16T07:58:14.995Z level=INFO msg="registering webhook endpoints"
+time=2026-04-16T07:58:14.995Z level=INFO msg="Registering a validating webhook" logger=controller-runtime/builder GVK="trust.cert-manager.io/v1alpha1, Kind=Bundle" path=/validate-trust-cert-manager-io-v1alpha1-bundle
+time=2026-04-16T07:58:14.995Z level=INFO msg="Registering webhook" path=/validate-trust-cert-manager-io-v1alpha1-bundle logger=controller-runtime/webhook
+time=2026-04-16T07:58:14.996Z level=INFO msg="starting server" name="health probe" addr=[::]:6060
+time=2026-04-16T07:58:14.996Z level=INFO msg="Starting metrics server" logger=controller-runtime/metrics
+time=2026-04-16T07:58:14.996Z level=INFO msg="Serving metrics server" logger=controller-runtime/metrics bindAddress=0.0.0.0:9402 secure=false
+time=2026-04-16T07:58:14.996Z level=INFO msg="Starting webhook server" logger=controller-runtime/webhook
+time=2026-04-16T07:58:14.997Z level=INFO msg="attempting to acquire leader lease cert-manager/trust-manager-leader-election..."
+time=2026-04-16T07:58:14.997Z level=INFO msg="Updated current TLS certificate" cert=/tls/tls.crt key=/tls/tls.key logger=controller-runtime/certwatcher
+time=2026-04-16T07:58:14.999Z level=INFO msg="Starting certificate poll+watcher" cert=/tls/tls.crt key=/tls/tls.key logger=controller-runtime/certwatcher interval=10s
+time=2026-04-16T07:58:14.999Z level=INFO msg="Serving webhook server" logger=controller-runtime/webhook host=0.0.0.0 port=6443
+time=2026-04-16T07:58:20.002Z level=ERROR msg="error retrieving resource lock cert-manager/trust-manager-leader-election: Get \"https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/cert-manager/leases/trust-manager-leader-election?timeout=5s\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"
+time=2026-04-16T07:58:27.674Z level=ERROR msg="error retrieving resource lock cert-manager/trust-manager-leader-election: Get \"https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/cert-manager/leases/trust-manager-leader-election?timeout=5s\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"
+time=2026-04-16T07:58:35.829Z level=ERROR msg="error retrieving resource lock cert-manager/trust-manager-leader-election: Get \"https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/cert-manager/leases/trust-manager-leader-election?timeout=5s\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"
+time=2026-04-16T07:58:58.332Z level=INFO msg="successfully acquired lease cert-manager/trust-manager-leader-election"
+time=2026-04-16T07:58:58.333Z level=DEBUG+3 msg="trust-manager-5f888dc647-qzp9f_6df1ab3a-b5e5-47a4-bf5f-100fb7c16695 became leader" logger=events type=Normal object="{Kind:Lease Namespace:cert-manager Name:trust-manager-leader-election UID:edb4b8a4-cd55-48ba-94e8-e52b8d477c70 APIVersion:coordination.k8s.io/v1 ResourceVersion:43346249 FieldPath:}" reason=LeaderElection
+time=2026-04-16T07:58:58.338Z level=INFO msg="Starting EventSource" controller=bundles source="kind source: *v1.PartialObjectMetadata"
+time=2026-04-16T07:58:58.344Z level=INFO msg="Starting EventSource" controller=bundles source="kind source: *v1alpha1.Bundle"
+time=2026-04-16T07:58:58.344Z level=INFO msg="Starting EventSource" controller=bundles source="kind source: *v1.Namespace"
+time=2026-04-16T07:58:58.346Z level=INFO msg="Starting EventSource" controller=bundles source="kind source: *v1.Secret"
+time=2026-04-16T07:58:58.347Z level=INFO msg="Starting EventSource" controller=bundles source="kind source: *v1.ConfigMap"
+time=2026-04-16T07:58:59.248Z level=INFO msg="Starting Controller" controller=bundles
+time=2026-04-16T07:58:59.248Z level=INFO msg="Starting workers" controller=bundles "worker count"=1

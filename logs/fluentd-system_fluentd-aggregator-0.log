@@ -1,0 +1,141 @@
+[38;5;6mfluentd [38;5;5m11:49:54.91 [0m[38;5;2mINFO [0m ==> 
+[38;5;6mfluentd [38;5;5m11:49:54.92 [0m[38;5;2mINFO [0m ==> [1mWelcome to the Bitnami fluentd container[0m
+[38;5;6mfluentd [38;5;5m11:49:54.92 [0m[38;5;2mINFO [0m ==> Subscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[38;5;6mfluentd [38;5;5m11:49:54.92 [0m[38;5;2mINFO [0m ==> Did you know there are enterprise versions of the Bitnami catalog? For enhanced secure software supply chain features, unlimited pulls from Docker, LTS support, or application customization, see Bitnami Premium or Tanzu Application Catalog. See https://www.arrow.com/globalecs/na/vendors/bitnami/ for more information.
+[38;5;6mfluentd [38;5;5m11:49:54.92 [0m[38;5;2mINFO [0m ==> 
+[38;5;6mfluentd [38;5;5m11:49:54.93 [0m[38;5;2mINFO [0m ==> ** Starting Fluentd setup **
+find: '/docker-entrypoint-initdb.d/': No such file or directory
+[38;5;6mfluentd [38;5;5m11:49:54.95 [0m[38;5;2mINFO [0m ==> No custom scripts in /docker-entrypoint-initdb.d
+[38;5;6mfluentd [38;5;5m11:49:54.95 [0m[38;5;2mINFO [0m ==> ** Fluentd setup finished! **
+
+[38;5;6mfluentd [38;5;5m11:49:54.98 [0m[38;5;2mINFO [0m ==> ** Starting Fluentd **
+2026-03-20 11:49:56 +0000 [info]: init supervisor logger path=nil rotate_age=nil rotate_size=nil
+2026-03-20 11:49:56 +0000 [info]: parsing config file is succeeded path="/opt/bitnami/fluentd/conf/fluentd.conf"
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-azurestorage' version '0.1.0'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-concat' version '2.5.0'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-detect-exceptions' version '0.0.16'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-elasticsearch' version '5.4.3'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-grafana-loki' version '1.2.20'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-kafka' version '0.19.3'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-kubernetes_metadata_filter' version '3.7.1'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-multi-format-parser' version '1.1.0'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-prometheus' version '2.2.0'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-record-modifier' version '2.2.0'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-rewrite-tag-filter' version '2.4.0'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-s3' version '1.8.2'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluent-plugin-systemd' version '1.1.0'
+2026-03-20 11:49:56 +0000 [info]: gem 'fluentd' version '1.18.0'
+2026-03-20 11:49:57 +0000 [warn]: 'force_path_style' parameter is deprecated: S3 will drop path style API in 2020: See https://aws.amazon.com/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/
+2026-03-20 11:49:57 +0000 [warn]: [output-audit] The default value of s3_object_key_format will use ${chunk_id} instead of %{index} to avoid object conflict in v2
+2026-03-20 11:49:57 +0000 [warn]: [output-audit] No ${chunk_id}, %{uuid_flush} or %{hex_random} in s3_object_key_format with multiple flush threads or multiple workers. Recommend to set ${chunk_id}, %{uuid_flush} or %{hex_random} to avoid data lost by object conflict
+2026-03-20 11:49:57 +0000 [info]: using configuration file: <ROOT>
+  <label @FLUENT_LOG>
+    <match fluent.*>
+      @type stdout
+    </match>
+  </label>
+  <source>
+    @id prometheus
+    @type prometheus
+  </source>
+  <source>
+    @id prometheus_monitor
+    @type prometheus_monitor
+    <labels>
+      host ${hostname}
+    </labels>
+  </source>
+  <source>
+    @id prometheus_output_monitor
+    @type prometheus_output_monitor
+    <labels>
+      host ${hostname}
+    </labels>
+  </source>
+  <source>
+    @type http
+    bind "0.0.0.0"
+    port 9880
+  </source>
+  <source>
+    @type forward
+    bind "0.0.0.0"
+    port 24224
+  </source>
+  <match kubernetes.var.log.containers.fluentd-**>
+    @type null
+  </match>
+  <match authlog.**>
+    @type relabel
+    @label @AUDIT
+  </match>
+  <match kubeaudit.**>
+    @type relabel
+    @label @AUDIT
+  </match>
+  <match kubernetes.**>
+    @type relabel
+    @label @AUDIT
+  </match>
+  <match **>
+    @type null
+  </match>
+  <label @AUDIT>
+    <match kubernetes.**>
+      @type null
+    </match>
+    <match **>
+      @id output-audit
+      @type s3
+      aws_key_id xxxxxx
+      aws_sec_key xxxxxx
+      s3_endpoint "https://s3.internal.elastisys.se:8443"
+      s3_region "us-east-1"
+      force_path_style true
+      s3_bucket "backman-audit"
+      path "backman-wc/%Y%m%d/${tag}/"
+      <buffer tag,time>
+        @type "file"
+        chunk_limit_size 50MB
+        flush_interval 15m
+        flush_mode interval
+        flush_thread_burst_interval 0.2
+        flush_thread_count 4
+        retry_forever true
+        retry_max_interval 30
+        retry_type exponential_backoff
+        timekey 10m
+        timekey_use_utc true
+        timekey_wait 1m
+        total_limit_size 9GB
+        path "/opt/bitnami/fluentd/logs/buffers/audit"
+      </buffer>
+    </match>
+  </label>
+</ROOT>
+2026-03-20 11:49:57 +0000 [info]: starting fluentd-1.18.0 pid=1 ruby="3.4.3"
+2026-03-20 11:49:57 +0000 [info]: spawn command to main:  cmdline=["/opt/bitnami/ruby/bin/ruby", "-Eascii-8bit:ascii-8bit", "/opt/bitnami/fluentd/bin/fluentd", "--config", "/opt/bitnami/fluentd/conf/fluentd.conf", "--plugin", "/opt/bitnami/fluentd/plugins", "--under-supervisor"]
+2026-03-20 11:49:58 +0000 [info]: #0 init worker0 logger path=nil rotate_age=nil rotate_size=nil
+2026-03-20 11:49:58 +0000 [info]: adding match in @FLUENT_LOG pattern="fluent.*" type="stdout"
+2026-03-20 11:49:58 +0000 [info]: adding match in @AUDIT pattern="kubernetes.**" type="null"
+2026-03-20 11:49:58 +0000 [info]: adding match in @AUDIT pattern="**" type="s3"
+2026-03-20 11:49:59 +0000 [warn]: #0 'force_path_style' parameter is deprecated: S3 will drop path style API in 2020: See https://aws.amazon.com/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/
+2026-03-20 11:49:59 +0000 [warn]: #0 [output-audit] The default value of s3_object_key_format will use ${chunk_id} instead of %{index} to avoid object conflict in v2
+2026-03-20 11:49:59 +0000 [warn]: #0 [output-audit] No ${chunk_id}, %{uuid_flush} or %{hex_random} in s3_object_key_format with multiple flush threads or multiple workers. Recommend to set ${chunk_id}, %{uuid_flush} or %{hex_random} to avoid data lost by object conflict
+2026-03-20 11:49:59 +0000 [info]: adding match pattern="kubernetes.var.log.containers.fluentd-**" type="null"
+2026-03-20 11:49:59 +0000 [info]: adding match pattern="authlog.**" type="relabel"
+2026-03-20 11:49:59 +0000 [info]: adding match pattern="kubeaudit.**" type="relabel"
+2026-03-20 11:49:59 +0000 [info]: adding match pattern="kubernetes.**" type="relabel"
+2026-03-20 11:49:59 +0000 [info]: adding match pattern="**" type="null"
+2026-03-20 11:49:59 +0000 [info]: adding source type="prometheus"
+2026-03-20 11:49:59 +0000 [info]: adding source type="prometheus_monitor"
+2026-03-20 11:49:59 +0000 [info]: adding source type="prometheus_output_monitor"
+2026-03-20 11:49:59 +0000 [info]: adding source type="http"
+2026-03-20 11:49:59 +0000 [info]: adding source type="forward"
+2026-03-20 11:49:59 +0000 [info]: #0 starting fluentd worker pid=35 ppid=1 worker=0
+/opt/bitnami/fluentd/gems/aws-sdk-core-3.218.1/lib/aws-sdk-core/json/oj_engine.rb:20: warning: undefining the allocator of T_DATA class Oj::CStack
+2026-03-20 11:50:00 +0000 [info]: #0 listening port port=24224 bind="0.0.0.0"
+2026-03-20 11:50:00 +0000 [info]: #0 fluentd worker is now running worker=0
+2026-03-20 11:49:59.398398056 +0000 fluent.info: {"pid":35,"ppid":1,"worker":0,"message":"starting fluentd worker pid=35 ppid=1 worker=0"}
+2026-03-20 11:50:00.002429652 +0000 fluent.info: {"port":24224,"bind":"0.0.0.0","message":"listening port port=24224 bind=\"0.0.0.0\""}
+2026-03-20 11:50:00.010598555 +0000 fluent.info: {"worker":0,"message":"fluentd worker is now running worker=0"}

@@ -1,0 +1,29 @@
+maxprocs: Leaving GOMAXPROCS=2: CPU quota undefined
+[INFO] plugin/kubernetes: waiting for Kubernetes API before starting server
+.:53
+[INFO] plugin/reload: Running configuration SHA512 = 1b226df79860026c6a52e67daa10d7f0d57ec5b023288ec00c5e05f93523c894564e15b91770d3a07ae1cfbe861d15b37d4a0027e69c546ab112970993a3b03b
+CoreDNS-1.12.0
+linux/amd64, go1.23.3, 51e11f1
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.EndpointSlice ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.Service ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.Namespace ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[ERROR] plugin/errors: 2 cinderv3.internal.elastisys.se. A: read udp 10.234.68.162:57040->1.0.0.1:53: i/o timeout
+[ERROR] plugin/errors: 2 s3.internal.elastisys.se. AAAA: read udp 10.234.68.162:49327->1.0.0.1:53: i/o timeout
+[ERROR] plugin/errors: 2 s3.internal.elastisys.se. A: read udp 10.234.68.162:33326->1.1.1.1:53: i/o timeout
+[WARNING] plugin/health: Local health request to "http://:8080/health" failed: Get "http://:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[WARNING] plugin/health: Local health request to "http://:8080/health" failed: Get "http://:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.Namespace ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.Service ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.EndpointSlice ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: failed to list *v1.Service: Get "https://10.233.0.1:443/api/v1/services?resourceVersion=31584671": net/http: TLS handshake timeout
+[ERROR] plugin/kubernetes: Unhandled Error
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: failed to list *v1.EndpointSlice: Get "https://10.233.0.1:443/apis/discovery.k8s.io/v1/endpointslices?resourceVersion=31584596": net/http: TLS handshake timeout
+[ERROR] plugin/kubernetes: Unhandled Error
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: failed to list *v1.Namespace: Get "https://10.233.0.1:443/api/v1/namespaces?resourceVersion=31584669": net/http: TLS handshake timeout
+[ERROR] plugin/kubernetes: Unhandled Error
+[ERROR] plugin/errors: 2 opensearch.ops.backman.dev-ck8s.com. A: read udp 10.234.68.162:36369->1.1.1.1:53: i/o timeout
+[ERROR] plugin/errors: 2 opensearch.ops.backman.dev-ck8s.com. A: read udp 10.234.68.162:56892->1.1.1.1:53: i/o timeout
+[ERROR] plugin/errors: 2 thanos-receiver.ops.backman.dev-ck8s.com. AAAA: read udp 10.234.68.162:47241->1.0.0.1:53: i/o timeout
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.Namespace ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.Service ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.31.2/tools/cache/reflector.go:243: watch of *v1.EndpointSlice ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding

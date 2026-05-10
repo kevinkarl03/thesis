@@ -1,0 +1,131 @@
+2026/03/24 17:01:23 Running command:
+Command env: (log-file=, also-stdout=false, redirect-stderr=true)
+Run from directory: 
+Executable path: /bin/openstack-cloud-controller-manager
+Args (comma-delimited): /bin/openstack-cloud-controller-manager,--v=2,--cloud-config=/etc/config/cloud.conf,--cluster-name=backman-wc,--cloud-provider=openstack,--use-service-account-credentials=false,--controllers=cloud-node,cloud-node-lifecycle,route,service,--bind-address=0.0.0.0
+2026/03/24 17:01:23 Now listening for interrupts
+I0324 17:01:25.106104      11 serving.go:386] Generated self-signed cert in-memory
+I0324 17:01:25.586763      11 serving.go:386] Generated self-signed cert in-memory
+W0324 17:01:25.589759      11 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+I0324 17:01:26.482737      11 requestheader_controller.go:255] Loaded a new request header values for RequestHeaderAuthRequestController
+I0324 17:01:26.793696      11 controllermanager.go:160] Version: v1.34.1
+I0324 17:01:26.817264      11 requestheader_controller.go:180] Starting RequestHeaderAuthRequestController
+I0324 17:01:26.817354      11 shared_informer.go:349] "Waiting for caches to sync" controller="RequestHeaderAuthRequestController"
+I0324 17:01:26.817446      11 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0324 17:01:26.817461      11 shared_informer.go:349] "Waiting for caches to sync" controller="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0324 17:01:26.817475      11 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0324 17:01:26.817484      11 shared_informer.go:349] "Waiting for caches to sync" controller="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0324 17:01:26.817653      11 tlsconfig.go:203] "Loaded serving cert" certName="Generated self signed cert" certDetail="\"localhost@1774371685\" [serving] validServingFor=[127.0.0.1,localhost,localhost] issuer=\"localhost-ca@1774371684\" (2026-03-24 16:01:24 +0000 UTC to 2027-03-24 16:01:24 +0000 UTC (now=2026-03-24 17:01:26.817611388 +0000 UTC))"
+I0324 17:01:26.818045      11 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1774371686\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1774371686\" (2026-03-24 16:01:25 +0000 UTC to 2029-03-24 16:01:25 +0000 UTC (now=2026-03-24 17:01:26.818028309 +0000 UTC))"
+I0324 17:01:26.818293      11 secure_serving.go:211] Serving securely on [::]:10258
+I0324 17:01:26.818398      11 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+I0324 17:01:26.820146      11 leaderelection.go:257] attempting to acquire leader lease kube-system/cloud-controller-manager...
+I0324 17:01:26.823559      11 reflector.go:436] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0324 17:01:26.825197      11 reflector.go:436] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0324 17:01:26.828047      11 reflector.go:436] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0324 17:01:26.918344      11 shared_informer.go:356] "Caches are synced" controller="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0324 17:01:26.918440      11 shared_informer.go:356] "Caches are synced" controller="RequestHeaderAuthRequestController"
+I0324 17:01:26.918717      11 shared_informer.go:356] "Caches are synced" controller="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0324 17:01:26.919179      11 tlsconfig.go:181] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubernetes\" [] issuer=\"<self>\" (2026-01-15 08:30:53 +0000 UTC to 2036-01-13 08:35:53 +0000 UTC (now=2026-03-24 17:01:26.91915606 +0000 UTC))"
+I0324 17:01:26.920692      11 tlsconfig.go:203] "Loaded serving cert" certName="Generated self signed cert" certDetail="\"localhost@1774371685\" [serving] validServingFor=[127.0.0.1,localhost,localhost] issuer=\"localhost-ca@1774371684\" (2026-03-24 16:01:24 +0000 UTC to 2027-03-24 16:01:24 +0000 UTC (now=2026-03-24 17:01:26.920634587 +0000 UTC))"
+I0324 17:01:26.921176      11 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1774371686\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1774371686\" (2026-03-24 16:01:25 +0000 UTC to 2029-03-24 16:01:25 +0000 UTC (now=2026-03-24 17:01:26.921155102 +0000 UTC))"
+I0324 17:01:26.921313      11 tlsconfig.go:181] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubernetes\" [] issuer=\"<self>\" (2026-01-15 08:30:53 +0000 UTC to 2036-01-13 08:35:53 +0000 UTC (now=2026-03-24 17:01:26.921298172 +0000 UTC))"
+I0324 17:01:26.921363      11 tlsconfig.go:181] "Loaded client CA" index=1 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubernetes\" [] issuer=\"<self>\" (2026-01-15 08:30:53 +0000 UTC to 2036-01-13 08:35:53 +0000 UTC (now=2026-03-24 17:01:26.921351042 +0000 UTC))"
+I0324 17:01:26.921984      11 tlsconfig.go:203] "Loaded serving cert" certName="Generated self signed cert" certDetail="\"localhost@1774371685\" [serving] validServingFor=[127.0.0.1,localhost,localhost] issuer=\"localhost-ca@1774371684\" (2026-03-24 16:01:24 +0000 UTC to 2027-03-24 16:01:24 +0000 UTC (now=2026-03-24 17:01:26.921965907 +0000 UTC))"
+I0324 17:01:26.922959      11 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1774371686\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1774371686\" (2026-03-24 16:01:25 +0000 UTC to 2029-03-24 16:01:25 +0000 UTC (now=2026-03-24 17:01:26.922934194 +0000 UTC))"
+E0324 21:11:22.435828      11 leaderelection.go:448] error retrieving resource lock kube-system/cloud-controller-manager: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+E0325 00:06:25.578163      11 leaderelection.go:448] error retrieving resource lock kube-system/cloud-controller-manager: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+E0325 01:11:28.668225      11 leaderelection.go:448] error retrieving resource lock kube-system/cloud-controller-manager: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+E0325 02:56:30.079719      11 leaderelection.go:448] error retrieving resource lock kube-system/cloud-controller-manager: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+E0325 02:56:37.523561      11 leaderelection.go:448] error retrieving resource lock kube-system/cloud-controller-manager: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+E0325 03:16:28.763166      11 leaderelection.go:448] error retrieving resource lock kube-system/cloud-controller-manager: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+E0325 03:16:36.242267      11 leaderelection.go:448] error retrieving resource lock kube-system/cloud-controller-manager: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+I0325 03:21:45.807256      11 leaderelection.go:271] successfully acquired lease kube-system/cloud-controller-manager
+I0325 03:21:45.841225      11 event.go:389] "Event occurred" object="kube-system/cloud-controller-manager" fieldPath="" kind="Lease" apiVersion="coordination.k8s.io/v1" type="Normal" reason="LeaderElection" message="backman-wc-control-plane-cwpdb_d46949e0-2250-41df-8ec7-4c5b881c1278 became leader"
+I0325 03:21:45.963384      11 openstack.go:424] Setting up informers for Cloud
+I0325 03:21:45.967681      11 controllermanager.go:310] Starting "cloud-node-controller"
+I0325 03:21:46.140797      11 controllermanager.go:329] Started "cloud-node-controller"
+I0325 03:21:46.140835      11 controllermanager.go:310] Starting "cloud-node-lifecycle-controller"
+I0325 03:21:46.142886      11 node_controller.go:176] Sending events to api server.
+I0325 03:21:46.144021      11 node_controller.go:185] Waiting for informer caches to sync
+I0325 03:21:46.147173      11 controllermanager.go:329] Started "cloud-node-lifecycle-controller"
+I0325 03:21:46.147201      11 controllermanager.go:310] Starting "service-lb-controller"
+I0325 03:21:46.152483      11 node_lifecycle_controller.go:112] Sending events to api server
+W0325 03:21:46.182754      11 openstack.go:362] Failed to create an OpenStack Secret client: unable to initialize keymanager client for region RegionOne: No suitable endpoint could be found in the service catalog.
+I0325 03:21:46.182922      11 openstack.go:373] Claiming to support LoadBalancer
+I0325 03:21:46.183123      11 controllermanager.go:329] Started "service-lb-controller"
+I0325 03:21:46.183219      11 controllermanager.go:310] Starting "node-route-controller"
+I0325 03:21:46.183833      11 controller.go:235] Starting service controller
+I0325 03:21:46.188496      11 shared_informer.go:349] "Waiting for caches to sync" controller="service"
+W0325 03:21:46.245100      11 openstack.go:408] Error initialising Routes support: router-id not set in cloud provider config
+W0325 03:21:46.245163      11 core.go:111] --configure-cloud-routes is set, but cloud provider does not support routes. Will not configure cloud provider routes.
+W0325 03:21:46.245182      11 controllermanager.go:317] Skipping "node-route-controller"
+I0325 03:21:46.312196      11 reflector.go:436] "Caches populated" type="*v1.Service" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0325 03:21:46.315293      11 reflector.go:436] "Caches populated" type="*v1.Node" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0325 03:21:46.388684      11 shared_informer.go:356] "Caches are synced" controller="service"
+I0325 03:21:46.388961      11 controller.go:723] Syncing backends for all LB services.
+I0325 03:21:46.388996      11 controller.go:727] Successfully updated 0 out of 0 load balancers to direct traffic to the updated set of nodes
+I0325 03:21:46.389019      11 controller.go:723] Syncing backends for all LB services.
+I0325 03:21:46.389060      11 controller.go:727] Successfully updated 0 out of 0 load balancers to direct traffic to the updated set of nodes
+I0325 03:21:46.389078      11 controller.go:723] Syncing backends for all LB services.
+I0325 03:21:46.389087      11 controller.go:727] Successfully updated 0 out of 0 load balancers to direct traffic to the updated set of nodes
+I0325 03:21:46.389096      11 controller.go:723] Syncing backends for all LB services.
+I0325 03:21:46.389104      11 controller.go:727] Successfully updated 0 out of 0 load balancers to direct traffic to the updated set of nodes
+I0325 03:21:46.389112      11 controller.go:723] Syncing backends for all LB services.
+I0325 03:21:46.389120      11 controller.go:727] Successfully updated 0 out of 0 load balancers to direct traffic to the updated set of nodes
+I0325 03:21:46.389128      11 controller.go:723] Syncing backends for all LB services.
+I0325 03:21:46.389135      11 controller.go:727] Successfully updated 0 out of 0 load balancers to direct traffic to the updated set of nodes
+I0325 03:21:46.390664      11 controller.go:402] Ensuring load balancer for service ingress-nginx/ingress-nginx-controller
+I0325 03:21:46.390860      11 loadbalancer.go:1863] "EnsureLoadBalancer" cluster="backman-wc" service="ingress-nginx/ingress-nginx-controller"
+I0325 03:21:46.394099      11 event.go:389] "Event occurred" object="ingress-nginx/ingress-nginx-controller" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuringLoadBalancer" message="Ensuring load balancer"
+I0325 03:21:47.228127      11 controller.go:402] Ensuring load balancer for service traefik-system/traefik
+I0325 03:21:47.228180      11 loadbalancer.go:1863] "EnsureLoadBalancer" cluster="backman-wc" service="traefik-system/traefik"
+I0325 03:21:47.228404      11 event.go:389] "Event occurred" object="ingress-nginx/ingress-nginx-controller" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuredLoadBalancer" message="Ensured load balancer"
+I0325 03:21:47.228423      11 event.go:389] "Event occurred" object="traefik-system/traefik" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuringLoadBalancer" message="Ensuring load balancer"
+I0325 03:21:47.611771      11 node_controller.go:271] Update 6 nodes status took 1.264200967s.
+I0325 03:21:48.028637      11 event.go:389] "Event occurred" object="traefik-system/traefik" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuredLoadBalancer" message="Ensured load balancer"
+I0325 03:26:48.873442      11 node_controller.go:271] Update 6 nodes status took 1.261046872s.
+I0325 03:31:50.228938      11 node_controller.go:271] Update 6 nodes status took 1.355234836s.
+I0325 03:36:51.610697      11 node_controller.go:271] Update 6 nodes status took 1.380958302s.
+I0325 03:41:52.770073      11 node_controller.go:271] Update 6 nodes status took 1.157171611s.
+I0325 03:46:54.145361      11 node_controller.go:271] Update 6 nodes status took 1.374028684s.
+I0325 03:51:55.547368      11 node_controller.go:271] Update 6 nodes status took 1.401244245s.
+I0325 03:56:56.976822      11 node_controller.go:271] Update 6 nodes status took 1.428383374s.
+I0325 04:01:58.241710      11 node_controller.go:271] Update 6 nodes status took 1.264301225s.
+I0325 04:06:59.646630      11 node_controller.go:271] Update 6 nodes status took 1.404591766s.
+I0325 04:12:01.002263      11 node_controller.go:271] Update 6 nodes status took 1.355424442s.
+I0325 04:17:02.293202      11 node_controller.go:271] Update 6 nodes status took 1.289995542s.
+I0325 04:22:03.683109      11 node_controller.go:271] Update 6 nodes status took 1.389093298s.
+I0325 04:27:05.334191      11 node_controller.go:271] Update 6 nodes status took 1.650323145s.
+I0325 04:32:06.759045      11 node_controller.go:271] Update 6 nodes status took 1.423950174s.
+I0325 04:37:08.070797      11 node_controller.go:271] Update 6 nodes status took 1.311492621s.
+I0325 04:42:09.350059      11 node_controller.go:271] Update 6 nodes status took 1.278962557s.
+I0325 04:47:10.619677      11 node_controller.go:271] Update 6 nodes status took 1.26921454s.
+I0325 04:52:11.862712      11 node_controller.go:271] Update 6 nodes status took 1.242134512s.
+I0325 04:57:13.215244      11 node_controller.go:271] Update 6 nodes status took 1.351388608s.
+I0325 05:02:14.513503      11 node_controller.go:271] Update 6 nodes status took 1.297516352s.
+I0325 05:07:15.760047      11 node_controller.go:271] Update 6 nodes status took 1.245895917s.
+I0325 05:12:17.008473      11 node_controller.go:271] Update 6 nodes status took 1.247172159s.
+I0325 05:17:18.707220      11 node_controller.go:271] Update 6 nodes status took 1.698159311s.
+I0325 05:22:20.446703      11 node_controller.go:271] Update 6 nodes status took 1.739269429s.
+I0325 05:27:26.441178      11 node_controller.go:271] Update 6 nodes status took 5.99395079s.
+I0325 05:32:27.848731      11 node_controller.go:271] Update 6 nodes status took 1.406641844s.
+I0325 05:37:29.154229      11 node_controller.go:271] Update 6 nodes status took 1.305046365s.
+I0325 05:42:30.548977      11 node_controller.go:271] Update 6 nodes status took 1.39393294s.
+I0325 05:47:32.244550      11 node_controller.go:271] Update 6 nodes status took 1.694728918s.
+I0325 05:52:33.907232      11 node_controller.go:271] Update 6 nodes status took 1.662347808s.
+I0325 05:57:35.675405      11 node_controller.go:271] Update 6 nodes status took 1.766396655s.
+I0325 06:02:37.005466      11 node_controller.go:271] Update 6 nodes status took 1.329310092s.
+I0325 06:07:38.383682      11 node_controller.go:271] Update 6 nodes status took 1.377211894s.
+I0325 06:12:39.646709      11 node_controller.go:271] Update 6 nodes status took 1.261971035s.
+I0325 06:14:37.964096      11 reflector.go:568] "Warning: watch ended with error" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290" type="*v1.ConfigMap" err="an error on the server (\"unable to decode an event from the watch stream: http2: client connection force closed via ClientConn.Close\") has prevented the request from succeeding"
+I0325 06:14:37.964665      11 reflector.go:568] "Warning: watch ended with error" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290" type="*v1.ConfigMap" err="an error on the server (\"unable to decode an event from the watch stream: http2: client connection force closed via ClientConn.Close\") has prevented the request from succeeding"
+I0325 06:14:37.964712      11 reflector.go:568] "Warning: watch ended with error" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290" type="*v1.ConfigMap" err="an error on the server (\"unable to decode an event from the watch stream: http2: client connection force closed via ClientConn.Close\") has prevented the request from succeeding"
+I0325 06:14:39.077694      11 reflector.go:436] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0325 06:14:39.364967      11 reflector.go:436] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0325 06:14:39.415191      11 reflector.go:436] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+E0325 06:16:38.134494      11 leaderelection.go:441] Failed to update lock optimistically: Put "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers), falling back to slow path
+E0325 06:16:43.105294      11 leaderelection.go:448] error retrieving resource lock kube-system/cloud-controller-manager: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": context deadline exceeded
+I0325 06:16:43.105427      11 leaderelection.go:297] failed to renew lease kube-system/cloud-controller-manager: context deadline exceeded
+E0325 06:16:43.107641      11 controllermanager.go:265] "leaderelection lost"
+2026/03/25 06:16:43 running command: exit status 1

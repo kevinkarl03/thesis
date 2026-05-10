@@ -1,0 +1,66 @@
+I0319 13:22:33.530688       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+I0319 13:22:33.533877       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+I0319 13:22:33.533886       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+I0319 13:22:33.533895       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+I0319 13:22:33.671726       1 webhook.go:132] "using dynamic certificate generating using CA stored in Secret resource" logger="cert-manager.webhook.webhook" secret_namespace="cert-manager" secret_name="cert-manager-webhook-ca"
+I0319 13:22:33.671779       1 webhook.go:144] "serving insecurely as tls certificate data not provided" logger="cert-manager.webhook.webhook"
+I0319 13:22:33.677143       1 server.go:192] "listening for insecure healthz connections" logger="cert-manager.webhook" address=6080
+I0319 13:22:33.677414       1 server.go:183] "Registering webhook" logger="cert-manager.controller-runtime.webhook" path="/mutate"
+I0319 13:22:33.677530       1 server.go:183] "Registering webhook" logger="cert-manager.controller-runtime.webhook" path="/validate"
+I0319 13:22:33.677621       1 server.go:208] "Starting metrics server" logger="cert-manager.controller-runtime.metrics"
+I0319 13:22:33.677741       1 server.go:247] "Serving metrics server" logger="cert-manager.controller-runtime.metrics" bindAddress="0.0.0.0:9402" secure=false
+I0319 13:22:33.677912       1 server.go:191] "Starting webhook server" logger="cert-manager.controller-runtime.webhook"
+I0319 13:22:33.678035       1 server.go:242] "Serving webhook server" logger="cert-manager.controller-runtime.webhook" host="" port=10250
+E0319 13:22:33.683009       1 dynamic_source.go:221] "Failed to generate serving certificate, retrying..." err="no tls.Certificate available yet, try again later" logger="cert-manager" interval="1s"
+I0319 13:22:33.730916       1 reflector.go:376] Caches populated for *v1.Secret from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0319 13:22:33.734367       1 authority.go:293] "Detected change in CA secret data, update current CA data and notify watches" logger="cert-manager"
+I0319 13:22:34.684037       1 dynamic_source.go:290] "Updated cert-manager TLS certificate" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+I0319 13:22:34.684121       1 dynamic_source.go:172] "Detected root CA rotation - regenerating serving certificates" logger="cert-manager"
+I0319 13:22:34.687555       1 dynamic_source.go:290] "Updated cert-manager TLS certificate" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+W0321 23:41:53.267876       1 reflector.go:492] k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: watch of *v1.Secret ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0321 23:42:04.834130       1 reflector.go:569] k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: failed to list *v1.Secret: Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566": net/http: TLS handshake timeout
+I0321 23:42:04.834229       1 trace.go:236] Trace[108968719]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251 (21-Mar-2026 23:41:54.831) (total time: 10003ms):
+Trace[108968719]: ---"Objects listed" error:Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566": net/http: TLS handshake timeout 10002ms (23:42:04.834)
+Trace[108968719]: [10.003066692s] [10.003066692s] END
+E0321 23:42:04.834280       1 reflector.go:166] "Unhandled Error" err="k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: Failed to watch *v1.Secret: failed to list *v1.Secret: Get \"https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566\": net/http: TLS handshake timeout" logger="UnhandledError"
+W0321 23:42:17.333477       1 reflector.go:569] k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: failed to list *v1.Secret: Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566": net/http: TLS handshake timeout
+I0321 23:42:17.333580       1 trace.go:236] Trace[1152898692]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251 (21-Mar-2026 23:42:07.328) (total time: 10005ms):
+Trace[1152898692]: ---"Objects listed" error:Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566": net/http: TLS handshake timeout 10005ms (23:42:17.333)
+Trace[1152898692]: [10.005143503s] [10.005143503s] END
+E0321 23:42:17.333679       1 reflector.go:166] "Unhandled Error" err="k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: Failed to watch *v1.Secret: failed to list *v1.Secret: Get \"https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566\": net/http: TLS handshake timeout" logger="UnhandledError"
+W0321 23:42:30.740197       1 reflector.go:569] k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: failed to list *v1.Secret: Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566": net/http: TLS handshake timeout
+I0321 23:42:30.740286       1 trace.go:236] Trace[1932992516]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251 (21-Mar-2026 23:42:20.736) (total time: 10003ms):
+Trace[1932992516]: ---"Objects listed" error:Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566": net/http: TLS handshake timeout 10003ms (23:42:30.740)
+Trace[1932992516]: [10.003502846s] [10.003502846s] END
+E0321 23:42:30.740318       1 reflector.go:166] "Unhandled Error" err="k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: Failed to watch *v1.Secret: failed to list *v1.Secret: Get \"https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566\": net/http: TLS handshake timeout" logger="UnhandledError"
+W0321 23:42:49.402308       1 reflector.go:569] k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: failed to list *v1.Secret: Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566": net/http: TLS handshake timeout
+I0321 23:42:49.403220       1 trace.go:236] Trace[1648018726]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251 (21-Mar-2026 23:42:39.399) (total time: 10003ms):
+Trace[1648018726]: ---"Objects listed" error:Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566": net/http: TLS handshake timeout 10002ms (23:42:49.402)
+Trace[1648018726]: [10.003031485s] [10.003031485s] END
+E0321 23:42:49.403479       1 reflector.go:166] "Unhandled Error" err="k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: Failed to watch *v1.Secret: failed to list *v1.Secret: Get \"https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=31584566\": net/http: TLS handshake timeout" logger="UnhandledError"
+I0321 23:43:09.864539       1 reflector.go:376] Caches populated for *v1.Secret from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0324 05:22:34.000456       1 dynamic_source.go:176] "cert-manager webhook certificate requires renewal, regenerating" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+I0324 05:22:34.004479       1 dynamic_source.go:290] "Updated cert-manager TLS certificate" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+I0328 21:22:34.000772       1 dynamic_source.go:176] "cert-manager webhook certificate requires renewal, regenerating" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+I0328 21:22:34.005794       1 dynamic_source.go:290] "Updated cert-manager TLS certificate" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+I0402 13:22:34.001041       1 dynamic_source.go:176] "cert-manager webhook certificate requires renewal, regenerating" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+I0402 13:22:34.005001       1 dynamic_source.go:290] "Updated cert-manager TLS certificate" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+I0407 05:22:34.000981       1 dynamic_source.go:176] "cert-manager webhook certificate requires renewal, regenerating" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+I0407 05:22:34.005373       1 dynamic_source.go:290] "Updated cert-manager TLS certificate" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+W0408 01:09:39.034503       1 reflector.go:492] k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: watch of *v1.Secret ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0408 01:09:53.465185       1 reflector.go:569] k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: failed to list *v1.Secret: Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=39703866": net/http: TLS handshake timeout
+I0408 01:09:53.465341       1 trace.go:236] Trace[876746880]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251 (08-Apr-2026 01:09:40.358) (total time: 13106ms):
+Trace[876746880]: ---"Objects listed" error:Get "https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=39703866": net/http: TLS handshake timeout 13106ms (01:09:53.465)
+Trace[876746880]: [13.106297332s] [13.106297332s] END
+E0408 01:09:53.465435       1 reflector.go:166] "Unhandled Error" err="k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: Failed to watch *v1.Secret: failed to list *v1.Secret: Get \"https://10.233.0.1:443/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=39703866\": net/http: TLS handshake timeout" logger="UnhandledError"
+I0408 01:10:20.188718       1 trace.go:236] Trace[2081409105]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251 (08-Apr-2026 01:09:56.442) (total time: 23745ms):
+Trace[2081409105]: ---"Objects listed" error:<nil> 23745ms (01:10:20.188)
+Trace[2081409105]: [23.745840924s] [23.745840924s] END
+I0408 01:10:20.188774       1 reflector.go:376] Caches populated for *v1.Secret from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+W0408 01:14:03.166234       1 reflector.go:492] k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251: watch of *v1.Secret ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+I0408 01:14:16.161328       1 trace.go:236] Trace[855384800]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251 (08-Apr-2026 01:14:04.441) (total time: 11719ms):
+Trace[855384800]: ---"Objects listed" error:<nil> 11719ms (01:14:16.161)
+Trace[855384800]: [11.719349655s] [11.719349655s] END
+I0408 01:14:16.161360       1 reflector.go:376] Caches populated for *v1.Secret from k8s.io/client-go@v0.32.0/tools/cache/reflector.go:251
+I0411 21:22:34.001158       1 dynamic_source.go:176] "cert-manager webhook certificate requires renewal, regenerating" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]
+I0411 21:22:34.005832       1 dynamic_source.go:290] "Updated cert-manager TLS certificate" logger="cert-manager" DNSNames=["cert-manager-webhook","cert-manager-webhook.cert-manager","cert-manager-webhook.cert-manager.svc"]

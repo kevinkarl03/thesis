@@ -1,0 +1,386 @@
+2025-12-11T09:54:24.716051+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:25.303966+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-wzbxuydqqbhbcalekheqzcuozzljlcbr ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446864.8756006-3391-51354207821247/AnsiballZ_command.py'
+2025-12-11T09:54:25.304733+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:25.475400+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:26.076293+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ibquxjiswzibxjcgfudiiphuydhwscku ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446865.657484-3399-212177883133980/AnsiballZ_file.py'
+2025-12-11T09:54:26.077088+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:26.257137+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:26.796315+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-izcdhwpuidzvibyufzfppcnvdjkwjicy ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446866.3772936-3399-224744806489629/AnsiballZ_file.py'
+2025-12-11T09:54:26.797056+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:26.977152+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:27.527766+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-jbscxzceuiexemllmvssrpmgfftmgtcx ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446867.1002374-3399-114556437389703/AnsiballZ_file.py'
+2025-12-11T09:54:27.527927+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:27.708256+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:28.290757+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-slovpztlveplsjjdbnrfgsgaewuertwx ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446867.8692887-3419-150793123644363/AnsiballZ_file.py'
+2025-12-11T09:54:28.291485+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:28.466400+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:29.006314+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-qindpwadpzosfizafvccdldxzibyxvak ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446868.5865197-3419-182637323633752/AnsiballZ_file.py'
+2025-12-11T09:54:29.006486+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:29.185438+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:29.771099+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ievrwcsigrrsublfrpxelqbczrgxpcla ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446869.349202-3433-251961191657450/AnsiballZ_command.py'
+2025-12-11T09:54:29.771890+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:29.979327+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:30.552166+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-pvaqjazbzytqqjvuausjpbzonesyspts ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446870.1344392-3441-70706833658306/AnsiballZ_command.py'
+2025-12-11T09:54:30.552872+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:30.732743+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:31.371864+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-dpykgumhpvvatofvgzzyzoqpkggcazez ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446870.9365363-3453-127857942239262/AnsiballZ_systemd.py'
+2025-12-11T09:54:31.372583+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:32.044122+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:32.631026+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-nngojyxjwmtqkuwbdodbiqfcdhipkopc ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446872.20988-3461-165785706471416/AnsiballZ_systemd.py'
+2025-12-11T09:54:32.631869+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:33.834743+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:34.526390+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-afkxeulrgoibloxawuyeamxigdzwhazx ; http_proxy=\'\' https_proxy=\'\' no_proxy=\'\' HTTP_PROXY=\'\' HTTPS_PROXY=\'\' NO_PROXY=\'\' PYTHONPATH=\'\' /usr/bin/python3 /tmp/.ansible/ansible-tmp-1765446874.102787-3471-12939785322653/AnsiballZ_command.py'
+2025-12-11T09:54:34.527277+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:35.087648+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:36.840248+00:00 localhost sudo:  builder : PWD=/tmp/goss ; USER=root ; COMMAND=/tmp/goss-0.3.23-linux-amd64 --gossfile goss/goss.yaml --vars /tmp/goss/goss-vars.yaml --vars-inline {"ARCH":"amd64","OS":"ubuntu","OS_VERSION":"2404","PROVIDER":"qemu","containerd_version":"1.7.27","kubernetes_cni_deb_version":"","kubernetes_cni_rpm_version":"","kubernetes_cni_source_type":"pkg","kubernetes_cni_version":"1.2.0","kubernetes_deb_version":"1.33.6-1.1","kubernetes_rpm_version":"1.33.6","kubernetes_source_type":"pkg","kubernetes_version":"1.33.6"} validate --retry-timeout 0s --sleep 1s -f json -o pretty
+2025-12-11T09:54:36.841423+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:37.245469+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:37.807067+00:00 localhost sudo:  builder : PWD=/home/builder ; USER=root ; COMMAND=/usr/bin/sh -c 'userdel -f -r builder && rm -f /etc/sudoers.d/builder && rm -f /etc/sudoers.d/90-cloud-init-users && shutdown -P now'
+2025-12-11T09:54:37.808426+00:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by builder(uid=1000)
+2025-12-11T09:54:37.845931+00:00 localhost userdel[6782]: delete user 'builder'
+2025-12-11T09:54:37.847545+00:00 localhost userdel[6782]: delete 'builder' from group 'adm'
+2025-12-11T09:54:37.847632+00:00 localhost userdel[6782]: delete 'builder' from group 'cdrom'
+2025-12-11T09:54:37.847662+00:00 localhost userdel[6782]: delete 'builder' from group 'sudo'
+2025-12-11T09:54:37.847690+00:00 localhost userdel[6782]: delete 'builder' from group 'dip'
+2025-12-11T09:54:37.847715+00:00 localhost userdel[6782]: delete 'builder' from group 'plugdev'
+2025-12-11T09:54:37.847749+00:00 localhost userdel[6782]: delete 'builder' from group 'lxd'
+2025-12-11T09:54:37.847776+00:00 localhost userdel[6782]: removed group 'builder' owned by 'builder'
+2025-12-11T09:54:37.847803+00:00 localhost userdel[6782]: removed shadow group 'builder' owned by 'builder'
+2025-12-11T09:54:37.847829+00:00 localhost userdel[6782]: delete 'builder' from shadow group 'adm'
+2025-12-11T09:54:37.847867+00:00 localhost userdel[6782]: delete 'builder' from shadow group 'cdrom'
+2025-12-11T09:54:37.847893+00:00 localhost userdel[6782]: delete 'builder' from shadow group 'sudo'
+2025-12-11T09:54:37.847919+00:00 localhost userdel[6782]: delete 'builder' from shadow group 'dip'
+2025-12-11T09:54:37.847946+00:00 localhost userdel[6782]: delete 'builder' from shadow group 'plugdev'
+2025-12-11T09:54:37.847978+00:00 localhost userdel[6782]: delete 'builder' from shadow group 'lxd'
+2025-12-11T09:54:37.899458+00:00 localhost systemd-logind[675]: The system will power off now!
+2025-12-11T09:54:37.908954+00:00 localhost sudo: pam_unix(sudo:session): session closed for user root
+2025-12-11T09:54:37.920218+00:00 localhost systemd-logind[675]: System is powering down.
+2025-12-11T09:54:37.951668+00:00 localhost sshd[844]: pam_unix(sshd:session): session closed for user builder
+2026-04-15T14:35:01.858163+00:00 backman-mc-control-plane-8kb26 CRON[4492]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T14:35:01.867138+00:00 backman-mc-control-plane-8kb26 CRON[4492]: pam_unix(cron:session): session closed for user root
+2026-04-15T14:45:01.882483+00:00 backman-mc-control-plane-8kb26 CRON[6200]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T14:45:01.888412+00:00 backman-mc-control-plane-8kb26 CRON[6200]: pam_unix(cron:session): session closed for user root
+2026-04-15T14:55:01.902461+00:00 backman-mc-control-plane-8kb26 CRON[7437]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T14:55:01.910866+00:00 backman-mc-control-plane-8kb26 CRON[7437]: pam_unix(cron:session): session closed for user root
+2026-04-15T15:05:01.921760+00:00 backman-mc-control-plane-8kb26 CRON[8230]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T15:05:01.926688+00:00 backman-mc-control-plane-8kb26 CRON[8230]: pam_unix(cron:session): session closed for user root
+2026-04-15T15:15:01.945006+00:00 backman-mc-control-plane-8kb26 CRON[9295]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T15:15:01.956040+00:00 backman-mc-control-plane-8kb26 CRON[9295]: pam_unix(cron:session): session closed for user root
+2026-04-15T15:17:01.970770+00:00 backman-mc-control-plane-8kb26 CRON[9407]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T15:17:01.985617+00:00 backman-mc-control-plane-8kb26 CRON[9407]: pam_unix(cron:session): session closed for user root
+2026-04-15T15:25:01.998524+00:00 backman-mc-control-plane-8kb26 CRON[9844]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T15:25:02.042679+00:00 backman-mc-control-plane-8kb26 CRON[9844]: pam_unix(cron:session): session closed for user root
+2026-04-15T15:33:03.013534+00:00 backman-mc-control-plane-8kb26 sshd[10299]: Connection closed by 172.16.0.239 port 37922 [preauth]
+2026-04-15T15:33:24.380137+00:00 backman-mc-control-plane-8kb26 sshd[10303]: Accepted publickey for ubuntu from 172.16.0.239 port 56028 ssh2: ED25519 SHA256:N2aBaDJXDM0nFdAG9gSdh/THEdo/o009JHXuzXNVZ+0
+2026-04-15T15:33:24.385772+00:00 backman-mc-control-plane-8kb26 sshd[10303]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-04-15T15:33:24.429663+00:00 backman-mc-control-plane-8kb26 systemd-logind[910]: New session 8 of user ubuntu.
+2026-04-15T15:33:24.494426+00:00 backman-mc-control-plane-8kb26 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-04-15T15:33:35.113998+00:00 backman-mc-control-plane-8kb26 sshd[10303]: pam_unix(sshd:session): session closed for user ubuntu
+2026-04-15T15:33:35.125511+00:00 backman-mc-control-plane-8kb26 systemd-logind[910]: Session 8 logged out. Waiting for processes to exit.
+2026-04-15T15:33:35.131568+00:00 backman-mc-control-plane-8kb26 systemd-logind[910]: Removed session 8.
+2026-04-15T15:35:01.020304+00:00 backman-mc-control-plane-8kb26 CRON[10754]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T15:35:01.030510+00:00 backman-mc-control-plane-8kb26 CRON[10754]: pam_unix(cron:session): session closed for user root
+2026-04-15T15:45:01.042335+00:00 backman-mc-control-plane-8kb26 CRON[11605]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T15:45:01.087092+00:00 backman-mc-control-plane-8kb26 CRON[11605]: pam_unix(cron:session): session closed for user root
+2026-04-15T15:55:01.065541+00:00 backman-mc-control-plane-8kb26 CRON[12191]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T15:55:01.070512+00:00 backman-mc-control-plane-8kb26 CRON[12191]: pam_unix(cron:session): session closed for user root
+2026-04-15T16:05:01.082277+00:00 backman-mc-control-plane-8kb26 CRON[12904]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T16:05:01.126778+00:00 backman-mc-control-plane-8kb26 CRON[12904]: pam_unix(cron:session): session closed for user root
+2026-04-15T16:15:01.099582+00:00 backman-mc-control-plane-8kb26 CRON[13434]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T16:15:01.106105+00:00 backman-mc-control-plane-8kb26 CRON[13434]: pam_unix(cron:session): session closed for user root
+2026-04-15T16:17:01.115849+00:00 backman-mc-control-plane-8kb26 CRON[13544]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T16:17:01.167119+00:00 backman-mc-control-plane-8kb26 CRON[13544]: pam_unix(cron:session): session closed for user root
+2026-04-15T16:25:01.134128+00:00 backman-mc-control-plane-8kb26 CRON[13973]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T16:25:01.182706+00:00 backman-mc-control-plane-8kb26 CRON[13973]: pam_unix(cron:session): session closed for user root
+2026-04-15T16:35:01.150774+00:00 backman-mc-control-plane-8kb26 CRON[14700]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T16:35:01.198179+00:00 backman-mc-control-plane-8kb26 CRON[14700]: pam_unix(cron:session): session closed for user root
+2026-04-15T16:45:01.171146+00:00 backman-mc-control-plane-8kb26 CRON[15264]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T16:45:01.178873+00:00 backman-mc-control-plane-8kb26 CRON[15264]: pam_unix(cron:session): session closed for user root
+2026-04-15T16:55:01.192641+00:00 backman-mc-control-plane-8kb26 CRON[15832]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T16:55:01.199731+00:00 backman-mc-control-plane-8kb26 CRON[15832]: pam_unix(cron:session): session closed for user root
+2026-04-15T17:05:01.212285+00:00 backman-mc-control-plane-8kb26 CRON[16536]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T17:05:01.220683+00:00 backman-mc-control-plane-8kb26 CRON[16536]: pam_unix(cron:session): session closed for user root
+2026-04-15T17:15:01.230419+00:00 backman-mc-control-plane-8kb26 CRON[17072]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T17:15:01.236472+00:00 backman-mc-control-plane-8kb26 CRON[17072]: pam_unix(cron:session): session closed for user root
+2026-04-15T17:17:01.248729+00:00 backman-mc-control-plane-8kb26 CRON[17179]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T17:17:01.280811+00:00 backman-mc-control-plane-8kb26 CRON[17179]: pam_unix(cron:session): session closed for user root
+2026-04-15T17:25:01.270607+00:00 backman-mc-control-plane-8kb26 CRON[17613]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T17:25:01.277377+00:00 backman-mc-control-plane-8kb26 CRON[17613]: pam_unix(cron:session): session closed for user root
+2026-04-15T17:35:01.292352+00:00 backman-mc-control-plane-8kb26 CRON[18345]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T17:35:01.318252+00:00 backman-mc-control-plane-8kb26 CRON[18345]: pam_unix(cron:session): session closed for user root
+2026-04-15T17:45:01.312530+00:00 backman-mc-control-plane-8kb26 CRON[18873]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T17:45:01.346578+00:00 backman-mc-control-plane-8kb26 CRON[18873]: pam_unix(cron:session): session closed for user root
+2026-04-15T17:55:01.336548+00:00 backman-mc-control-plane-8kb26 CRON[19437]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T17:55:01.500538+00:00 backman-mc-control-plane-8kb26 CRON[19437]: pam_unix(cron:session): session closed for user root
+2026-04-15T18:05:01.366226+00:00 backman-mc-control-plane-8kb26 CRON[20145]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T18:05:01.372795+00:00 backman-mc-control-plane-8kb26 CRON[20145]: pam_unix(cron:session): session closed for user root
+2026-04-15T18:15:01.385078+00:00 backman-mc-control-plane-8kb26 CRON[20678]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T18:15:01.423353+00:00 backman-mc-control-plane-8kb26 CRON[20678]: pam_unix(cron:session): session closed for user root
+2026-04-15T18:17:01.405974+00:00 backman-mc-control-plane-8kb26 CRON[20786]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T18:17:01.411377+00:00 backman-mc-control-plane-8kb26 CRON[20786]: pam_unix(cron:session): session closed for user root
+2026-04-15T18:25:01.425873+00:00 backman-mc-control-plane-8kb26 CRON[21215]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T18:25:01.436069+00:00 backman-mc-control-plane-8kb26 CRON[21215]: pam_unix(cron:session): session closed for user root
+2026-04-15T18:35:01.443409+00:00 backman-mc-control-plane-8kb26 CRON[21949]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T18:35:01.480739+00:00 backman-mc-control-plane-8kb26 CRON[21949]: pam_unix(cron:session): session closed for user root
+2026-04-15T18:45:01.462489+00:00 backman-mc-control-plane-8kb26 CRON[22480]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T18:45:01.511748+00:00 backman-mc-control-plane-8kb26 CRON[22480]: pam_unix(cron:session): session closed for user root
+2026-04-15T18:55:01.483611+00:00 backman-mc-control-plane-8kb26 CRON[23042]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T18:55:01.493615+00:00 backman-mc-control-plane-8kb26 CRON[23042]: pam_unix(cron:session): session closed for user root
+2026-04-15T19:05:01.504905+00:00 backman-mc-control-plane-8kb26 CRON[23739]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T19:05:01.537060+00:00 backman-mc-control-plane-8kb26 CRON[23739]: pam_unix(cron:session): session closed for user root
+2026-04-15T19:15:01.523226+00:00 backman-mc-control-plane-8kb26 CRON[24272]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T19:15:01.600709+00:00 backman-mc-control-plane-8kb26 CRON[24272]: pam_unix(cron:session): session closed for user root
+2026-04-15T19:17:01.538829+00:00 backman-mc-control-plane-8kb26 CRON[24380]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T19:17:01.548125+00:00 backman-mc-control-plane-8kb26 CRON[24380]: pam_unix(cron:session): session closed for user root
+2026-04-15T19:25:01.565713+00:00 backman-mc-control-plane-8kb26 CRON[24813]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T19:25:01.643246+00:00 backman-mc-control-plane-8kb26 CRON[24813]: pam_unix(cron:session): session closed for user root
+2026-04-15T19:35:01.585851+00:00 backman-mc-control-plane-8kb26 CRON[25543]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T19:35:01.660493+00:00 backman-mc-control-plane-8kb26 CRON[25543]: pam_unix(cron:session): session closed for user root
+2026-04-15T19:45:01.603081+00:00 backman-mc-control-plane-8kb26 CRON[26074]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T19:45:01.610351+00:00 backman-mc-control-plane-8kb26 CRON[26074]: pam_unix(cron:session): session closed for user root
+2026-04-15T19:55:01.622064+00:00 backman-mc-control-plane-8kb26 CRON[26635]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T19:55:01.630439+00:00 backman-mc-control-plane-8kb26 CRON[26635]: pam_unix(cron:session): session closed for user root
+2026-04-15T20:05:01.643359+00:00 backman-mc-control-plane-8kb26 CRON[27333]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T20:05:01.686172+00:00 backman-mc-control-plane-8kb26 CRON[27333]: pam_unix(cron:session): session closed for user root
+2026-04-15T20:15:01.665707+00:00 backman-mc-control-plane-8kb26 CRON[27860]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T20:15:01.674808+00:00 backman-mc-control-plane-8kb26 CRON[27860]: pam_unix(cron:session): session closed for user root
+2026-04-15T20:17:01.693574+00:00 backman-mc-control-plane-8kb26 CRON[27970]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T20:17:01.731239+00:00 backman-mc-control-plane-8kb26 CRON[27970]: pam_unix(cron:session): session closed for user root
+2026-04-15T20:25:01.707580+00:00 backman-mc-control-plane-8kb26 CRON[28396]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T20:25:01.751858+00:00 backman-mc-control-plane-8kb26 CRON[28396]: pam_unix(cron:session): session closed for user root
+2026-04-15T20:35:01.726867+00:00 backman-mc-control-plane-8kb26 CRON[29137]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T20:35:01.768496+00:00 backman-mc-control-plane-8kb26 CRON[29137]: pam_unix(cron:session): session closed for user root
+2026-04-15T20:45:01.746762+00:00 backman-mc-control-plane-8kb26 CRON[29671]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T20:45:01.752545+00:00 backman-mc-control-plane-8kb26 CRON[29671]: pam_unix(cron:session): session closed for user root
+2026-04-15T20:55:01.764880+00:00 backman-mc-control-plane-8kb26 CRON[30236]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T20:55:01.772156+00:00 backman-mc-control-plane-8kb26 CRON[30236]: pam_unix(cron:session): session closed for user root
+2026-04-15T21:05:01.784220+00:00 backman-mc-control-plane-8kb26 CRON[30936]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T21:05:01.790752+00:00 backman-mc-control-plane-8kb26 CRON[30936]: pam_unix(cron:session): session closed for user root
+2026-04-15T21:15:01.802519+00:00 backman-mc-control-plane-8kb26 CRON[31488]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T21:15:01.839800+00:00 backman-mc-control-plane-8kb26 CRON[31488]: pam_unix(cron:session): session closed for user root
+2026-04-15T21:17:01.821679+00:00 backman-mc-control-plane-8kb26 CRON[31597]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T21:17:01.831756+00:00 backman-mc-control-plane-8kb26 CRON[31597]: pam_unix(cron:session): session closed for user root
+2026-04-15T21:25:01.849008+00:00 backman-mc-control-plane-8kb26 CRON[32028]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T21:25:01.854872+00:00 backman-mc-control-plane-8kb26 CRON[32028]: pam_unix(cron:session): session closed for user root
+2026-04-15T21:35:01.868956+00:00 backman-mc-control-plane-8kb26 CRON[32758]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T21:35:01.875003+00:00 backman-mc-control-plane-8kb26 CRON[32758]: pam_unix(cron:session): session closed for user root
+2026-04-15T21:45:01.889779+00:00 backman-mc-control-plane-8kb26 CRON[33290]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T21:45:01.918460+00:00 backman-mc-control-plane-8kb26 CRON[33290]: pam_unix(cron:session): session closed for user root
+2026-04-15T21:55:01.911812+00:00 backman-mc-control-plane-8kb26 CRON[33852]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T21:55:01.918230+00:00 backman-mc-control-plane-8kb26 CRON[33852]: pam_unix(cron:session): session closed for user root
+2026-04-15T22:05:01.929811+00:00 backman-mc-control-plane-8kb26 CRON[34558]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T22:05:01.962579+00:00 backman-mc-control-plane-8kb26 CRON[34558]: pam_unix(cron:session): session closed for user root
+2026-04-15T22:15:01.947905+00:00 backman-mc-control-plane-8kb26 CRON[35092]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T22:15:01.955668+00:00 backman-mc-control-plane-8kb26 CRON[35092]: pam_unix(cron:session): session closed for user root
+2026-04-15T22:17:01.965729+00:00 backman-mc-control-plane-8kb26 CRON[35201]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T22:17:01.975224+00:00 backman-mc-control-plane-8kb26 CRON[35201]: pam_unix(cron:session): session closed for user root
+2026-04-15T22:25:01.990315+00:00 backman-mc-control-plane-8kb26 CRON[35633]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T22:25:01.995937+00:00 backman-mc-control-plane-8kb26 CRON[35633]: pam_unix(cron:session): session closed for user root
+2026-04-15T22:35:02.009401+00:00 backman-mc-control-plane-8kb26 CRON[36361]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T22:35:02.018059+00:00 backman-mc-control-plane-8kb26 CRON[36361]: pam_unix(cron:session): session closed for user root
+2026-04-15T22:45:01.032872+00:00 backman-mc-control-plane-8kb26 CRON[36896]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T22:45:01.038701+00:00 backman-mc-control-plane-8kb26 CRON[36896]: pam_unix(cron:session): session closed for user root
+2026-04-15T22:55:01.051821+00:00 backman-mc-control-plane-8kb26 CRON[37455]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T22:55:01.059647+00:00 backman-mc-control-plane-8kb26 CRON[37455]: pam_unix(cron:session): session closed for user root
+2026-04-15T23:05:01.073541+00:00 backman-mc-control-plane-8kb26 CRON[38154]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T23:05:01.078375+00:00 backman-mc-control-plane-8kb26 CRON[38154]: pam_unix(cron:session): session closed for user root
+2026-04-15T23:15:01.093890+00:00 backman-mc-control-plane-8kb26 CRON[38685]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T23:15:01.100793+00:00 backman-mc-control-plane-8kb26 CRON[38685]: pam_unix(cron:session): session closed for user root
+2026-04-15T23:17:01.110864+00:00 backman-mc-control-plane-8kb26 CRON[38793]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T23:17:01.152164+00:00 backman-mc-control-plane-8kb26 CRON[38793]: pam_unix(cron:session): session closed for user root
+2026-04-15T23:25:01.131394+00:00 backman-mc-control-plane-8kb26 CRON[39218]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T23:25:01.163781+00:00 backman-mc-control-plane-8kb26 CRON[39218]: pam_unix(cron:session): session closed for user root
+2026-04-15T23:35:01.152400+00:00 backman-mc-control-plane-8kb26 CRON[39949]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T23:35:01.188655+00:00 backman-mc-control-plane-8kb26 CRON[39949]: pam_unix(cron:session): session closed for user root
+2026-04-15T23:45:01.174889+00:00 backman-mc-control-plane-8kb26 CRON[40482]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T23:45:01.179994+00:00 backman-mc-control-plane-8kb26 CRON[40482]: pam_unix(cron:session): session closed for user root
+2026-04-15T23:55:01.195158+00:00 backman-mc-control-plane-8kb26 CRON[41042]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T23:55:01.201707+00:00 backman-mc-control-plane-8kb26 CRON[41042]: pam_unix(cron:session): session closed for user root
+2026-04-15T23:59:01.212068+00:00 backman-mc-control-plane-8kb26 CRON[41260]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-15T23:59:01.217448+00:00 backman-mc-control-plane-8kb26 CRON[41260]: pam_unix(cron:session): session closed for user root
+2026-04-16T00:05:01.230466+00:00 backman-mc-control-plane-8kb26 CRON[41764]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T00:05:01.244706+00:00 backman-mc-control-plane-8kb26 CRON[41764]: pam_unix(cron:session): session closed for user root
+2026-04-16T00:15:01.247953+00:00 backman-mc-control-plane-8kb26 CRON[42308]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T00:15:01.253985+00:00 backman-mc-control-plane-8kb26 CRON[42308]: pam_unix(cron:session): session closed for user root
+2026-04-16T00:17:01.263957+00:00 backman-mc-control-plane-8kb26 CRON[42417]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T00:17:01.303134+00:00 backman-mc-control-plane-8kb26 CRON[42417]: pam_unix(cron:session): session closed for user root
+2026-04-16T00:25:01.281823+00:00 backman-mc-control-plane-8kb26 CRON[42843]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T00:25:01.287022+00:00 backman-mc-control-plane-8kb26 CRON[42843]: pam_unix(cron:session): session closed for user root
+2026-04-16T00:35:01.301831+00:00 backman-mc-control-plane-8kb26 CRON[43577]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T00:35:01.308995+00:00 backman-mc-control-plane-8kb26 CRON[43577]: pam_unix(cron:session): session closed for user root
+2026-04-16T00:45:01.323895+00:00 backman-mc-control-plane-8kb26 CRON[44110]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T00:45:01.329457+00:00 backman-mc-control-plane-8kb26 CRON[44110]: pam_unix(cron:session): session closed for user root
+2026-04-16T00:55:01.344459+00:00 backman-mc-control-plane-8kb26 CRON[44647]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T00:55:01.347686+00:00 backman-mc-control-plane-8kb26 CRON[44647]: pam_unix(cron:session): session closed for user root
+2026-04-16T01:05:01.360772+00:00 backman-mc-control-plane-8kb26 CRON[45392]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T01:05:01.375279+00:00 backman-mc-control-plane-8kb26 CRON[45392]: pam_unix(cron:session): session closed for user root
+2026-04-16T01:15:01.382673+00:00 backman-mc-control-plane-8kb26 CRON[45929]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T01:15:01.390889+00:00 backman-mc-control-plane-8kb26 CRON[45929]: pam_unix(cron:session): session closed for user root
+2026-04-16T01:17:01.403008+00:00 backman-mc-control-plane-8kb26 CRON[46038]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T01:17:01.435079+00:00 backman-mc-control-plane-8kb26 CRON[46038]: pam_unix(cron:session): session closed for user root
+2026-04-16T01:25:01.422483+00:00 backman-mc-control-plane-8kb26 CRON[46463]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T01:25:01.450384+00:00 backman-mc-control-plane-8kb26 CRON[46463]: pam_unix(cron:session): session closed for user root
+2026-04-16T01:35:01.439879+00:00 backman-mc-control-plane-8kb26 CRON[47193]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T01:35:01.454869+00:00 backman-mc-control-plane-8kb26 CRON[47193]: pam_unix(cron:session): session closed for user root
+2026-04-16T01:45:01.457351+00:00 backman-mc-control-plane-8kb26 CRON[47729]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T01:45:01.463549+00:00 backman-mc-control-plane-8kb26 CRON[47729]: pam_unix(cron:session): session closed for user root
+2026-04-16T01:55:01.477120+00:00 backman-mc-control-plane-8kb26 CRON[49291]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T01:55:01.482436+00:00 backman-mc-control-plane-8kb26 CRON[49291]: pam_unix(cron:session): session closed for user root
+2026-04-16T02:05:01.495264+00:00 backman-mc-control-plane-8kb26 CRON[49996]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T02:05:01.501743+00:00 backman-mc-control-plane-8kb26 CRON[49996]: pam_unix(cron:session): session closed for user root
+2026-04-16T02:15:01.515422+00:00 backman-mc-control-plane-8kb26 CRON[50528]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T02:15:01.521534+00:00 backman-mc-control-plane-8kb26 CRON[50528]: pam_unix(cron:session): session closed for user root
+2026-04-16T02:17:01.530842+00:00 backman-mc-control-plane-8kb26 CRON[50635]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T02:17:01.572891+00:00 backman-mc-control-plane-8kb26 CRON[50635]: pam_unix(cron:session): session closed for user root
+2026-04-16T02:25:01.554134+00:00 backman-mc-control-plane-8kb26 CRON[51063]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T02:25:01.587761+00:00 backman-mc-control-plane-8kb26 CRON[51063]: pam_unix(cron:session): session closed for user root
+2026-04-16T02:35:01.572353+00:00 backman-mc-control-plane-8kb26 CRON[51791]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T02:35:01.579094+00:00 backman-mc-control-plane-8kb26 CRON[51791]: pam_unix(cron:session): session closed for user root
+2026-04-16T02:45:01.593512+00:00 backman-mc-control-plane-8kb26 CRON[52323]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T02:45:01.631430+00:00 backman-mc-control-plane-8kb26 CRON[52323]: pam_unix(cron:session): session closed for user root
+2026-04-16T02:55:01.615522+00:00 backman-mc-control-plane-8kb26 CRON[52882]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T02:55:01.622818+00:00 backman-mc-control-plane-8kb26 CRON[52882]: pam_unix(cron:session): session closed for user root
+2026-04-16T03:05:01.635930+00:00 backman-mc-control-plane-8kb26 CRON[53582]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T03:05:01.645256+00:00 backman-mc-control-plane-8kb26 CRON[53582]: pam_unix(cron:session): session closed for user root
+2026-04-16T03:10:01.662161+00:00 backman-mc-control-plane-8kb26 CRON[53853]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T03:10:01.667410+00:00 backman-mc-control-plane-8kb26 CRON[53853]: pam_unix(cron:session): session closed for user root
+2026-04-16T03:15:01.681840+00:00 backman-mc-control-plane-8kb26 CRON[54121]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T03:15:01.716908+00:00 backman-mc-control-plane-8kb26 CRON[54121]: pam_unix(cron:session): session closed for user root
+2026-04-16T03:17:01.704430+00:00 backman-mc-control-plane-8kb26 CRON[54229]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T03:17:01.709683+00:00 backman-mc-control-plane-8kb26 CRON[54229]: pam_unix(cron:session): session closed for user root
+2026-04-16T03:25:01.723047+00:00 backman-mc-control-plane-8kb26 CRON[54651]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T03:25:01.730259+00:00 backman-mc-control-plane-8kb26 CRON[54651]: pam_unix(cron:session): session closed for user root
+2026-04-16T03:35:01.740514+00:00 backman-mc-control-plane-8kb26 CRON[55389]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T03:35:01.745396+00:00 backman-mc-control-plane-8kb26 CRON[55389]: pam_unix(cron:session): session closed for user root
+2026-04-16T03:45:01.758633+00:00 backman-mc-control-plane-8kb26 CRON[55916]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T03:45:01.765582+00:00 backman-mc-control-plane-8kb26 CRON[55916]: pam_unix(cron:session): session closed for user root
+2026-04-16T03:55:01.778830+00:00 backman-mc-control-plane-8kb26 CRON[56445]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T03:55:01.785617+00:00 backman-mc-control-plane-8kb26 CRON[56445]: pam_unix(cron:session): session closed for user root
+2026-04-16T04:05:01.800040+00:00 backman-mc-control-plane-8kb26 CRON[57142]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T04:05:01.807831+00:00 backman-mc-control-plane-8kb26 CRON[57142]: pam_unix(cron:session): session closed for user root
+2026-04-16T04:15:01.819892+00:00 backman-mc-control-plane-8kb26 CRON[57703]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T04:15:01.825471+00:00 backman-mc-control-plane-8kb26 CRON[57703]: pam_unix(cron:session): session closed for user root
+2026-04-16T04:17:01.836735+00:00 backman-mc-control-plane-8kb26 CRON[57811]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T04:17:01.844269+00:00 backman-mc-control-plane-8kb26 CRON[57811]: pam_unix(cron:session): session closed for user root
+2026-04-16T04:25:01.857379+00:00 backman-mc-control-plane-8kb26 CRON[58244]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T04:25:01.864176+00:00 backman-mc-control-plane-8kb26 CRON[58244]: pam_unix(cron:session): session closed for user root
+2026-04-16T04:35:01.878108+00:00 backman-mc-control-plane-8kb26 CRON[58972]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T04:35:01.886645+00:00 backman-mc-control-plane-8kb26 CRON[58972]: pam_unix(cron:session): session closed for user root
+2026-04-16T04:45:01.898986+00:00 backman-mc-control-plane-8kb26 CRON[59504]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T04:45:01.904984+00:00 backman-mc-control-plane-8kb26 CRON[59504]: pam_unix(cron:session): session closed for user root
+2026-04-16T04:55:01.917593+00:00 backman-mc-control-plane-8kb26 CRON[60038]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T04:55:01.924128+00:00 backman-mc-control-plane-8kb26 CRON[60038]: pam_unix(cron:session): session closed for user root
+2026-04-16T05:05:01.939060+00:00 backman-mc-control-plane-8kb26 CRON[60742]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T05:05:01.945074+00:00 backman-mc-control-plane-8kb26 CRON[60742]: pam_unix(cron:session): session closed for user root
+2026-04-16T05:15:01.956620+00:00 backman-mc-control-plane-8kb26 CRON[61304]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T05:15:01.963768+00:00 backman-mc-control-plane-8kb26 CRON[61304]: pam_unix(cron:session): session closed for user root
+2026-04-16T05:17:01.974129+00:00 backman-mc-control-plane-8kb26 CRON[61413]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T05:17:01.982311+00:00 backman-mc-control-plane-8kb26 CRON[61413]: pam_unix(cron:session): session closed for user root
+2026-04-16T05:25:01.989529+00:00 backman-mc-control-plane-8kb26 CRON[61841]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T05:25:02.076482+00:00 backman-mc-control-plane-8kb26 CRON[61841]: pam_unix(cron:session): session closed for user root
+2026-04-16T05:35:02.006458+00:00 backman-mc-control-plane-8kb26 CRON[62574]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T05:35:02.014396+00:00 backman-mc-control-plane-8kb26 CRON[62574]: pam_unix(cron:session): session closed for user root
+2026-04-16T05:45:01.028448+00:00 backman-mc-control-plane-8kb26 CRON[63114]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T05:45:01.037277+00:00 backman-mc-control-plane-8kb26 CRON[63114]: pam_unix(cron:session): session closed for user root
+2026-04-16T05:55:01.049079+00:00 backman-mc-control-plane-8kb26 CRON[63644]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T05:55:01.053759+00:00 backman-mc-control-plane-8kb26 CRON[63644]: pam_unix(cron:session): session closed for user root
+2026-04-16T06:05:01.070218+00:00 backman-mc-control-plane-8kb26 CRON[64344]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T06:05:01.077557+00:00 backman-mc-control-plane-8kb26 CRON[64344]: pam_unix(cron:session): session closed for user root
+2026-04-16T06:15:01.094395+00:00 backman-mc-control-plane-8kb26 CRON[64901]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T06:15:01.099708+00:00 backman-mc-control-plane-8kb26 CRON[64901]: pam_unix(cron:session): session closed for user root
+2026-04-16T06:17:01.112738+00:00 backman-mc-control-plane-8kb26 CRON[65010]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T06:17:01.149399+00:00 backman-mc-control-plane-8kb26 CRON[65010]: pam_unix(cron:session): session closed for user root
+2026-04-16T06:25:01.129957+00:00 backman-mc-control-plane-8kb26 CRON[65454]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T06:25:01.139288+00:00 backman-mc-control-plane-8kb26 CRON[65453]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T06:25:01.140231+00:00 backman-mc-control-plane-8kb26 CRON[65454]: pam_unix(cron:session): session closed for user root
+2026-04-16T06:25:01.165907+00:00 backman-mc-control-plane-8kb26 CRON[65453]: pam_unix(cron:session): session closed for user root
+2026-04-16T06:35:01.178847+00:00 backman-mc-control-plane-8kb26 CRON[66206]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T06:35:01.189737+00:00 backman-mc-control-plane-8kb26 CRON[66206]: pam_unix(cron:session): session closed for user root
+2026-04-16T06:45:01.202040+00:00 backman-mc-control-plane-8kb26 CRON[66798]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T06:45:01.207997+00:00 backman-mc-control-plane-8kb26 CRON[66798]: pam_unix(cron:session): session closed for user root
+2026-04-16T06:53:49.786306+00:00 backman-mc-control-plane-8kb26 sshd[921]: Received signal 15; terminating.
+2026-04-16T06:53:50.525253+00:00 backman-mc-control-plane-8kb26 sshd[68550]: Server listening on 0.0.0.0 port 22.
+2026-04-16T06:53:50.528080+00:00 backman-mc-control-plane-8kb26 sshd[68550]: Server listening on :: port 22.
+2026-04-16T06:53:51.052038+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T06:53:51.055066+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T06:53:51.077153+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Finished loading, compiling and executing 6 rules
+2026-04-16T06:53:51.088905+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-04-16T06:54:50.054376+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Reloading rules
+2026-04-16T06:54:50.055864+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Collecting garbage unconditionally...
+2026-04-16T06:54:50.056018+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T06:54:50.056093+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T06:54:50.057953+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Finished loading, compiling and executing 6 rules
+2026-04-16T06:54:50.058602+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Reloading rules
+2026-04-16T06:54:50.058678+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Collecting garbage unconditionally...
+2026-04-16T06:54:50.058734+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T06:54:50.058791+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T06:54:50.061140+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Finished loading, compiling and executing 6 rules
+2026-04-16T06:54:50.061251+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Reloading rules
+2026-04-16T06:54:50.061324+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Collecting garbage unconditionally...
+2026-04-16T06:54:50.061393+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T06:54:50.061458+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T06:54:50.063711+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Finished loading, compiling and executing 6 rules
+2026-04-16T06:54:50.063843+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Reloading rules
+2026-04-16T06:54:50.063930+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Collecting garbage unconditionally...
+2026-04-16T06:54:50.063995+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T06:54:50.064067+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T06:54:50.067742+00:00 backman-mc-control-plane-8kb26 polkitd[68490]: Finished loading, compiling and executing 6 rules
+2026-04-16T06:54:55.381425+00:00 backman-mc-control-plane-8kb26 polkitd[69990]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T06:54:55.381567+00:00 backman-mc-control-plane-8kb26 polkitd[69990]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T06:54:55.384938+00:00 backman-mc-control-plane-8kb26 polkitd[69990]: Finished loading, compiling and executing 6 rules
+2026-04-16T06:54:55.388641+00:00 backman-mc-control-plane-8kb26 polkitd[69990]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-04-16T06:55:01.595516+00:00 backman-mc-control-plane-8kb26 CRON[70145]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T06:55:01.606743+00:00 backman-mc-control-plane-8kb26 CRON[70145]: pam_unix(cron:session): session closed for user root
+2026-04-16T06:57:07.967170+00:00 backman-mc-control-plane-8kb26 polkitd[76513]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T06:57:07.970432+00:00 backman-mc-control-plane-8kb26 polkitd[76513]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T06:57:08.006442+00:00 backman-mc-control-plane-8kb26 polkitd[76513]: Finished loading, compiling and executing 6 rules
+2026-04-16T06:57:08.019430+00:00 backman-mc-control-plane-8kb26 polkitd[76513]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-04-16T06:57:34.993612+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T06:57:34.994262+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T06:57:35.000712+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Finished loading, compiling and executing 6 rules
+2026-04-16T06:57:35.003581+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-04-16T06:59:02.045966+00:00 backman-mc-control-plane-8kb26 sshd[68550]: Received signal 15; terminating.
+2026-04-16T07:00:15.461604+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Reloading rules
+2026-04-16T07:00:15.465447+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Collecting garbage unconditionally...
+2026-04-16T07:00:15.468280+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T07:00:15.468362+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T07:00:15.468460+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Finished loading, compiling and executing 6 rules
+2026-04-16T07:00:15.471422+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Reloading rules
+2026-04-16T07:00:15.471530+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Collecting garbage unconditionally...
+2026-04-16T07:00:15.471594+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T07:00:15.471650+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T07:00:15.471716+00:00 backman-mc-control-plane-8kb26 polkitd[77067]: Finished loading, compiling and executing 6 rules
+2026-04-16T07:00:46.843989+00:00 backman-mc-control-plane-8kb26 polkitd[88746]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T07:00:46.844519+00:00 backman-mc-control-plane-8kb26 polkitd[88746]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T07:00:46.851077+00:00 backman-mc-control-plane-8kb26 polkitd[88746]: Finished loading, compiling and executing 6 rules
+2026-04-16T07:00:46.856241+00:00 backman-mc-control-plane-8kb26 polkitd[88746]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-04-16T07:02:40.744985+00:00 backman-mc-control-plane-8kb26 polkitd[90975]: Loading rules from directory /etc/polkit-1/rules.d
+2026-04-16T07:02:40.745724+00:00 backman-mc-control-plane-8kb26 polkitd[90975]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-16T07:02:40.765421+00:00 backman-mc-control-plane-8kb26 polkitd[90975]: Finished loading, compiling and executing 6 rules
+2026-04-16T07:02:40.769258+00:00 backman-mc-control-plane-8kb26 polkitd[90975]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-04-16T07:05:01.651322+00:00 backman-mc-control-plane-8kb26 CRON[98098]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T07:05:01.662563+00:00 backman-mc-control-plane-8kb26 CRON[98098]: pam_unix(cron:session): session closed for user root
+2026-04-16T07:15:01.676334+00:00 backman-mc-control-plane-8kb26 CRON[98898]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T07:15:01.684091+00:00 backman-mc-control-plane-8kb26 CRON[98898]: pam_unix(cron:session): session closed for user root
+2026-04-16T07:17:01.693252+00:00 backman-mc-control-plane-8kb26 CRON[99012]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T07:17:01.709763+00:00 backman-mc-control-plane-8kb26 CRON[99012]: pam_unix(cron:session): session closed for user root
+2026-04-16T07:25:01.724280+00:00 backman-mc-control-plane-8kb26 CRON[99443]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T07:25:01.729638+00:00 backman-mc-control-plane-8kb26 CRON[99443]: pam_unix(cron:session): session closed for user root
+2026-04-16T07:35:01.742448+00:00 backman-mc-control-plane-8kb26 CRON[100169]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T07:35:01.748179+00:00 backman-mc-control-plane-8kb26 CRON[100169]: pam_unix(cron:session): session closed for user root
+2026-04-16T07:45:01.762416+00:00 backman-mc-control-plane-8kb26 CRON[100699]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T07:45:01.768497+00:00 backman-mc-control-plane-8kb26 CRON[100699]: pam_unix(cron:session): session closed for user root
+2026-04-16T07:55:01.782025+00:00 backman-mc-control-plane-8kb26 CRON[101232]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T07:55:01.787074+00:00 backman-mc-control-plane-8kb26 CRON[101232]: pam_unix(cron:session): session closed for user root
+2026-04-16T08:05:01.799000+00:00 backman-mc-control-plane-8kb26 CRON[101935]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T08:05:01.805470+00:00 backman-mc-control-plane-8kb26 CRON[101935]: pam_unix(cron:session): session closed for user root
+2026-04-16T08:15:01.819594+00:00 backman-mc-control-plane-8kb26 CRON[102475]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T08:15:01.826836+00:00 backman-mc-control-plane-8kb26 CRON[102475]: pam_unix(cron:session): session closed for user root
+2026-04-16T08:17:01.836551+00:00 backman-mc-control-plane-8kb26 CRON[102583]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-16T08:17:01.877711+00:00 backman-mc-control-plane-8kb26 CRON[102583]: pam_unix(cron:session): session closed for user root
+2026-04-16T08:19:54.423581+00:00 backman-mc-control-plane-8kb26 sshd[102724]: Server listening on 0.0.0.0 port 22.
+2026-04-16T08:19:54.423979+00:00 backman-mc-control-plane-8kb26 sshd[102724]: Server listening on :: port 22.
+2026-04-16T08:19:54.745903+00:00 backman-mc-control-plane-8kb26 sshd[102725]: Accepted publickey for ubuntu from 172.16.0.239 port 44142 ssh2: ED25519 SHA256:N2aBaDJXDM0nFdAG9gSdh/THEdo/o009JHXuzXNVZ+0
+2026-04-16T08:19:54.751791+00:00 backman-mc-control-plane-8kb26 sshd[102725]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-04-16T08:19:54.798673+00:00 backman-mc-control-plane-8kb26 systemd-logind[910]: New session 131 of user ubuntu.
+2026-04-16T08:19:54.861510+00:00 backman-mc-control-plane-8kb26 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)

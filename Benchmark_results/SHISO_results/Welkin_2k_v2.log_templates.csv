@@ -1,0 +1,129 @@
+EventId,EventTemplate,Occurrences
+42d1fa40,* *,87
+6e644e70,* * *,148
+36963bb4,* * * * * * *,118
+8704fe12,"""Using iptables proxy""",1
+55616db2,* * * * *,44
+dff15ef4,* * * *,77
+023db9cc,"""CSI driver name"" csiDriverName=""cinder.csi.openstack.org""",1
+aa916321,Version: v1.<*>.<*>,3
+0f3c69f4,* * * * * * * * * * * * * * * * * * * * * * *,22
+36963bb4,* * * * * * *,61
+6d005fad,* * * * * * * * * * * * * * *,83
+10bd6f67,* * * * * * * * * * *,31
+42d1fa40,* *,28
+ddb1c136,* * * * * *,29
+5b90fc3f,updated ClusterIP allocator for Service CIDR <*>/<*>,21
+38497ffd,"Trace[<*>]: ""Reflector ListAndWatch"" * * <*>:<*>:<*>.<*>) (total time: <*>):",11
+c84ecbbc,"OIDC: No x509 certificates provided, will use host's root CA set",1
+748356d5,Adding GroupVersion * v1 to ResourceManager,4
+fe16f8f6,Starting APIServiceRegistrationController,1
+bb7d8ad8,* * * * * * * *,128
+ddb1c136,* * * * * *,237
+0fe46bec,"""Waiting for caches to sync"" controller=""ipallocator-repair-controller""",1
+071375df,* * * * * * * * * *,99
+13fc056c,"""Loaded client CA"" index=<*> certName=""client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"" certDetail=""\""kubernetes\"" [] issuer=\""<self>\"" (<*> to <*> (now=<*>))""",2
+28c9e493,Successfully updated <*> out of <*> load balancers to direct traffic to the updated set of nodes,2
+d598aa11,"""CSI driver supports ControllerPublishUnpublish, using real CSI handler"" driver=""cinder.csi.openstack.org""",1
+cb397f3d,OpenAPI AggregationController: action for item v1beta1.metrics.k<*>.io: Rate Limited Requeue.,3
+65cee956,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*>, panicked: false, err: context canceled, panic-reason: <nil>"" logger=""UnhandledError""",9
+12c9afc3,* * * * * * * * *,10
+51ec0b2c,"""Failed to get storage metrics"" storage_cluster_id=""etcd-<*>"" err=""context deadline exceeded""",2
+0a616f46,* * * * * * * * * * * * * * * * * * *,16
+5b1b1fde,"""Unhandled Error"" err=""loading OpenAPI spec for \""v1beta1.metrics.k<*>.io\"" failed with: Error, could not get list of group versions for APIService"" logger=""UnhandledError""",2
+3f4cfc2c,"""Unhandled Error"" err=""v1beta1.metrics.k<*>.io failed with: failing or missing response from https:/<*>/apis/metrics.k<*>.io/v1beta1: bad status from https:/<*>/apis/metrics.k<*>.io/v1beta1: <*>"" logger=""UnhandledError""",19
+a6a33ee5,"""Unhandled Error"" err=""v1beta1.metrics.k<*>.io failed with: failing or missing response from https:/<*>/apis/metrics.k<*>.io/v1beta1: Get \""https:/<*>/apis/metrics.k<*>.io/v1beta1\"": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"" logger=""UnhandledError""",1
+7a363041,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*>, panicked: false, err: context deadline exceeded, panic-reason: <nil>"" logger=""UnhandledError""",3
+27b00fe0,"""Unhandled Error"" err=""apiserver was unable to write a fallback JSON response: http: Handler timeout"" logger=""UnhandledError""",2
+8d908abc,"""Unhandled Error"" err=""apiserver was unable to write a JSON response: http: Handler timeout"" logger=""UnhandledError""",2
+f1f30c0a,"""Warning: watch ended with error"" reflector=""k<*>.io/client-go/informers/factory.go:<*>"" type=""*v1.ServiceCIDR"" err=""an error on the server (\""unable to decode an event from the watch stream: http2: client connection lost\"") has prevented the request from succeeding""",1
+8d908abc,"""Unhandled Error"" err=""apiserver was unable to write a JSON response: http: Handler timeout"" logger=""UnhandledError""",5
+27b00fe0,"""Unhandled Error"" err=""apiserver was unable to write a fallback JSON response: http: Handler timeout"" logger=""UnhandledError""",4
+11018854,"""Detected change in CA secret data, update current CA data and notify watches"" logger=""cert-manager""",1
+e703d8a7,"""Running in Kubernetes cluster"" major=""<*>"" minor=""<*>"" git=""v1.<*>.<*>"" state=""clean"" commit=""1e09fec02ac194c1044224e45e60d249e98cd092"" platform=""linux/amd64""",3
+e526ef7f,* * * * * * * * * * * * * * * * * *,60
+c849275d,"ignoring ingress * in * based on annotation : no object matching key ""traefik"" in local store",2
+da7db156,"Failed calling webhook, failing * * failed calling webhook * failed to call webhook: Post * dial tcp <*> connect: connection refused",3
+ac36bc08,"""Unhandled Error"" err=""failed calling webhook \""monitor-webhooks.kyverno.svc\"": failed to call webhook: Post \""https://kyverno-svc.kyverno.svc:<*>/verifymutate?timeout=<*>\"": dial tcp <*> connect: connection refused"" logger=""UnhandledError""",1
+17d7af83,"Event(v1.ObjectReference{Kind:""Pod"", Namespace:""ingress-nginx"", * * APIVersion:""v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'RELOAD' NGINX reload triggered due to a change in configuration",3
+2be1e9dc,"""Unhandled Error"" err=""write tcp <*>-><*> write: connection reset by peer"" logger=""UnhandledError""",1
+27b00fe0,"""Unhandled Error"" err=""apiserver was unable to write a fallback JSON response: http: Handler timeout"" logger=""UnhandledError""",1
+9b013891,"""Unhandled Error"" err=""v1beta1.metrics.k<*>.io failed with: failing or missing response from https:/<*>/apis/metrics.k<*>.io/v1beta1: Get \""https:/<*>/apis/metrics.k<*>.io/v1beta1\"": dial tcp <*> connect: connection refused"" logger=""UnhandledError""",1
+4788d562,* * * * * * * * * * * * *,16
+5b23d583,* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *,30
+b777d48c,"""Unhandled Error"" * * * * * * * * * * * * * * * * * * * * * * * * * * logger=""UnhandledError""",16
+4733e603,"""Failed to update lease"" err=""Operation cannot be fulfilled on leases.coordination.k<*>.io * the object has been modified; please apply your changes to the latest version and try again""",18
+6fe7dec2,"* watch of * ended with: an error on the server (""unable to decode an event from the watch stream: http2: client connection lost"") has prevented the request from succeeding",9
+23a5fc51,"Event(v1.ObjectReference{Kind:""ConfigMap"", Namespace:""ingress-nginx"", Name:""ingress-nginx-controller"", UID:""0bcad545-8a81-4e4a-<*>-98ad012a35de"", APIVersion:""v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'CREATE' ConfigMap ingress-nginx/ingress-nginx-controller",3
+e5428356,"Event(v1.ObjectReference{Kind:""Ingress"", * * * APIVersion:""networking.k<*>.io/v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'Sync' Scheduled for sync",13
+17d7af83,"Event(v1.ObjectReference{Kind:""Pod"", Namespace:""ingress-nginx"", * * APIVersion:""v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'RELOAD' NGINX reload triggered due to a change in configuration",3
+11874ee4,starting ServiceCIDR Allocator Controller,1
+c1991646,waiting for initial CRD sync...,2
+55616db2,* * * * *,45
+b885c2b1,Starting OpenAPI V3 *,4
+6ad0b735,* * * * * * * * * * * * * * * * * * * * *,11
+cb397f3d,OpenAPI AggregationController: action for item v1beta1.metrics.k<*>.io: Rate Limited Requeue.,1
+d72eb211,"""CSI driver supports list volumes published nodes. Using capability to reconcile volume attachment objects with actual backend state"" driver=""cinder.csi.openstack.org""",1
+81da28d2,"Failed to update lock optimistically: Put ""https:/<*>/apis/coordination.k<*>.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=<*>"": read tcp <*>-><*> read: connection reset by peer, falling back to slow path",1
+067ec5a0,"""Failed to update lease"" err=""leases.coordination.k<*>.io \""apiserver-645gi2i5vbfsgt5pwyh6gudjiq\"" is forbidden: ValidatingAdmissionPolicy 'gatekeeper-k<*>pspapparmor' denied request: failed to configure policy: failed to find resource referenced by paramKind: 'constraints.gatekeeper.sh/v1beta1, Kind=K<*>PSPAppArmor'""",3
+636eb847,"""Warning: resync period is smaller than resync check period and the informer has already started. Changing it to the resync check period"" * resyncCheckPeriod=""23h9m<*>""",2
+fb207ea7,"""Unhandled Error"" err=""apiserver received an error that is not an metav1.Status: &errors.errorString{s:\""context canceled\""}: context canceled"" logger=""UnhandledError""",1
+6383a3f9,Neither --kubeconfig nor --master was specified. Using the inClusterConfig. This might not work.,1
+92445152,* * * * * * * * * * * * * * * *,15
+8d908abc,"""Unhandled Error"" err=""apiserver was unable to write a JSON response: http: Handler timeout"" logger=""UnhandledError""",10
+7a363041,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*>, panicked: false, err: context deadline exceeded, panic-reason: <nil>"" logger=""UnhandledError""",10
+3bf37cf0,* to * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *,8
+a4d7026d,Failed to create an OpenStack Secret client: unable to initialize keymanager client for region RegionOne: No suitable endpoint could be found in the service catalog.,3
+140dc612,"""unable to update target object with new CA data"" err=""Operation cannot be fulfilled on apiservices.apiregistration.k<*>.io \""v1beta1.metrics.k<*>.io\"": the object has been modified; please apply your changes to the latest version and try again"" logger=""cert-manager"" kind=""apiservice"" kind=""apiservice"" name=""v1beta1.metrics.k<*>.io""",5
+d5a3c694,"""Reconciler error"" err=""Operation cannot be fulfilled on apiservices.apiregistration.k<*>.io \""v1beta1.metrics.k<*>.io\"": the object has been modified; please apply your changes to the latest version and try again"" logger=""cert-manager"" controller=""apiservice"" controllerGroup=""apiregistration.k<*>.io"" controllerKind=""APIService"" APIService=""v1beta1.metrics.k<*>.io"" namespace="""" name=""v1beta1.metrics.k<*>.io"" *",5
+fae5a90b,initial CRD sync complete...,2
+dff15ef4,* * * *,49
+ec2580df,"informer started for constraints.gatekeeper.sh/v1beta1, Kind=K<*>PSPAppArmor",2
+2a89792e,"""Error retrieving lease lock"" err=""Get \""https:/<*>/apis/coordination.k<*>.io/v1/namespaces/ingress-nginx/leases/ingress-nginx-leader\"": net/http: TLS handshake timeout - error from a previous attempt: http2: client connection lost"" lock=""ingress-nginx/ingress-nginx-leader""",1
+8d908abc,"""Unhandled Error"" err=""apiserver was unable to write a JSON response: http: Handler timeout"" logger=""UnhandledError""",30
+4788d562,* * * * * * * * * * * * *,9
+a17514be,* * * * * * * * * * * *,4
+201a6efe,"Resetting endpoints for master service ""kubernetes"" to [<*> <*>]",15
+de0f8410,"Trace[<*>]: ""Reflector ListAndWatch"" * (<*>-Apr-<*> <*>:<*>:<*>.<*>) (total time: <*>):",16
+b2a55d90,"""Timeout or abort while handling"" logger=""UnhandledError"" * * *",5
+000936e6,"""Error retrieving lease lock"" err=""etcdserver: request timed out"" lock=""ingress-nginx/ingress-nginx-leader""",1
+739d07af,"Failed to make webhook authorizer request: Post ""https:/<*>/apis/authorization.k<*>.io/v1/subjectaccessreviews?timeout=<*>"": net/http: request canceled (Client.Timeout exceeded while awaiting headers)",1
+d38b1ac1,"""ignoring ingressclass as the spec.controller is not the same of this ingress"" ingressclass=""traefik""",1
+362177d3,"oidc authenticator: initializing plugin: Get ""https://dex.backman.dev-ck<*>.com/.well-known/openid-configuration"": tls: failed to verify certificate: x509: certificate signed by unknown authority",49
+65cee956,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*>, panicked: false, err: context canceled, panic-reason: <nil>"" logger=""UnhandledError""",14
+f627f4d4,Error proxying data from * to * write tcp <*>-><*> write: broken pipe,5
+a17514be,* * * * * * * * * * * *,5
+ffe721ba,processed ingress via admission controller {testedIngressLength:<*> testedIngressTime:<*> renderingIngressLength:<*> renderingIngressTime:<*> admissionTime:<*> testedConfigurationSize:<*>.3kB},1
+aba0f469,"""Timeout or abort while handling"" logger=""UnhandledError"" method=""POST"" URI=""/apis/authentication.k<*>.io/v1/tokenreviews"" auditID=""c476228e-<*>-4b85-891a-835563112b39""",1
+d7f2e928,"""Starting EventSource"" logger=""cert-manager"" * controllerGroup=""admissionregistration.k<*>.io"" * source=""kind source: *",2
+8482305c,"""Failed to watch"" err=""failed to list * Get * net/http: TLS handshake timeout"" logger=""UnhandledError"" * *",15
+51461eab,"""Unhandled Error"" err=""k<*>.io/client-go@v0.<*>.<*>/tools/cache/reflector.go:<*>: Failed to watch *v1.Secret: failed to list *v1.Secret: Get \""https:/<*>/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=<*>\"": net/http: TLS handshake timeout"" logger=""UnhandledError""",5
+cee99c45,* to * * * * * * * * * * * * * * *,3
+12c9afc3,* * * * * * * * *,23
+d5d55923,"Event(v1.ObjectReference{Kind:""Ingress"", Namespace:""alertmanager"", Name:""kube-prometheus-stack-alertmanager"", UID:""eb9b3310-85a7-4acc-953f-e667e9cb9a56"", APIVersion:""networking.k<*>.io/v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'Sync' Scheduled for sync",1
+02f86dd6,* failed to list * Get * net/http: TLS handshake timeout,5
+65cee956,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*>, panicked: false, err: context canceled, panic-reason: <nil>"" logger=""UnhandledError""",2
+ffc41619,"rejected by webhook ""vpol.validate.kyverno.svc-fail-finegrained-elastisys-check-bundle-cm-exists"": &errors.StatusError{ErrStatus:v1.Status{TypeMeta:v1.TypeMeta{Kind:"""", APIVersion:""""}, ListMeta:v1.ListMeta{SelfLink:"""", ResourceVersion:"""", Continue:"""", RemainingItemCount:(*int64)(nil)}, Status:""Failure"", Message:""admission webhook \""vpol.validate.kyverno.svc-fail-finegrained-elastisys-check-bundle-cm-exists\"" denied the request: Policy elastisys-check-bundle-cm-exists failed: Bundle ConfigMap \""non-existing-bundle\"" not found in default. Please verify that the name is correct. If the name is correct but you still get this error, please contact your platform administrator."", Reason:"""", Details:(*v1.StatusDetails)(nil), Code:<*>}}",2
+8aa46ee1,"[core] [Channel #<*> SubChannel #<*>]grpc: addrConn.createTransport failed to connect to {Addr: ""<*>"", ServerName: ""<*>"", }. Err: connection error: desc = ""transport: authentication handshake failed: context deadline exceeded""",4
+5bd98e6c,"""Failed to update lease"" err=""Operation cannot be fulfilled on leases.coordination.k<*>.io \""ingress-nginx-leader\"": the object has been modified; please apply your changes to the latest version and try again"" lock=""ingress-nginx/ingress-nginx-leader""",1
+026744ab,"Operation for ""{volumeName:kubernetes.io/csi/cinder.csi.openstack.org^21c9e6f0-f124-4ada-a5e9-4998e0e3b665 podName: nodeName:}"" failed. No retries permitted until <*> m=<*>.<*> (durationBeforeRetry 2m<*>). Error: DetachVolume.Detach failed for volume ""pvc-d88c539e-145c-42a2-b57e-5cde630d8dcc"" (UniqueName: ""kubernetes.io/csi/cinder.csi.openstack.org^21c9e6f0-f124-4ada-a5e9-4998e0e3b665"") on node ""backman-wc-elastisys-pvl5f-mvm56"" : timed out waiting for external-attacher of unknown CSI driver to detach volume 21c9e6f0-f124-4ada-a5e9-4998e0e3b<*>",14
+7a363041,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*>, panicked: false, err: context deadline exceeded, panic-reason: <nil>"" logger=""UnhandledError""",5
+d982795f,"""Unhandled Error"" err=""apiserver received an error that is not an metav1.Status: * * * * logger=""UnhandledError""",10
+48abca17,* * * * * * * * * * * * * *,12
+4f8003a1,Failed to contact API server for /livez: got <*>,2
+65cee956,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*>, panicked: false, err: context canceled, panic-reason: <nil>"" logger=""UnhandledError""",2
+ee3ebbc4,"""serving insecurely as tls certificate data not provided"" logger=""cert-manager.controller""",1
+6383a3f9,Neither --kubeconfig nor --master was specified. Using the inClusterConfig. This might not work.,2
+ae8d1e6a,"""failed to update lease using latest lease, fallback to ensure lease"" err=""failed <*> attempts to update lease""",2
+497de76c,"Failed to update lock optimistically: etcdserver: request timed out, falling back to slow path",1
+b2c4bf5a,"""Loaded SNI cert"" index=<*> certName=""self-signed loopback"" certDetail=""\""apiserver-loopback-client@<*>\"" [serving] validServingFor=[apiserver-loopback-client] issuer=\""apiserver-loopback-client-ca@<*>\"" (<*> to <*> (now=<*>))""",1
+497de76c,"Failed to update lock optimistically: etcdserver: request timed out, falling back to slow path",8
+b2c4bf5a,"""Loaded SNI cert"" index=<*> certName=""self-signed loopback"" certDetail=""\""apiserver-loopback-client@<*>\"" [serving] validServingFor=[apiserver-loopback-client] issuer=\""apiserver-loopback-client-ca@<*>\"" (<*> to <*> (now=<*>))""",1
+e061f2b3,"""Unhandled Error"" err=""unable to sync kubernetes service: etcdserver: request timed out"" logger=""UnhandledError""",1
+b2a55d90,"""Timeout or abort while handling"" logger=""UnhandledError"" * * *",2
+ae8d1e6a,"""failed to update lease using latest lease, fallback to ensure lease"" err=""failed <*> attempts to update lease""",1
+327dae8a,"Trace[<*>]: ""Reflector ListAndWatch"" name:sigs.k<*>.io/controller-runtime/pkg/cache/internal/informers_map.go:<*> (<*>-Apr-<*> <*>:<*>:<*>.<*>) (total time: <*>):",1
+12c9afc3,* * * * * * * * *,8
+be16d15a,"""No Secondary Service CIDR provided. Skipping filtering out secondary service addresses"" logger=""node-ipam-controller""",1
+ca1c60c9,"Operation for * podName: nodeName:}"" failed. No retries permitted until <*> m=<*>.<*> (durationBeforeRetry * Error: DetachVolume.Detach failed for volume * (UniqueName: * on node * : timed out waiting for external-attacher of unknown CSI driver to detach volume *",17
+7a363041,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*>, panicked: false, err: context deadline exceeded, panic-reason: <nil>"" logger=""UnhandledError""",1

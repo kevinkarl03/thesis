@@ -1,0 +1,20 @@
+I0415 06:42:46.609875       1 serving.go:386] Generated self-signed cert in-memory
+I0415 06:42:47.335567       1 server.go:171] "Starting Kubernetes Scheduler" version="v1.33.6"
+I0415 06:42:47.335611       1 server.go:173] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0415 06:42:47.363565       1 requestheader_controller.go:180] Starting RequestHeaderAuthRequestController
+I0415 06:42:47.364269       1 secure_serving.go:211] Serving securely on 127.0.0.1:10259
+I0415 06:42:47.366167       1 shared_informer.go:350] "Waiting for caches to sync" controller="RequestHeaderAuthRequestController"
+I0415 06:42:47.367644       1 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+I0415 06:42:47.368342       1 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0415 06:42:47.368468       1 shared_informer.go:350] "Waiting for caches to sync" controller="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0415 06:42:47.368600       1 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0415 06:42:47.368704       1 shared_informer.go:350] "Waiting for caches to sync" controller="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0415 06:42:47.469853       1 shared_informer.go:357] "Caches are synced" controller="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0415 06:42:47.478089       1 shared_informer.go:357] "Caches are synced" controller="RequestHeaderAuthRequestController"
+I0415 06:42:47.489150       1 shared_informer.go:357] "Caches are synced" controller="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0415 06:42:47.567917       1 leaderelection.go:257] attempting to acquire leader lease kube-system/kube-scheduler...
+E0415 14:22:37.968978       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-scheduler: Get "https://172.16.1.153:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler?timeout=5s": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+E0415 14:22:46.729460       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-scheduler: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io kube-scheduler)
+E0416 00:07:55.115808       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-scheduler: Get "https://172.16.1.153:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+E0416 00:08:02.305645       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-scheduler: Get "https://172.16.1.153:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler?timeout=5s": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0416 06:18:15.119270       1 leaderelection.go:271] successfully acquired lease kube-system/kube-scheduler

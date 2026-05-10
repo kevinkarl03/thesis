@@ -1,0 +1,296 @@
+time=2026-04-16T01:03:08.825450325Z level=info msg="  --agent-not-ready-taint-key='node.cilium.io/agent-not-ready'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825584044Z level=info msg="  --annotate-k8s-node='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825608687Z level=info msg="  --auto-create-cilium-pod-ip-pools=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825619464Z level=info msg="  --auto-direct-node-routes='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825628068Z level=info msg="  --bpf-distributed-lru='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825636997Z level=info msg="  --bpf-events-drop-enabled='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825649559Z level=info msg="  --bpf-events-policy-verdict-enabled='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825660659Z level=info msg="  --bpf-events-trace-enabled='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825671868Z level=info msg="  --bpf-lb-acceleration='disabled'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825681889Z level=info msg="  --bpf-lb-algorithm-annotation='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825693009Z level=info msg="  --bpf-lb-external-clusterip='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82570407Z level=info msg="  --bpf-lb-map-max='65536'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825720466Z level=info msg="  --bpf-lb-mode-annotation='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825733136Z level=info msg="  --bpf-lb-proto-diff='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825742133Z level=info msg="  --bpf-lb-sock='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825749794Z level=info msg="  --bpf-lb-source-range-all-types='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825757543Z level=info msg="  --bpf-map-dynamic-size-ratio='0.0025'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825765331Z level=info msg="  --bpf-policy-map-max='16384'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825772823Z level=info msg="  --bpf-policy-stats-map-max='65536'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825780551Z level=info msg="  --bpf-root='/sys/fs/bpf'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825792471Z level=info msg="  --ces-max-ciliumendpoints-per-ces='100'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825802849Z level=info msg="  --ces-rate-limits='[{\"nodes\":0,\"limit\":10,\"burst\":20}]'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825812168Z level=info msg="  --ces-slice-mode='fcfs'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825820031Z level=info msg="  --cgroup-root='/run/cilium/cgroupv2'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825828461Z level=info msg="  --cilium-endpoint-gc-interval='5m0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825837366Z level=info msg="  --cilium-pod-labels='k8s-app=cilium'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825849431Z level=info msg="  --cilium-pod-namespace=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825861799Z level=info msg="  --cluster-id='0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82586998Z level=info msg="  --cluster-name='wc'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825878014Z level=info msg="  --cluster-pool-ipv4-cidr='10.234.64.0/18'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825886377Z level=info msg="  --cluster-pool-ipv4-mask-size='24'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825927131Z level=info msg="  --cluster-pool-ipv6-cidr=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82593731Z level=info msg="  --cluster-pool-ipv6-mask-size='112'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825947648Z level=info msg="  --clustermesh-concurrent-service-endpoint-syncs='5'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82597053Z level=info msg="  --clustermesh-config=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825980139Z level=info msg="  --clustermesh-enable-endpoint-sync='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825988671Z level=info msg="  --clustermesh-enable-mcs-api='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.825998937Z level=info msg="  --clustermesh-endpoint-updates-batch-period='500ms'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826017105Z level=info msg="  --clustermesh-endpoints-per-slice='100'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826026941Z level=info msg="  --clustermesh-sync-timeout='1m0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826037406Z level=info msg="  --cmdref=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826066884Z level=info msg="  --cni-exclusive='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826085397Z level=info msg="  --cni-log-file='/var/run/cilium/cilium-cni.log'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826099722Z level=info msg="  --config=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826117869Z level=info msg="  --config-dir='/tmp/cilium/config-map'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826128631Z level=info msg="  --controller-group-metrics='write-cni-file,sync-host-ips,sync-lb-maps-with-k8s-services'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826137491Z level=info msg="  --custom-cni-conf='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826145025Z level=info msg="  --datapath-mode='veth'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82615279Z level=info msg="  --debug='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826161998Z level=info msg="  --debug-verbose=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826170278Z level=info msg="  --default-lb-service-ipam='lbipam'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826178699Z level=info msg="  --direct-routing-skip-unreachable='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826187558Z level=info msg="  --disable-endpoint-crd='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826195359Z level=info msg="  --dnsproxy-enable-transparent-mode='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826203215Z level=info msg="  --dnsproxy-socket-linger-timeout='10'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826261857Z level=info msg="  --double-write-metric-reporter-interval='1m0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826281816Z level=info msg="  --egress-gateway-reconciliation-trigger-interval='1s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826290566Z level=info msg="  --enable-auto-protect-node-port-range='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826298738Z level=info msg="  --enable-bpf-clock-probe='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826308308Z level=info msg="  --enable-cilium-clusterwide-network-policy='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826317895Z level=info msg="  --enable-cilium-endpoint-slice='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826326557Z level=info msg="  --enable-cilium-network-policy='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826364823Z level=info msg="  --enable-cilium-operator-server-access='*'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826401842Z level=info msg="  --enable-egress-gateway='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826410221Z level=info msg="  --enable-endpoint-health-checking='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826418376Z level=info msg="  --enable-endpoint-lockdown-on-policy-overflow='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826455347Z level=info msg="  --enable-gateway-api-alpn='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826471035Z level=info msg="  --enable-gateway-api-app-protocol='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826497097Z level=info msg="  --enable-gateway-api-proxy-protocol='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826511317Z level=info msg="  --enable-gateway-api-secrets-sync='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826537564Z level=info msg="  --enable-gops='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826550152Z level=info msg="  --enable-health-check-loadbalancer-ip='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826619156Z level=info msg="  --enable-health-check-nodeport='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826635201Z level=info msg="  --enable-health-checking='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826643417Z level=info msg="  --enable-hubble='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826651489Z level=info msg="  --enable-hubble-open-metrics='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82666416Z level=info msg="  --enable-icmp-rules='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826673694Z level=info msg="  --enable-ingress-controller='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826686061Z level=info msg="  --enable-ingress-proxy-protocol='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826695041Z level=info msg="  --enable-ingress-secrets-sync='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826703156Z level=info msg="  --enable-internal-traffic-policy='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826711889Z level=info msg="  --enable-ipv4='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826719792Z level=info msg="  --enable-ipv4-big-tcp='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826728551Z level=info msg="  --enable-ipv4-egress-gateway='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826736504Z level=info msg="  --enable-ipv4-masquerade='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826761994Z level=info msg="  --enable-ipv6='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826778353Z level=info msg="  --enable-ipv6-big-tcp='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826786106Z level=info msg="  --enable-ipv6-masquerade='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826795258Z level=info msg="  --enable-k8s='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826802642Z level=info msg="  --enable-k8s-api-discovery='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826811368Z level=info msg="  --enable-k8s-endpoint-slice='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826820175Z level=info msg="  --enable-k8s-networkpolicy='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826831109Z level=info msg="  --enable-l2-neigh-discovery='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826843922Z level=info msg="  --enable-l7-proxy='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826855323Z level=info msg="  --enable-lb-ipam='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826867249Z level=info msg="  --enable-local-redirect-policy='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826876047Z level=info msg="  --enable-masquerade-to-route-source='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826888301Z level=info msg="  --enable-metrics='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826934702Z level=info msg="  --enable-node-ipam='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826944891Z level=info msg="  --enable-node-port='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826953684Z level=info msg="  --enable-node-selector-labels='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826961625Z level=info msg="  --enable-non-default-deny-policies='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826970969Z level=info msg="  --enable-policy='default'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826979267Z level=info msg="  --enable-policy-secrets-sync='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826987175Z level=info msg="  --enable-sctp='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.826994904Z level=info msg="  --enable-source-ip-verification='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827003704Z level=info msg="  --enable-srv6='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827011417Z level=info msg="  --enable-svc-source-range-check='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827019222Z level=info msg="  --enable-tcx='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827027047Z level=info msg="  --enable-vtep='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82703485Z level=info msg="  --enable-well-known-identities='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827042823Z level=info msg="  --enable-xt-socket-fallback='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827066321Z level=info msg="  --enforce-ingress-https='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827074183Z level=info msg="  --envoy-access-log-buffer-size='4096'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827082015Z level=info msg="  --envoy-base-id='0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827089854Z level=info msg="  --envoy-keep-cap-netbindservice='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827098031Z level=info msg="  --external-envoy-proxy='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827107193Z level=info msg="  --gateway-api-hostnetwork-enabled='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827121384Z level=info msg="  --gateway-api-hostnetwork-nodelabelselector=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82713429Z level=info msg="  --gateway-api-secrets-namespace='cilium-secrets'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827144221Z level=info msg="  --gateway-api-service-externaltrafficpolicy='Cluster'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827171207Z level=info msg="  --gateway-api-xff-num-trusted-hops='0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827218539Z level=info msg="  --gops-port='9891'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827229629Z level=info msg="  --health-check-icmp-failure-threshold='3'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827241093Z level=info msg="  --http-retry-count='3'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82724924Z level=info msg="  --http-stream-idle-timeout='300'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827259277Z level=info msg="  --hubble-disable-tls='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827270014Z level=info msg="  --hubble-listen-address=':4244'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82731221Z level=info msg="  --hubble-metrics='drop:labelsContext=traffic_direction,source_pod,source_namespace,source_ip,destination_pod,destination_namespace,destination_ip,flow:labelsContext=traffic_direction,source_pod,source_namespace,source_ip,destination_pod,destination_namespace,destination_ip,dns,tcp,icmp,httpV2:exemplars=true;labelsContext=source_ip,source_namespace,source_workload,destination_ip,destination_namespace,destination_workload,traffic_direction'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82732908Z level=info msg="  --hubble-metrics-server=':9965'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827337056Z level=info msg="  --hubble-metrics-server-enable-tls='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827385533Z level=info msg="  --hubble-network-policy-correlation-enabled='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827395288Z level=info msg="  --hubble-socket-path='/var/run/cilium/hubble.sock'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827461904Z level=info msg="  --hubble-tls-cert-file='/var/lib/cilium/tls/hubble/server.crt'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827478752Z level=info msg="  --hubble-tls-client-ca-files='/var/lib/cilium/tls/hubble/client-ca.crt'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827487882Z level=info msg="  --hubble-tls-key-file='/var/lib/cilium/tls/hubble/server.key'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827497471Z level=info msg="  --identity-allocation-mode='crd'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827506557Z level=info msg="  --identity-gc-interval='15m0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827556852Z level=info msg="  --identity-gc-rate-interval='1m0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827611605Z level=info msg="  --identity-gc-rate-limit='2500'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827628311Z level=info msg="  --identity-heartbeat-timeout='30m0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827637406Z level=info msg="  --identity-management-mode='agent'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827646991Z level=info msg="  --ingress-default-lb-mode='dedicated'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827656278Z level=info msg="  --ingress-default-request-timeout='0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827669185Z level=info msg="  --ingress-default-secret-name=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827680246Z level=info msg="  --ingress-default-secret-namespace=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827689484Z level=info msg="  --ingress-default-xff-num-trusted-hops='0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827698294Z level=info msg="  --ingress-hostnetwork-enabled='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827709161Z level=info msg="  --ingress-hostnetwork-nodelabelselector=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827718073Z level=info msg="  --ingress-hostnetwork-shared-listener-port='0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827807054Z level=info msg="  --ingress-lb-annotation-prefixes='lbipam.cilium.io,service.beta.kubernetes.io,service.kubernetes.io,cloud.google.com'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827829027Z level=info msg="  --ingress-secrets-namespace='cilium-secrets'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827873369Z level=info msg="  --ingress-shared-lb-service-name='cilium-ingress'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827882371Z level=info msg="  --install-no-conntrack-iptables-rules='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.8278954Z level=info msg="  --instance-tags-filter=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827904002Z level=info msg="  --ipam='cluster-pool'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827911841Z level=info msg="  --ipam-cilium-node-update-rate='15s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827919884Z level=info msg="  --iptables-random-fully='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827956627Z level=info msg="  --k8s-api-server=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.827998414Z level=info msg="  --k8s-api-server-urls=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828013776Z level=info msg="  --k8s-client-connection-keep-alive='30s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828027425Z level=info msg="  --k8s-client-connection-timeout='30s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828038238Z level=info msg="  --k8s-heartbeat-timeout='30s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82807124Z level=info msg="  --k8s-kubeconfig-path=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828097129Z level=info msg="  --k8s-namespace='kube-system'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828106189Z level=info msg="  --k8s-require-ipv4-pod-cidr='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828114344Z level=info msg="  --k8s-require-ipv6-pod-cidr='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.8281725Z level=info msg="  --k8s-service-proxy-name=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828189312Z level=info msg="  --kube-proxy-replacement='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828200964Z level=info msg="  --kvstore=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828210413Z level=info msg="  --kvstore-lease-ttl='15m0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82822001Z level=info msg="  --kvstore-max-consecutive-quorum-errors='2'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828268837Z level=info msg="  --kvstore-opt=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828282396Z level=info msg="  --leader-election-lease-duration='15s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828291158Z level=info msg="  --leader-election-renew-deadline='10s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828314069Z level=info msg="  --leader-election-retry-period='2s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828332553Z level=info msg="  --limit-ipam-api-burst='20'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828345215Z level=info msg="  --limit-ipam-api-qps='4'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828358995Z level=info msg="  --loadbalancer-l7=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82837Z level=info msg="  --loadbalancer-l7-algorithm='round_robin'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828409266Z level=info msg="  --loadbalancer-l7-ports=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828456227Z level=info msg="  --log-driver=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828477729Z level=info msg="  --log-opt=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828488393Z level=info msg="  --max-connected-clusters='255'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828496547Z level=info msg="  --mesh-auth-enabled='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828504355Z level=info msg="  --mesh-auth-gc-interval='5m0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828514075Z level=info msg="  --mesh-auth-mutual-enabled='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828522078Z level=info msg="  --mesh-auth-queue-size='1024'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828530254Z level=info msg="  --mesh-auth-rotated-identities-queue-size='1024'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828540104Z level=info msg="  --mesh-auth-spiffe-trust-domain='spiffe.cilium'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828549955Z level=info msg="  --mesh-auth-spire-agent-socket='/run/spire/sockets/agent/agent.sock'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828559565Z level=info msg="  --mesh-auth-spire-server-address='spire-server.spire.svc:8081'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828570512Z level=info msg="  --mesh-auth-spire-server-connection-timeout='10s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828578934Z level=info msg="  --metrics-sampling-interval='5m'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828587105Z level=info msg="  --monitor-aggregation='medium'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828594887Z level=info msg="  --monitor-aggregation-flags='all'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828602874Z level=info msg="  --monitor-aggregation-interval='5s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828610954Z level=info msg="  --nat-map-stats-entries='32'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828618809Z level=info msg="  --nat-map-stats-interval='30s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828627094Z level=info msg="  --node-port-bind-protection='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828648061Z level=info msg="  --nodeport-addresses=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82865647Z level=info msg="  --nodes-gc-interval='5m0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828664785Z level=info msg="  --operator-api-serve-addr='127.0.0.1:9234'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828675215Z level=info msg="  --operator-k8s-client-burst='200'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828684961Z level=info msg="  --operator-k8s-client-qps='100'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828693762Z level=info msg="  --operator-pprof='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828702626Z level=info msg="  --operator-pprof-address='localhost'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828711538Z level=info msg="  --operator-pprof-port='6061'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828722009Z level=info msg="  --operator-prometheus-serve-addr=':9963'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828735997Z level=info msg="  --parallel-alloc-workers='50'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828748276Z level=info msg="  --pod-restart-selector='k8s-app=kube-dns'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82876435Z level=info msg="  --policy-cidr-match-mode='nodes'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828776936Z level=info msg="  --policy-default-local-cluster='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828787884Z level=info msg="  --policy-secrets-namespace='cilium-secrets'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828796699Z level=info msg="  --policy-secrets-only-from-secrets-namespace='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82880487Z level=info msg="  --preallocate-bpf-maps='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828812475Z level=info msg="  --procfs='/host/proc'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828819895Z level=info msg="  --prometheus-serve-addr=':9962'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828827588Z level=info msg="  --proxy-connect-timeout='2'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828835212Z level=info msg="  --proxy-idle-timeout-seconds='60'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828843504Z level=info msg="  --proxy-initial-fetch-timeout='30'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828851396Z level=info msg="  --proxy-max-concurrent-retries='128'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828859687Z level=info msg="  --proxy-max-connection-duration-seconds='0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828868184Z level=info msg="  --proxy-max-requests-per-connection='0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828876078Z level=info msg="  --proxy-prometheus-port='9964'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82888402Z level=info msg="  --proxy-xff-num-trusted-hops-egress='0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828892119Z level=info msg="  --proxy-xff-num-trusted-hops-ingress='0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82890098Z level=info msg="  --remove-cilium-node-taints='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828908907Z level=info msg="  --routing-mode='tunnel'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828916541Z level=info msg="  --service-no-backend-response='reject'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828924908Z level=info msg="  --set-cilium-is-up-condition='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828932996Z level=info msg="  --set-cilium-node-taints='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828942039Z level=info msg="  --skip-crd-creation='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828972398Z level=info msg="  --subnet-ids-filter=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828988976Z level=info msg="  --subnet-tags-filter=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.828997338Z level=info msg="  --synchronize-k8s-nodes='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829005825Z level=info msg="  --synchronize-k8s-services='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829014469Z level=info msg="  --taint-sync-workers='10'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829022494Z level=info msg="  --tofqdns-dns-reject-response-code='refused'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829030477Z level=info msg="  --tofqdns-enable-dns-compression='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829038347Z level=info msg="  --tofqdns-endpoint-max-ip-per-hostname='1000'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82904633Z level=info msg="  --tofqdns-idle-connection-grace-period='0s'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829086078Z level=info msg="  --tofqdns-max-deferred-connection-deletes='10000'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829094228Z level=info msg="  --tofqdns-preallocate-identities='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829102111Z level=info msg="  --tofqdns-proxy-response-max-delay='100ms'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829110002Z level=info msg="  --tunnel-protocol='vxlan'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82912214Z level=info msg="  --tunnel-source-port-range='0-0'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829130546Z level=info msg="  --unmanaged-pod-watcher-interval='15'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82913968Z level=info msg="  --validate-network-policy='true'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829148028Z level=info msg="  --version='false'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829157114Z level=info msg="  --vtep-cidr=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829166266Z level=info msg="  --vtep-endpoint=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829174881Z level=info msg="  --vtep-mac=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829183607Z level=info msg="  --vtep-mask=''" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.829191873Z level=info msg="  --write-cni-conf-when-ready='/host/etc/cni/net.d/05-cilium.conflist'" subsys=cilium-operator-generic
+time=2026-04-16T01:03:08.82921262Z level=info msg="Cilium Operator" subsys=cilium-operator-generic version="1.18.7 2adae214 2026-02-12T16:14:30+00:00 go version go1.24.13 linux/amd64"
+time=2026-04-16T01:03:09.024369416Z level=info msg="Setting up Secret synchronization" module=operator.operator-controlplane.leader-lifecycle.secret-sync registrations="[*v2.CiliumClusterwideNetworkPolicy -> \"cilium-secrets\" *v2.CiliumNetworkPolicy -> \"cilium-secrets\"]"
+time=2026-04-16T01:03:09.024762298Z level=info msg=Invoked duration=134.441259ms function="secretsync.initSecretSyncReconciliation (pkg/secretsync/cell.go:67)"
+time=2026-04-16T01:03:09.029068205Z level=info msg="Registering CNP / CCNP validator" module=operator.operator-controlplane.leader-lifecycle.network-policy-validator
+time=2026-04-16T01:03:09.031194633Z level=info msg="Starting hive"
+time=2026-04-16T01:03:09.031354251Z level=info msg="Started gops server" module=operator.operator-infra.gops address=127.0.0.1:9891
+time=2026-04-16T01:03:09.049514386Z level=info msg="Establishing connection to apiserver" module=operator.operator-infra.operator-k8s-client-builder.k8s-client-builder ipAddr=https://172.16.200.127:6443
+time=2026-04-16T01:03:09.049534791Z level=info msg="Starting metrics server" module=operator.operator-infra.operator-metrics address=:9963
+time=2026-04-16T01:03:09.058565663Z level=info msg="Connected to apiserver" module=operator.operator-infra.operator-k8s-client-builder.k8s-client-builder
+time=2026-04-16T01:03:09.120579982Z level=info msg="Establishing connection to apiserver" module=operator.operator-infra.operator-k8s-client-builder.k8s-client-builder ipAddr=https://172.16.200.127:6443
+time=2026-04-16T01:03:09.140191737Z level=info msg="Connected to apiserver" module=operator.operator-infra.operator-k8s-client-builder.k8s-client-builder
+time=2026-04-16T01:03:09.168840179Z level=info msg="Started hive" duration=137.598475ms
+time=2026-04-16T01:03:09.169472085Z level=info msg="Waiting for leader election" module=operator
+time=2026-04-16T01:03:09.170623211Z level=info msg="attempting to acquire leader lease kube-system/cilium-operator-resource-lock..." subsys=klog
+time=2026-04-16T01:03:09.215332737Z level=info msg="Leader re-election complete" module=operator newLeader=backman-wc-elastisys-pvl5f-kdtgf-mqklphvcwg operatorID=backman-wc-elastisys-pvl5f-kdtgf-mqklphvcwg
+time=2026-04-16T01:03:11.949213886Z level=info msg="Leader re-election complete" module=operator newLeader=backman-wc-elastisys-pvl5f-kdtgf-mqklphvcwg operatorID=backman-wc-elastisys-pvl5f-kdtgf-mqklphvcwg
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": context deadline exceeded
+time=2026-04-16T01:07:54.556850351Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": context deadline exceeded" subsys=klog
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": context deadline exceeded
+time=2026-04-16T01:08:02.596692489Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": context deadline exceeded" subsys=klog
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+time=2026-04-16T01:08:11.358160694Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)" subsys=klog
+time=2026-04-16T01:08:20.296478306Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": context deadline exceeded" subsys=klog
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": context deadline exceeded
+time=2026-04-16T05:58:14.098979952Z level=warn msg="Network status error received, restarting client connections" module=operator.operator-infra.operator-k8s-client-builder.k8s-client-builder error="an error on the server (\"[+]ping ok\\n[+]log ok\\n[-]etcd failed: reason withheld\\n[+]poststarthook/start-apiserver-admission-initializer ok\\n[+]poststarthook/generic-apiserver-start-informers ok\\n[+]poststarthook/priority-and-fairness-config-consumer ok\\n[+]poststarthook/priority-and-fairness-filter ok\\n[+]poststarthook/storage-object-count-tracker-hook ok\\n[+]poststarthook/start-apiextensions-informers ok\\n[+]poststarthook/start-apiextensions-controllers ok\\n[+]poststarthook/crd-informer-synced ok\\n[+]poststarthook/start-system-namespaces-controller ok\\n[+]poststarthook/start-cluster-authentication-info-controller ok\\n[+]poststarthook/start-kube-apiserver-identity-lease-controller ok\\n[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\\n[+]poststarthook/start-legacy-token-tracking-controller ok\\n[+]poststarthook/start-service-ip-repair-controllers ok\\n[+]poststarthook/rbac/bootstrap-roles ok\\n[+]poststarthook/scheduling/bootstrap-system-priority-classes ok\\n[+]poststarthook/priority-and-fairness-config-producer ok\\n[+]poststarthook/bootstrap-controller ok\\n[+]poststarthook/start-kubernetes-service-cidr-controller ok\\n[+]poststarthook/aggregator-reload-proxy-client-cert ok\\n[+]poststarthook/start-kube-aggregator-informers ok\\n[+]poststarthook/apiservice-status-local-available-controller ok\\n[+]poststarthook/apiservice-status-remote-available-controller ok\\n[+]poststarthook/apiservice-registration-controller ok\\n[+]poststarthook/apiservice-discovery-controller ok\\n[+]poststarthook/kube-apiserver-autoregistration ok\\n[+]autoregister-completion ok\\n[+]poststarthook/apiservice-openapi-controller ok\\n[+]poststarthook/apiservice-openapiv3-controller ok\\nhealthz check failed\") has prevented the request from succeeding (get healthz.meta.k8s.io)"
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+time=2026-04-16T06:18:03.643753448Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)" subsys=klog
+time=2026-04-16T06:38:15.051630308Z level=warn msg="Network status error received, restarting client connections" module=operator.operator-infra.operator-k8s-client-builder.k8s-client-builder error="an error on the server (\"[+]ping ok\\n[+]log ok\\n[-]etcd failed: reason withheld\\n[+]poststarthook/start-apiserver-admission-initializer ok\\n[+]poststarthook/generic-apiserver-start-informers ok\\n[+]poststarthook/priority-and-fairness-config-consumer ok\\n[+]poststarthook/priority-and-fairness-filter ok\\n[+]poststarthook/storage-object-count-tracker-hook ok\\n[+]poststarthook/start-apiextensions-informers ok\\n[+]poststarthook/start-apiextensions-controllers ok\\n[+]poststarthook/crd-informer-synced ok\\n[+]poststarthook/start-system-namespaces-controller ok\\n[+]poststarthook/start-cluster-authentication-info-controller ok\\n[+]poststarthook/start-kube-apiserver-identity-lease-controller ok\\n[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\\n[+]poststarthook/start-legacy-token-tracking-controller ok\\n[+]poststarthook/start-service-ip-repair-controllers ok\\n[+]poststarthook/rbac/bootstrap-roles ok\\n[+]poststarthook/scheduling/bootstrap-system-priority-classes ok\\n[+]poststarthook/priority-and-fairness-config-producer ok\\n[+]poststarthook/bootstrap-controller ok\\n[+]poststarthook/start-kubernetes-service-cidr-controller ok\\n[+]poststarthook/aggregator-reload-proxy-client-cert ok\\n[+]poststarthook/start-kube-aggregator-informers ok\\n[+]poststarthook/apiservice-status-local-available-controller ok\\n[+]poststarthook/apiservice-status-remote-available-controller ok\\n[+]poststarthook/apiservice-registration-controller ok\\n[+]poststarthook/apiservice-discovery-controller ok\\n[+]poststarthook/kube-apiserver-autoregistration ok\\n[+]autoregister-completion ok\\n[+]poststarthook/apiservice-openapi-controller ok\\n[+]poststarthook/apiservice-openapiv3-controller ok\\nhealthz check failed\") has prevented the request from succeeding (get healthz.meta.k8s.io)"
+time=2026-04-16T06:43:15.104806579Z level=warn msg="Network status error received, restarting client connections" module=operator.operator-infra.operator-k8s-client-builder.k8s-client-builder error="an error on the server (\"[+]ping ok\\n[+]log ok\\n[-]etcd failed: reason withheld\\n[+]poststarthook/start-apiserver-admission-initializer ok\\n[+]poststarthook/generic-apiserver-start-informers ok\\n[+]poststarthook/priority-and-fairness-config-consumer ok\\n[+]poststarthook/priority-and-fairness-filter ok\\n[+]poststarthook/storage-object-count-tracker-hook ok\\n[+]poststarthook/start-apiextensions-informers ok\\n[+]poststarthook/start-apiextensions-controllers ok\\n[+]poststarthook/crd-informer-synced ok\\n[+]poststarthook/start-system-namespaces-controller ok\\n[+]poststarthook/start-cluster-authentication-info-controller ok\\n[+]poststarthook/start-kube-apiserver-identity-lease-controller ok\\n[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\\n[+]poststarthook/start-legacy-token-tracking-controller ok\\n[+]poststarthook/start-service-ip-repair-controllers ok\\n[+]poststarthook/rbac/bootstrap-roles ok\\n[+]poststarthook/scheduling/bootstrap-system-priority-classes ok\\n[+]poststarthook/priority-and-fairness-config-producer ok\\n[+]poststarthook/bootstrap-controller ok\\n[+]poststarthook/start-kubernetes-service-cidr-controller ok\\n[+]poststarthook/aggregator-reload-proxy-client-cert ok\\n[+]poststarthook/start-kube-aggregator-informers ok\\n[+]poststarthook/apiservice-status-local-available-controller ok\\n[+]poststarthook/apiservice-status-remote-available-controller ok\\n[+]poststarthook/apiservice-registration-controller ok\\n[+]poststarthook/apiservice-discovery-controller ok\\n[+]poststarthook/kube-apiserver-autoregistration ok\\n[+]autoregister-completion ok\\n[+]poststarthook/apiservice-openapi-controller ok\\n[+]poststarthook/apiservice-openapiv3-controller ok\\nhealthz check failed\") has prevented the request from succeeding (get healthz.meta.k8s.io)"
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": context deadline exceeded
+time=2026-04-16T07:43:04.08347032Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": context deadline exceeded" subsys=klog
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": context deadline exceeded
+time=2026-04-16T07:58:04.076086475Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": context deadline exceeded" subsys=klog
+time=2026-04-16T07:58:11.541261043Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": context deadline exceeded" subsys=klog
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": context deadline exceeded
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+time=2026-04-16T07:58:20.059783849Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)" subsys=klog
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+time=2026-04-16T07:58:28.161868422Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)" subsys=klog
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+time=2026-04-16T07:58:36.465531539Z level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get \"https://172.16.200.127:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock?timeout=5s\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)" subsys=klog

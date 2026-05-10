@@ -1,0 +1,573 @@
+EventId,EventTemplate,Occurrences
+f037645a,"""Version"" version=""v2.<*>.<*>""",6
+772e6721,"""Running node-driver-registrar"" mode=""""",6
+71a20583,"""Attempting to open a gRPC connection"" csiAddress=""/csi/csi.sock""",6
+8704fe12,"""Using iptables proxy""",6
+f147201a,"""Setting nf_conntrack_max"" nfConntrackMax=<*>",6
+4fb5ddac,"""Kube-proxy configuration may be incomplete or incorrect"" err=""nodePortAddresses is unset; NodePort connections will be accepted on all local IPs. Consider using `--nodeport-addresses primary`""",6
+31ef4b75,"""kube-proxy running in dual-stack mode"" primary ipFamily=""IPv4""",6
+6d131539,"""Using iptables Proxier""",6
+633cdce4,"""Setting route_localnet=<*> to allow node-ports on localhost; to change this either disable iptables.localhostNodePorts (--iptables-localhost-nodeports) or set nodePortAddresses (--nodeport-addresses) to filter loopback addresses"" ipFamily=""IPv4""",5
+022b6269,"""Version info"" version=""v1.<*>.<*>""",6
+de899fef,"""Golang settings"" GOGC="""" GOMAXPROCS="""" GOTRACEBACK=""""",15
+a11639ba,"""Starting endpoint slice config controller""",6
+6d7d5601,"""Starting service config controller""",6
+412bf330,"""Starting serviceCIDR config controller""",5
+c825d68f,"""Starting node config controller""",6
+e876e271,"""Waiting for caches to sync"" controller=""node config""",3
+9a784cf8,"""Calling CSI driver to discover driver name""",6
+023db9cc,"""CSI driver name"" csiDriverName=""cinder.csi.openstack.org""",6
+0615a5be,"""Starting Registration Server"" socketPath=""/registration/cinder.csi.openstack.org-reg.sock""",6
+97a73713,"""Registration Server started"" socketPath=""/registration/cinder.csi.openstack.org-reg.sock""",6
+e42d5b3c,"""Skipping HTTP server""",5
+39768a4b,"external host was not specified, using <*>",3
+aa916321,Version: v1.<*>.<*>,6
+c84ecbbc,"OIDC: No x509 certificates provided, will use host's root CA set",3
+c532a34d,"Audit policy contains errors, falling back to lenient decoding: strict decoding error: unknown field ""rules[<*>].namespacees""",3
+3d2ff931,"Loaded <*> mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,StorageObjectInUseProtection,RuntimeClass,DefaultIngressClass,PodTopologyLabels,MutatingAdmissionPolicy,MutatingAdmissionWebhook.",3
+cb795859,"Loaded <*> validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,PodSecurity,Priority,PersistentVolumeClaimResize,RuntimeClass,CertificateApproval,CertificateSigning,ClusterTrustBundleAttest,CertificateSubjectRestriction,ValidatingAdmissionPolicy,ValidatingAdmissionWebhook,ResourceQuota.",2
+7943aae9,Using reconciler: lease,3
+11874ee4,starting ServiceCIDR Allocator Controller,2
+edbab324,Skipping API <*> because it has no resources.,14
+275c0123,Adding GroupVersion authorization.k8s.io v1 to ResourceManager,1
+6e4de6c6,Adding GroupVersion autoscaling v1 to ResourceManager,1
+879bfcdf,Adding GroupVersion rbac.authorization.k8s.io v1 to ResourceManager,1
+011dec04,Adding GroupVersion admissionregistration.k8s.io v1 to ResourceManager,1
+201f13c2,Adding GroupVersion apiregistration.k8s.io v1 to ResourceManager,1
+ade413b0,Starting system namespaces controller,3
+cad24340,Starting OpenAPI AggregationController,3
+8c95b6bd,Starting OpenAPI V3 AggregationController,3
+aaa636d6,Starting API Priority and Fairness config controller,3
+3a9c02a1,Starting cluster_authentication_trust_controller controller,3
+7f9c0c64,Starting LocalAvailability controller,3
+fe16f8f6,Starting APIServiceRegistrationController,3
+f64512b9,Starting apiserver lease garbage collector,3
+0debdc1b,Starting legacy_token_tracking_controller,3
+fb40fce7,Starting RemoteAvailability controller,3
+c1991646,waiting for initial CRD sync...,3
+07a8e10b,Starting DiscoveryController,3
+527d1c93,Starting ipallocator-repair-controller,3
+0fe46bec,"""Waiting for caches to sync"" controller=""ipallocator-repair-controller""",2
+070de91d,Starting kubernetes-service-cidr-controller,3
+154b1967,Starting crd-autoregister controller,3
+bacadcc0,Starting OpenAPI controller,3
+e697b539,Starting OpenAPI V3 controller,3
+2edd9f06,Starting NamingConditionController,3
+d46db0d5,Starting EstablishingController,3
+baa35f05,Starting NonStructuralSchemaConditionController,3
+8f385c4c,Starting KubernetesAPIApprovalPolicyConformantConditionController,3
+b701345b,"""Starting controller"" name=""request-header::/etc/kubernetes/pki/front-proxy-ca.crt""",2
+6f794ae8,Running API Priority and Fairness config worker,3
+a0a22e2c,Running API Priority and Fairness periodic rebalancing process,3
+0b4f600e,Shutting down kubernetes-service-cidr-controller,3
+55f86b65,"""Caches are synced"" controller=""cluster_authentication_trust_controller""",2
+dd4cba5d,Starting ResourceDiscoveryManager,3
+70c620ad,all system priority classes are created successfully or already exist.,3
+e33e726a,Adding GroupVersion monitoring.coreos.com v1 to ResourceManager,2
+40ecf4ad,Adding GroupVersion constraints.gatekeeper.sh v1beta1 to ResourceManager,1
+00dbc67a,Adding GroupVersion nfd.k8s-sigs.io v1alpha1 to ResourceManager,1
+bdf25742,Adding GroupVersion aquasecurity.github.io v1alpha1 to ResourceManager,1
+e5a085ad,Adding GroupVersion gateway.networking.k8s.io v1 to ResourceManager,1
+fae5a90b,initial CRD sync complete...,3
+9ff9c87a,Starting autoregister controller,3
+fcf65da8,Adding GroupVersion mutations.gatekeeper.sh v1 to ResourceManager,1
+8215b973,Adding GroupVersion expansion.gatekeeper.sh v1beta1 to ResourceManager,1
+4651be00,"Failed calling webhook, failing closed <*> failed calling webhook <*> failed to call webhook: Post <*> context deadline exceeded",5
+5bb1aa04,"""Successfully retrieved node IP(s)"" IPs=[""<*>""]",5
+0c3be2ce,"""Set sysctl"" entry=""net/netfilter/nf_conntrack_max"" value=<*>",1
+c9a08003,"""Unhandled Error"" err=""loading OpenAPI spec for \""v1beta1.metrics.k8s.io\"" failed with: Error, could not get list of group versions for APIService"" logger=""UnhandledError""",2
+8cac595d,"""Still connecting"" address=""unix:///csi/csi.sock""",1
+9835ad96,"""Unhandled Error"" err=""v1beta1.metrics.k8s.io failed with: failing or missing response from https:/<*>/apis/metrics.k8s.io/v1beta1: bad status from https:/<*>/apis/metrics.k8s.io/v1beta1: <*>"" logger=""UnhandledError""",19
+2ccf292d,"""Unhandled Error"" err=<",30
+c1f1f6d3,"""Unhandled Error"" err=""v1beta1.metrics.k8s.io failed with: failing or missing response from https:/<*>/apis/metrics.k8s.io/v1beta1: Get \""https:/<*>/apis/metrics.k8s.io/v1beta1\"": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"" logger=""UnhandledError""",1
+ddcf4fed,OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.,4
+b5bff678,no RequestInfo found in the context,25
+3a363064,"""Unhandled Error"" err=""unable to sync kubernetes service: Operation cannot be fulfilled on endpoints \""kubernetes\"": the object has been modified; please apply your changes to the latest version and try again"" logger=""UnhandledError""",1
+c0399d90,quota admission added evaluator for: daemonsets.apps,1
+f1ec66a0,quota admission added evaluator for: statefulsets.apps,1
+ffcb22e0,"""Warning: watch ended with error"" <*> <*> err=""an error on the server (\""unable to decode an event from the watch stream: http2: client connection lost\"") has prevented the request from succeeding""",27
+2be1e9dc,"""Unhandled Error"" err=""write tcp <*>-><*> write: connection reset by peer"" logger=""UnhandledError""",1
+fd0b290f,"""Caches are synced"" controller=""endpoint slice config""",1
+39cf5894,"""Unhandled Error"" err=""v1beta1.metrics.k8s.io failed with: Operation cannot be fulfilled on apiservices.apiregistration.k8s.io \""v1beta1.metrics.k8s.io\"": the object has been modified; please apply your changes to the latest version and try again"" logger=""UnhandledError""",15
+1018ceb1,"""Unhandled Error"" err=""client disconnected"" logger=""UnhandledError""",2
+27b00fe0,"""Unhandled Error"" err=""apiserver was unable to write a fallback JSON response: http: Handler timeout"" logger=""UnhandledError""",50
+ba2ae921,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*> panicked: false, err: context canceled, panic-reason: <nil>"" logger=""UnhandledError""",30
+410b72fc,"""Unhandled Error"" err=""apiserver received an error that is not an metav1.Status: &errors.errorString{s:\""http: Handler timeout\""}: http: Handler timeout"" logger=""UnhandledError""",19
+475d5ea4,"""Failed to update lease"" err=""Operation cannot be fulfilled on leases.coordination.k8s.io <*> the object has been modified; please apply your changes to the latest version and try again""",18
+2fe15eb7,"""Failed to update lease"" err=""etcdserver: request timed out""",28
+05f9e7eb,refreshing policies,48
+d2686dbb,watch chan error: etcdserver: no leader,49
+a3ea244c,"""Timeout or abort while handling"" logger=""UnhandledError"" method=""PUT"" <*> <*>",6
+51ec0b2c,"""Failed to get storage metrics"" storage_cluster_id=""etcd-<*>"" err=""context deadline exceeded""",2
+9a1583f6,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*> panicked: false, err: context deadline exceeded, panic-reason: <nil>"" logger=""UnhandledError""",19
+23dc9f70,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.800639ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager"" result=null",1
+4ce6c3d5,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.724024ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/openstack-system/leases/external-attacher-leader-cinder-csi-openstack-org"" result=null",1
+8d908abc,"""Unhandled Error"" err=""apiserver was unable to write a JSON response: http: Handler timeout"" logger=""UnhandledError""",47
+c269c198,"""Timeout or abort while handling"" logger=""UnhandledError"" method=""POST"" <*> <*>",2
+5b90fc3f,updated ClusterIP allocator for Service CIDR <*>/<*>,48
+201a6efe,"Resetting endpoints for master service ""kubernetes"" to [<*> <*>]",21
+d630f662,"""Received GetInfo call"" request=""""",2
+2c38006e,"""Received NotifyRegistrationStatus call"" status=""plugin_registered:true""",2
+515b2348,Updated current TLS certificate,1
+95eb89dd,Starting certificate watcher,1
+8111e21e,"""Unhandled Error"" err=""v1beta1.metrics.k8s.io failed with: failing or missing response from https:/<*>/apis/metrics.k8s.io/v1beta1: Get \""https:/<*>/apis/metrics.k8s.io/v1beta1\"": dial tcp <*> connect: connection refused"" logger=""UnhandledError""",1
+9b9880ee,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.172055ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock"" result=null",1
+42ff4b41,"""using dynamic certificate generating using CA stored in Secret resource"" logger=""cert-manager.webhook.webhook"" secret_namespace=""cert-manager"" secret_name=""cert-manager-webhook-ca""",1
+08fcc0a2,"""serving insecurely as tls certificate data not provided"" <*>",2
+cab8e40b,"""listening for insecure healthz connections"" logger=""cert-manager.webhook"" address=<*>",1
+7c780a25,"""Registering webhook"" logger=""cert-manager.controller-runtime.webhook"" path=""/mutate""",1
+5b856603,"""Registering webhook"" logger=""cert-manager.controller-runtime.webhook"" path=""/validate""",1
+31bde78f,"""Starting metrics server"" logger=""cert-manager.controller-runtime.metrics""",2
+6993a44d,"""Serving metrics server"" logger=""cert-manager.controller-runtime.metrics"" bindAddress=""<*>"" secure=false",2
+e8b22ce6,"""Starting webhook server"" logger=""cert-manager.controller-runtime.webhook""",1
+a3fa71f5,"""Serving webhook server"" logger=""cert-manager.controller-runtime.webhook"" host="""" port=<*>",1
+11018854,"""Detected change in CA secret data, update current CA data and notify watches"" logger=""cert-manager""",1
+286bb491,"""Updated cert-manager TLS certificate"" logger=""cert-manager"" DNSNames=[""cert-manager-webhook"",""cert-manager-webhook.cert-manager"",""cert-manager-webhook.cert-manager.svc""]",7
+35671305,"""Detected root CA rotation - regenerating serving certificates"" logger=""cert-manager""",1
+e12efed9,"informer started for constraints.gatekeeper.sh/v1beta1, Kind=K8sPSPAppArmor",3
+0f22c988,"""Unhandled Error"" err=""apiserver received an error that is not an metav1.Status: <*> <*> <*> <*> logger=""UnhandledError""",19
+6243cc1a,quota admission added evaluator for: rolebindings.rbac.authorization.k8s.io,1
+fea1fb54,quota admission added evaluator for: issuers.cert-manager.io,1
+f2604725,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.096962ms"" method=""PUT"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/snapshot-controller-leader"" result=null",1
+6383a3f9,Neither --kubeconfig nor --master was specified. Using the inClusterConfig. This might not work.,7
+03b8a849,"""Creating API client"" host=""https:/<*>""",2
+e703d8a7,"""Running in Kubernetes cluster"" major=""<*>"" minor=""<*>"" git=""v1.<*>.<*>"" state=""clean"" commit=""1e09fec02ac194c1044224e45e60d249e98cd092"" platform=""linux/amd64""",3
+651dbfa6,"""Valid default backend"" service=""ingress-nginx/ingress-nginx-default-backend""",3
+7ac9074a,"""SSL fake certificate created"" file=""/etc/ingress-controller/ssl/default-fake-certificate.pem""",3
+6433797f,"""loading tls certificate"" path=""/usr/local/certificates/cert"" key=""/usr/local/certificates/key""",3
+4ac525c1,unexpected error merging defaults: <*> error(s) decoding:,2
+406bdecc,"Is Chrooted, starting logger",3
+d5609eb5,"""Starting NGINX Ingress controller""",3
+d38b1ac1,"""ignoring ingressclass as the spec.controller is not the same of this ingress"" ingressclass=""traefik""",5
+23a5fc51,"Event(v1.ObjectReference{Kind:""ConfigMap"", Namespace:""ingress-nginx"", Name:""ingress-nginx-controller"", UID:""0bcad545-8a81-4e4a-<*>-98ad012a35de"", APIVersion:""v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'CREATE' ConfigMap ingress-nginx/ingress-nginx-controller",3
+a7b7eb0d,"Event(v1.ObjectReference{Kind:""Ingress"", Namespace:""alertmanager"", Name:""kube-prometheus-stack-alertmanager"", UID:""eb9b3310-85a7-4acc-953f-e667e9cb9a56"", APIVersion:""networking.k8s.io/v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'Sync' Scheduled for sync",12
+17350da6,"""Adding secret to local store"" name=""alertmanager/alertmanager-certs""",3
+0f155863,"""Adding secret to local store"" name=""ingress-nginx/ingress-nginx-probe-ingress-tls""",2
+bac6430c,"""Ignoring ingress because of error while validating ingress class"" <*> error=""no object matching key \""traefik\"" in local store""",6
+ef8874e0,"""Starting TLS proxy for SSL Passthrough""",3
+8fe8deb3,"""Attempting to acquire leader lease..."" lock=""ingress-nginx/ingress-nginx-leader""",9
+2dbb73a4,"""Starting NGINX process""",3
+8e9251da,"""Starting validation webhook"" address="":<*>"" certPath=""/usr/local/certificates/cert"" keyPath=""/usr/local/certificates/key""",3
+eb3450dd,"""Configuration changes detected, backend reload required""",6
+20f45523,"""Backend successfully reloaded""",6
+981542d7,"""Initial sync, sleeping for <*> second""",3
+be672169,"Event(v1.ObjectReference{Kind:""Pod"", Namespace:""ingress-nginx"", Name:""ingress-nginx-controller-bxpzh"", UID:""38bb362e-cecd-4b90-811c-85c1854b9d05"", APIVersion:""v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'RELOAD' NGINX reload triggered due to a change in configuration",2
+75e01f6e,"Event(v1.ObjectReference{Kind:""Ingress"", Namespace:""kube-system"", Name:""kubeapi-metrics"", UID:""e8bf1043-e26e-48d5-a04a-5dbafb3f9632"", APIVersion:""networking.k8s.io/v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'Sync' Scheduled for sync",1
+904e9975,"""Found valid IngressClass"" ingress=""alertmanager/kube-prometheus-stack-alertmanager"" ingressclass=""_""",1
+b4c4417d,"Event(v1.ObjectReference{Kind:""Pod"", Namespace:""ingress-nginx"", Name:""ingress-nginx-controller-bbzrr"", UID:""f8fad7cd-22b1-4ef3-84f1-ed484c413d1a"", APIVersion:""v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'RELOAD' NGINX reload triggered due to a change in configuration",2
+21ba238a,"ignoring ingress kubeapi-metrics-traefik in kube-system based on annotation : no object matching key ""traefik"" in local store",1
+77869e23,"""successfully validated configuration, accepting"" ingress=""kube-system/kubeapi-metrics-traefik""",1
+b86a7db6,Starting RequestHeaderAuthRequestController,7
+b9ca2817,"""Caches are synced"" controller=""client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file""",1
+aa0036fa,Terminating all watchers from cacher alertmanagers.monitoring.coreos.com,1
+05c1b7fe,Terminating all watchers from cacher prometheusagents.monitoring.coreos.com,1
+00ae5a3e,Adding GroupVersion monitoring.coreos.com v1alpha1 to ResourceManager,3
+612e002c,"ignoring ingress traefik-probe-ingress in traefik-system based on annotation : no object matching key ""traefik"" in local store",1
+4ee8d18c,"""successfully validated configuration, accepting"" ingress=""traefik-system/traefik-probe-ingress""",1
+407edb05,"Failed calling webhook, failing open monitor-webhooks.kyverno.svc: failed calling webhook ""monitor-webhooks.kyverno.svc"": failed to call webhook: Post ""https://kyverno-svc.kyverno.svc:<*>/verifymutate?timeout=10s"": dial tcp <*> connect: connection refused",1
+c1f20a22,"""Unhandled Error"" err=""failed calling webhook \""monitor-webhooks.kyverno.svc\"": failed to call webhook: Post \""https://kyverno-svc.kyverno.svc:<*>/verifymutate?timeout=10s\"": dial tcp <*> connect: connection refused"" logger=""UnhandledError""",1
+556f6443,"""POD is not ready"" pod=""ingress-nginx/ingress-nginx-controller-kkf7g"" node=""backman-wc-worker-small-5xcc8-5tsnj""",3
+7204dd5e,"""updating Ingress status"" namespace=""kube-system"" ingress=""kubeapi-metrics"" currentValue=[{""ip"":""<*>""},{""ip"":""<*>""},{""ip"":""<*>""}] newValue=[{""ip"":""<*>""},{""ip"":""<*>""}]",1
+d3a500d2,"""updating Ingress status"" namespace=""alertmanager"" ingress=""kube-prometheus-stack-alertmanager"" currentValue=[{""ip"":""<*>""},{""ip"":""<*>""},{""ip"":""<*>""}] newValue=[{""ip"":""<*>""},{""ip"":""<*>""}]",1
+e27c6d63,"""updating Ingress status"" namespace=""ingress-nginx"" ingress=""ingress-nginx-probe-ingress"" currentValue=[{""ip"":""<*>""},{""ip"":""<*>""},{""ip"":""<*>""}] newValue=[{""ip"":""<*>""},{""ip"":""<*>""}]",1
+b07ffb2b,"""Failed to scrape node, timeout to access kubelet"" err=""Get \""https:/<*>/metrics/resource\"": context deadline exceeded"" <*> timeout=""10s""",5
+b4e8ce55,"""Set sysctl"" entry=""net/netfilter/nf_conntrack_tcp_timeout_close_wait"" value=<*>",1
+1cdb8aa2,"""Caches are synced"" controller=""service config""",1
+2c5823a2,"""Caches are synced"" controller=""serviceCIDR config""",1
+e25cd7ef,"""Found valid IngressClass"" ingress=""ingress-nginx/ingress-nginx-probe-ingress"" ingressclass=""nginx""",1
+48944807,"Event(v1.ObjectReference{Kind:""Pod"", Namespace:""ingress-nginx"", Name:""ingress-nginx-controller-kkf7g"", UID:""34a65b0b-fae6-4d50-b389-8b2d5d4c2278"", APIVersion:""v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'RELOAD' NGINX reload triggered due to a change in configuration",2
+00b3600a,"""updating Ingress status"" namespace=""kube-system"" ingress=""kubeapi-metrics"" currentValue=[{""ip"":""<*>""},{""ip"":""<*>""}] newValue=[{""ip"":""<*>""},{""ip"":""<*>""},{""ip"":""<*>""}]",1
+0d407c4c,"""updating Ingress status"" namespace=""ingress-nginx"" ingress=""ingress-nginx-probe-ingress"" currentValue=[{""ip"":""<*>""},{""ip"":""<*>""}] newValue=[{""ip"":""<*>""},{""ip"":""<*>""},{""ip"":""<*>""}]",1
+93ea2d0d,"""updating Ingress status"" namespace=""alertmanager"" ingress=""kube-prometheus-stack-alertmanager"" currentValue=[{""ip"":""<*>""},{""ip"":""<*>""}] newValue=[{""ip"":""<*>""},{""ip"":""<*>""},{""ip"":""<*>""}]",1
+5dbf766d,"Event(v1.ObjectReference{Kind:""Ingress"", Namespace:""ingress-nginx"", Name:""ingress-nginx-probe-ingress"", UID:""38aa8f0b-<*>-4eac-a86c-ec4fef271d76"", APIVersion:""networking.k8s.io/v1"", ResourceVersion:""<*>"", FieldPath:""""}): type: 'Normal' reason: 'Sync' Scheduled for sync",1
+add65758,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.720736ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager"" result=null",1
+f620a4f1,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.132048ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+b71cf522,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.066824ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/openstack-system/leases/cinder-csi-openstack-org"" result=null",1
+54b5ec5d,"""error running poll"" err=""context canceled""",9
+9b4ed7e0,"""Unhandled Error"" err=""apiserver received an error that is not an metav1.Status: rpctypes.EtcdError{code:0xe, desc:\""etcdserver: request timed out\""}: etcdserver: request timed out"" logger=""UnhandledError""",10
+f9b13494,"""Failed to update lease optimistically, falling back to slow path"" err=""etcdserver: request timed out"" lock=""ingress-nginx/ingress-nginx-leader""",19
+e641110a,"""Error retrieving lease lock"" err=""Get \""https:/<*>/apis/coordination.k8s.io/v1/namespaces/ingress-nginx/leases/ingress-nginx-leader\"": context deadline exceeded"" lock=""ingress-nginx/ingress-nginx-leader""",9
+66598d6c,Error proxying data from backend to client: websocket: close sent,48
+592ebc16,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.385598ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+63cab453,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.279663ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager"" result=null",1
+c3acd920,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.256795ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager"" result=null",1
+43df9fdb,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.011521ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager"" result=null",1
+2c84f6d4,"""secret was updated and it is used in ingress annotations. Parsing"" secret=""alertmanager/user-alertmanager-auth""",3
+635f738d,processed ingress via admission controller {testedIngressLength:<*> testedIngressTime:<*>.005s renderingIngressLength:<*> renderingIngressTime:<*>.001s admissionTime:<*>.006s testedConfigurationSize:<*>.3kB},1
+c368e8ec,"""successfully validated configuration, accepting"" ingress=""alertmanager/kube-prometheus-stack-alertmanager""",1
+424e9537,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.168262ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/openstack-system/leases/external-resizer-cinder-csi-openstack-org"" result=null",1
+302d098c,"Resetting endpoints for master service ""kubernetes"" to [<*> <*> <*>]",29
+7936cafa,"""Successfully acquired lease"" lock=""ingress-nginx/ingress-nginx-leader""",9
+d814ace6,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.054096ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+3447712d,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.952078ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler"" result=null",1
+d371c75b,"""Unhandled Error"" err=""Post \""https:/<*>/apis/authorization.k8s.io/v1/subjectaccessreviews?timeout=10s\"": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"" logger=""UnhandledError""",1
+704e69b8,"""Unhandled Error"" err=""Post \""https:/<*>/apis/authorization.k8s.io/v1/subjectaccessreviews?timeout=10s\"": context deadline exceeded"" logger=""UnhandledError""",1
+f1ea7ea8,"""Failed to watch"" err=""failed to list <*> Get <*> net/http: TLS handshake timeout"" logger=""UnhandledError"" <*> <*>",16
+e66e327c,"<*> watch of <*> ended with: an error on the server (""unable to decode an event from the watch stream: http2: client connection lost"") has prevented the request from succeeding",9
+968e0285,<*> failed to list <*> Get <*> net/http: TLS handshake timeout,9
+e6ec9bd0,"Trace[<*>]: ""Reflector ListAndWatch"" <*> (<*>-Mar-<*> <*>:<*>:<*>.<*>) (total time: <*>",6
+1074b678,"""Unhandled Error"" err=""k8s.io/client-go@v0.<*>.<*>/tools/cache/reflector.go:<*>: Failed to watch *v1.Secret: failed to list *v1.Secret: Get \""https:/<*>/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=<*>\"": net/http: TLS handshake timeout"" logger=""UnhandledError""",5
+7e93d2ec,"""Failed probe"" probe=""metric-storage-ready"" err=""no metrics to serve""",2
+78316072,"github.com/kubernetes-csi/external-snapshotter/client/v7/informers/externalversions/factory.go:<*>: Failed to watch *v1.VolumeSnapshotClass: failed to list *v1.VolumeSnapshotClass: Get ""https:/<*>/apis/snapshot.storage.k8s.io/v1/volumesnapshotclasses?resourceVersion=<*>"": net/http: TLS handshake timeout",5
+e061f2b3,"""Unhandled Error"" err=""unable to sync kubernetes service: etcdserver: request timed out"" logger=""UnhandledError""",5
+3e38dd74,"""Unable to authenticate the request"" err=""[invalid bearer token, context canceled]""",5
+fa819cc9,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.985963072s"" method=""PUT"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/backman-wc-control-plane-sbwph"" result=null",1
+5e423d24,"""Unhandled Error"" err=""unable to refresh the port allocations: etcdserver: leader changed"" logger=""UnhandledError""",1
+3476d138,"""Registering a reconciler for injectable"" logger=""cert-manager"" kind=""mutatingwebhookconfiguration""",1
+5592a5b2,"""Registering a reconciler for injectable"" logger=""cert-manager"" kind=""validatingwebhookconfiguration""",1
+627fc4dd,"""Registering a reconciler for injectable"" logger=""cert-manager"" kind=""customresourcedefinition""",1
+7e86380b,Caches populated for *v1.ValidatingWebhookConfiguration from k8s.io/client-go@v0.<*>.<*>/tools/cache/reflector.go:<*>,1
+356fcbaa,Caches populated for *v1.APIService from k8s.io/client-go@v0.<*>.<*>/tools/cache/reflector.go:<*>,1
+8440b4a8,"""cert-manager-cainjector-d666d4d-vwj4m_d3486405-f4fe-4bb5-96d0-8d08d27fb7c2 became leader"" logger=""cert-manager.events"" type=""Normal"" object={""kind"":""Lease"",""namespace"":""kube-system"",""name"":""cert-manager-cainjector-leader-election"",""uid"":""3f49e57c-88aa-446c-acd0-3879536c239d"",""apiVersion"":""coordination.k8s.io/v1"",""resourceVersion"":""<*>""} reason=""LeaderElection""",1
+212db502,"""Starting EventSource"" logger=""cert-manager"" controller=""mutatingwebhookconfiguration"" controllerGroup=""admissionregistration.k8s.io"" controllerKind=""MutatingWebhookConfiguration"" source=""kind source: *v1.PartialObjectMetadata""",1
+fc45f7c9,"""Starting Controller"" logger=""cert-manager"" controller=""mutatingwebhookconfiguration"" controllerGroup=""admissionregistration.k8s.io"" controllerKind=""MutatingWebhookConfiguration""",1
+22d1a44a,"""Starting Controller"" logger=""cert-manager"" controller=""apiservice"" controllerGroup=""apiregistration.k8s.io"" controllerKind=""APIService""",1
+8969a6e4,"""Starting EventSource"" logger=""cert-manager"" controller=""validatingwebhookconfiguration"" controllerGroup=""admissionregistration.k8s.io"" controllerKind=""ValidatingWebhookConfiguration"" source=""kind source: *v1.ValidatingWebhookConfiguration""",1
+2a3c33ab,"""Starting Controller"" logger=""cert-manager"" controller=""validatingwebhookconfiguration"" controllerGroup=""admissionregistration.k8s.io"" controllerKind=""ValidatingWebhookConfiguration""",1
+6abfd0ba,"""Starting Controller"" logger=""cert-manager"" controller=""customresourcedefinition"" controllerGroup=""apiextensions.k8s.io"" controllerKind=""CustomResourceDefinition""",1
+b7180361,"""Starting workers"" logger=""cert-manager"" controller=""apiservice"" controllerGroup=""apiregistration.k8s.io"" controllerKind=""APIService"" worker count=<*>",1
+647cf656,"""Starting workers"" logger=""cert-manager"" controller=""validatingwebhookconfiguration"" controllerGroup=""admissionregistration.k8s.io"" controllerKind=""ValidatingWebhookConfiguration"" worker count=<*>",1
+39fdd82c,"""Starting workers"" logger=""cert-manager"" controller=""mutatingwebhookconfiguration"" controllerGroup=""admissionregistration.k8s.io"" controllerKind=""MutatingWebhookConfiguration"" worker count=<*>",1
+f279dfcd,"""Starting workers"" logger=""cert-manager"" controller=""customresourcedefinition"" controllerGroup=""apiextensions.k8s.io"" controllerKind=""CustomResourceDefinition"" worker count=<*>",1
+59ab9f3d,"""Failed to update lease optimistically, falling back to slow path"" err=""Operation cannot be fulfilled on leases.coordination.k8s.io \""ingress-nginx-leader\"": the object has been modified; please apply your changes to the latest version and try again"" lock=""ingress-nginx/ingress-nginx-leader""",6
+80f523f5,"""Failed to renew lease"" lock=""ingress-nginx/ingress-nginx-leader"" err=""context deadline exceeded""",8
+fba93174,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.715258ms"" method=""PUT"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler"" result=null",1
+fde6d941,"""Updated object"" logger=""cert-manager"" kind=""mutatingwebhookconfiguration"" kind=""mutatingwebhookconfiguration"" name=""cert-manager-webhook""",7
+05111c75,"""Updated object"" logger=""cert-manager"" kind=""validatingwebhookconfiguration"" kind=""validatingwebhookconfiguration"" name=""hnc-controller-validating-webhook-configuration""",7
+144dd529,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.538264ms"" method=""GET"" path=""/api/v1/namespaces/kube-system/configmaps/cluster-autoscaler-status"" result=null",1
+497de76c,"Failed to update lock optimistically: etcdserver: request timed out, falling back to slow path",9
+5f03d80d,Loaded a new request header values for RequestHeaderAuthRequestController,3
+85d005b3,"""Starting controller"" name=""client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file""",2
+471761b7,"""Waiting for caches to sync"" controller=""client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file""",3
+f1f00127,"""Caches populated"" type=""*v1.ConfigMap"" reflector=""k8s.io/client-go@v0.<*>.<*>/tools/cache/reflector.go:<*>""",2
+c7553a1f,"""Loaded SNI cert"" index=<*> certName=""self-signed loopback"" certDetail=""\""apiserver-loopback-client@<*>\"" [serving] validServingFor=[apiserver-loopback-client] issuer=\""apiserver-loopback-client-ca@<*>\"" (<*>-<*>-<*> <*>:<*>:<*> <*> UTC to <*>-<*>-<*> <*>:<*>:<*> <*> UTC (now=<*>-<*>-<*> <*>:<*>:<*>.<*> <*> UTC))""",2
+38484430,"""Loaded client CA"" index=<*> certName=""client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"" certDetail=""\""kubernetes\"" [] issuer=\""<self>\"" (<*>-<*>-<*> <*>:<*>:<*> <*> UTC to <*>-<*>-<*> <*>:<*>:<*> <*> UTC (now=<*>-<*>-<*> <*>:<*>:<*>.<*> <*> UTC))""",2
+26133d30,"""Loaded serving cert"" certName=""Generated self signed cert"" certDetail=""\""localhost@<*>\"" [serving] validServingFor=[<*>,localhost,localhost] issuer=\""localhost-ca@<*>\"" (<*>-<*>-<*> <*>:<*>:<*> <*> UTC to <*>-<*>-<*> <*>:<*>:<*> <*> UTC (now=<*>-<*>-<*> <*>:<*>:<*>.<*> <*> UTC))""",2
+f5731974,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.28585ms"" method=""GET"" path=""/api/v1/namespaces/kyverno/secrets/kyverno-svc.kyverno.svc.kyverno-tls-ca"" result=null",1
+cb02be13,"""cert-manager webhook certificate requires renewal, regenerating"" logger=""cert-manager"" DNSNames=[""cert-manager-webhook"",""cert-manager-webhook.cert-manager"",""cert-manager-webhook.cert-manager.svc""]",5
+0e23a031,Setting up informers for Cloud,3
+a4d7026d,Failed to create an OpenStack Secret client: unable to initialize keymanager client for region RegionOne: No suitable endpoint could be found in the service catalog.,3
+e80f07f1,Claiming to support LoadBalancer,3
+b5fe6313,Starting service controller,3
+a0f2b7d5,Error initialising Routes support: router-id not set in cloud provider config,3
+dc465d35,"--configure-cloud-routes is set, but cloud provider does not support routes. Will not configure cloud provider routes.",3
+39621b35,"Skipping ""node-route-controller""",3
+8087d294,"Started ""cloud-node-controller""",2
+6802d8a7,Sending events to api server.,3
+51beda31,Waiting for informer caches to sync,3
+1a88501d,Sending events to api server,3
+a377c544,"""Caches are synced"" controller=""service""",1
+53713aa8,Ensuring load balancer for service ingress-nginx/ingress-nginx-controller,3
+aba04c61,"""EnsureLoadBalancer"" cluster=""backman-wc"" service=""ingress-nginx/ingress-nginx-controller""",3
+5ca91c33,"""EnsureLoadBalancer"" cluster=""backman-wc"" service=""traefik-system/traefik""",3
+98276a16,"""Event occurred"" object=""traefik-system/traefik"" fieldPath="""" kind=""Service"" apiVersion=""v1"" type=""Normal"" reason=""EnsuringLoadBalancer"" message=""Ensuring load balancer""",1
+62438fb5,"""Updated object"" logger=""cert-manager"" kind=""validatingwebhookconfiguration"" kind=""validatingwebhookconfiguration"" name=""snapshot-validating-webhook.snapshot.storage.k8s.io""",3
+4494edfe,failed to renew lease kube-system/cloud-controller-manager: context deadline exceeded,3
+4f089b50,"""leaderelection lost""",3
+a3f5a6d8,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.012903ms"" method=""PUT"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+fdb9f8b9,"""Updated object"" logger=""cert-manager"" kind=""apiservice"" kind=""apiservice"" name=""v1beta1.metrics.k8s.io""",6
+06f5ca95,"""unable to update target object with new CA data"" err=""Operation cannot be fulfilled on apiservices.apiregistration.k8s.io \""v1beta1.metrics.k8s.io\"": the object has been modified; please apply your changes to the latest version and try again"" logger=""cert-manager"" kind=""apiservice"" kind=""apiservice"" name=""v1beta1.metrics.k8s.io""",5
+3061e7d3,"""Reconciler error"" err=""Operation cannot be fulfilled on apiservices.apiregistration.k8s.io \""v1beta1.metrics.k8s.io\"": the object has been modified; please apply your changes to the latest version and try again"" logger=""cert-manager"" controller=""apiservice"" controllerGroup=""apiregistration.k8s.io"" controllerKind=""APIService"" APIService=""v1beta1.metrics.k8s.io"" namespace="""" name=""v1beta1.metrics.k8s.io"" <*>",5
+09416b04,"""Failed to remove file watch, it may have been deleted"" <*> err=""fsnotify: can't remove non-existent watch: <*>",2
+ab3c62d8,"""Caches are synced"" controller=""RequestHeaderAuthRequestController""",2
+d3fa4cba,etcd: endpoint ([https:/<*>]) compact failed: etcdserver: request timed out,6
+a9aa0846,"error retrieving resource lock kube-system/cloud-controller-manager: Get ""https:/<*>/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s"": net/http: request canceled (Client.Timeout exceeded while awaiting headers)",1
+8eb5a25f,"Starting ""service-lb-controller""",1
+168e0572,Syncing backends for all LB services.,2
+28c9e493,Successfully updated <*> out of <*> load balancers to direct traffic to the updated set of nodes,2
+e8acad2b,Ensuring load balancer for service traefik-system/traefik,2
+401e5660,Update <*> nodes status took <*>.428383374s.,1
+6a6ac22a,Update <*> nodes status took <*>.355424442s.,1
+47ff038f,Update <*> nodes status took <*>.423950174s.,1
+b0dea6b7,Update <*> nodes status took <*>.278962557s.,1
+db600186,Update <*> nodes status took <*>.739269429s.,1
+c58552bb,Update <*> nodes status took <*>.766396655s.,1
+cb8e2d0d,Update <*> nodes status took <*>.377211894s.,1
+e534105d,feature gates: {map[]},1
+0477b980,"""Version"" version=""v4.<*>.<*>""",1
+4e05d297,"""Feature gate default state"" feature=""InOrderInformers"" enabled=true",1
+0f6afe32,"""Probing CSI driver for readiness""",2
+d598aa11,"""CSI driver supports ControllerPublishUnpublish, using real CSI handler"" driver=""cinder.csi.openstack.org""",1
+d72eb211,"""CSI driver supports list volumes published nodes. Using capability to reconcile volume attachment objects with actual backend state"" driver=""cinder.csi.openstack.org""",1
+6a406b77,"""became leader, starting""",1
+4e9c72d5,"""Updated object"" logger=""cert-manager"" kind=""mutatingwebhookconfiguration"" kind=""mutatingwebhookconfiguration"" name=""hnc-controller-mutating-webhook-configuration""",5
+b0e35d28,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.<*>µs"" method=""PUT"" path=""/api/v1/namespaces/kube-system/configmaps/cluster-autoscaler-status"" result=null",1
+0ed2a9eb,"""Updated object"" logger=""cert-manager"" kind=""validatingwebhookconfiguration"" kind=""validatingwebhookconfiguration"" name=""snapshot-validating-webhook.storage.k8s.io""",13
+12dd9c07,"Starting ""cloud-node-lifecycle-controller""",1
+91278e37,"""Caches populated"" type=""*v1.Service"" reflector=""k8s.io/client-go@v0.<*>.<*>/tools/cache/reflector.go:<*>""",1
+e6f82fc0,Update <*> nodes status took <*>.303798394s.,1
+fcb361b1,Update <*> nodes status took <*>.28614523s.,1
+7a63be65,Update <*> nodes status took <*>.367955215s.,1
+490ce125,"Failed to update lock optimistically: Put ""https:/<*>/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s"": read tcp <*>-><*> read: connection reset by peer, falling back to slow path",1
+c9ec71f2,failed to renew lease openstack-system/external-attacher-leader-cinder-csi-openstack-org: context deadline exceeded,1
+8c7ed03d,"""Stopped leading""",1
+f3106c8e,Update <*> nodes status took <*>.369728698s.,1
+1d739bae,Update <*> nodes status took <*>.696693907s.,1
+82851ec1,Update <*> nodes status took <*>.455590192s.,1
+e3309b0a,Update <*> nodes status took <*>.495478647s.,1
+5cbbbbe3,Update <*> nodes status took <*>.405340764s.,1
+50ff3453,Update <*> nodes status took <*>.38657716s.,1
+437d3b3c,"error retrieving resource lock kube-system/cloud-controller-manager: Get ""https:/<*>/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s"": context deadline exceeded",1
+4d846d23,"""Updated object"" logger=""cert-manager"" kind=""validatingwebhookconfiguration"" kind=""validatingwebhookconfiguration"" name=""trust-manager""",5
+b19c0e7d,Error proxying data from client to backend: write tcp <*>-><*> write: broken pipe,6
+69212f37,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.960523ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+2808e455,"""New leader elected"" identity=""ingress-nginx-controller-bxpzh""",1
+bbbcbe4d,"Service ""alertmanager/kube-prometheus-stack-alertmanager"" does not have any active Endpoint.",50
+c902f63d,quota admission added evaluator for: volumesnapshots.snapshot.storage.k8s.io,2
+495c0108,"Trace[<*>]: ""Reflector ListAndWatch"" <*> (<*>-Apr-<*> <*>:<*>:<*>.<*>) (total time: <*>",38
+88a9bab9,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.998051ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler"" result=null",1
+6b5ea64a,"""Waiting for caches to sync"" controller=""service config""",1
+8f42bdc6,"""Updated object"" logger=""cert-manager"" kind=""validatingwebhookconfiguration"" kind=""validatingwebhookconfiguration"" name=""cert-manager-webhook""",2
+36349467,"""Timeout or abort while handling"" logger=""UnhandledError"" method=""GET"" <*> <*>",5
+249ca121,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.158014ms"" method=""GET"" path=""/api/v1/namespaces/kyverno/secrets/kyverno-svc.kyverno.svc.kyverno-tls-ca"" result=null",1
+a156e4bb,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.691124ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler"" result=null",1
+ae8d1e6a,"""failed to update lease using latest lease, fallback to ensure lease"" err=""failed <*> attempts to update lease""",4
+ffc41619,"rejected by webhook ""vpol.validate.kyverno.svc-fail-finegrained-elastisys-check-bundle-cm-exists"": &errors.StatusError{ErrStatus:v1.Status{TypeMeta:v1.TypeMeta{Kind:"""", APIVersion:""""}, ListMeta:v1.ListMeta{SelfLink:"""", ResourceVersion:"""", Continue:"""", RemainingItemCount:(*int64)(nil)}, Status:""Failure"", Message:""admission webhook \""vpol.validate.kyverno.svc-fail-finegrained-elastisys-check-bundle-cm-exists\"" denied the request: Policy elastisys-check-bundle-cm-exists failed: Bundle ConfigMap \""non-existing-bundle\"" not found in default. Please verify that the name is correct. If the name is correct but you still get this error, please contact your platform administrator."", Reason:"""", Details:(*v1.StatusDetails)(nil), Code:<*>}}",2
+e120cab5,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.04377ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler"" result=null",1
+33fcefcf,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.418779ms"" method=""GET"" path=""/apis/policies.kyverno.io/v1beta1/validatingpolicies/elastisys-check-bundle-cm-exists"" result=null",1
+4ac535d0,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.418872ms"" method=""GET"" path=""/api/v1/namespaces/kube-system/pods/kube-controller-manager-backman-wc-control-plane-4qmtw"" result=null",1
+49a33ba8,"Failed to make webhook authorizer request: Post ""https:/<*>/apis/authorization.k8s.io/v1/subjectaccessreviews?timeout=10s"": context deadline exceeded",1
+5aa3830e,"""Error retrieving lease lock"" err=""Get \""https:/<*>/apis/coordination.k8s.io/v1/namespaces/ingress-nginx/leases/ingress-nginx-leader\"": net/http: TLS handshake timeout - error from a previous attempt: http2: client connection lost"" lock=""ingress-nginx/ingress-nginx-leader""",1
+d61a9bad,failed to renew lease kube-system/cert-manager-cainjector-leader-election: context deadline exceeded,1
+ac3f7d31,"sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:<*>: watch of rbac.authorization.k8s.io/v1, Kind=Role ended with: an error on the server (""unable to decode an event from the watch stream: http2: client connection lost"") has prevented the request from succeeding",1
+d4ad9951,"sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:<*>: watch of networking.k8s.io/v1, Kind=NetworkPolicy ended with: an error on the server (""unable to decode an event from the watch stream: http2: client connection lost"") has prevented the request from succeeding",1
+8b3eb69a,"Failed to release lock: Put ""https:/<*>/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cert-manager-cainjector-leader-election"": http2: client connection lost",1
+cceebb33,"""Stopping and waiting for non leader election runnables"" logger=""cert-manager""",1
+21f158b6,"""cert-manager-cainjector-d666d4d-vwj4m_d3486405-f4fe-4bb5-96d0-8d08d27fb7c2 stopped leading"" logger=""cert-manager.events"" type=""Normal"" object={""kind"":""Lease"",""namespace"":""kube-system"",""name"":""cert-manager-cainjector-leader-election"",""uid"":""3f49e57c-88aa-446c-acd0-3879536c239d"",""apiVersion"":""coordination.k8s.io/v1"",""resourceVersion"":""<*>""} reason=""LeaderElection""",1
+c316ff63,"""Stopping and waiting for leader election runnables"" logger=""cert-manager""",1
+1f57ab83,"""Stopping and waiting for caches"" logger=""cert-manager""",1
+b81296bb,"""Stopping and waiting for webhooks"" logger=""cert-manager""",1
+c81f7e9c,"""Stopping and waiting for HTTP servers"" logger=""cert-manager""",1
+9c46fc29,"""Wait completed, proceeding to shutdown the manager"" logger=""cert-manager""",1
+4f6c591d,"""Shutdown signal received, waiting for all workers to finish"" logger=""cert-manager"" <*> <*> <*>",3
+5010b9bb,"""Shutting down metrics server with timeout of <*> minute"" logger=""cert-manager.controller-runtime.metrics""",1
+61f692d9,"""All workers finished"" logger=""cert-manager"" controller=""customresourcedefinition"" controllerGroup=""apiextensions.k8s.io"" controllerKind=""CustomResourceDefinition""",1
+bd14a5af,"""All workers finished"" logger=""cert-manager"" controller=""validatingwebhookconfiguration"" controllerGroup=""admissionregistration.k8s.io"" controllerKind=""ValidatingWebhookConfiguration""",1
+a9ce7593,"""All workers finished"" logger=""cert-manager"" controller=""mutatingwebhookconfiguration"" controllerGroup=""admissionregistration.k8s.io"" controllerKind=""MutatingWebhookConfiguration""",1
+b2d5c642,"""error executing command"" err=""error running manager: leader election lost"" logger=""cert-manager""",1
+d97766d4,"""Failed to update lease optimistically, falling back to slow path"" err=""Timeout: request did not complete within requested timeout - context deadline exceeded"" lock=""ingress-nginx/ingress-nginx-leader""",1
+14e23cb6,"""Waited before sending request"" delay=""<*>.13643453s"" reason=""client-side throttling, not priority and fairness"" verb=""GET"" URL=""https:/<*>/apis/networking.k8s.io/v1/servicecidrs?labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=<*>""",1
+8aa46ee1,"[core] [Channel #<*> SubChannel #<*>]grpc: addrConn.createTransport failed to connect to {Addr: ""<*>"", ServerName: ""<*>"", }. Err: connection error: desc = ""transport: authentication handshake failed: context deadline exceeded""",4
+35f26924,"""Unhandled Error"" err=""Internal error occurred: failed calling webhook \""hierarchyconfigurations.hnc.x-k8s.io\"": failed to call webhook: Post \""https://hnc-controller-webhook-service.hnc-system.svc:<*>/validate-hnc-x-k8s-io-v1alpha2-hierarchyconfigurations?timeout=10s\"": context deadline exceeded"" logger=""UnhandledError""",2
+2a2cbbc1,"Failed calling webhook, failing open namespacelabel.hnc.x-k8s.io: failed calling webhook ""namespacelabel.hnc.x-k8s.io"": failed to call webhook: Post ""https://hnc-controller-webhook-service.hnc-system.svc:<*>/mutate-namespace?timeout=10s"": dial tcp <*> connect: connection refused",1
+94239430,"""Unhandled Error"" err=""failed calling webhook \""namespacelabel.hnc.x-k8s.io\"": failed to call webhook: Post \""https://hnc-controller-webhook-service.hnc-system.svc:<*>/mutate-namespace?timeout=10s\"": dial tcp <*> connect: connection refused"" logger=""UnhandledError""",1
+22b31458,"Failed calling webhook, failing closed hncconfigurations.hnc.x-k8s.io: failed calling webhook ""hncconfigurations.hnc.x-k8s.io"": failed to call webhook: Post ""https://hnc-controller-webhook-service.hnc-system.svc:<*>/validate-hnc-x-k8s-io-v1alpha2-hncconfigurations?timeout=10s"": dial tcp <*> connect: connection refused",1
+2ce62390,"slow openapi aggregation of ""middlewaretcps.traefik.io"": <*>.025817055s",1
+94d08dfc,"Failed to make webhook authorizer request: Post ""https:/<*>/apis/authorization.k8s.io/v1/subjectaccessreviews?timeout=10s"": net/http: request canceled (Client.Timeout exceeded while awaiting headers)",1
+2900590a,"sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:<*>: watch of rbac.authorization.k8s.io/v1, Kind=RoleBinding ended with: an error on the server (""unable to decode an event from the watch stream: http2: client connection lost"") has prevented the request from succeeding",1
+000936e6,"""Error retrieving lease lock"" err=""etcdserver: request timed out"" lock=""ingress-nginx/ingress-nginx-leader""",1
+b97bbc8a,"""Unhandled Error"" err=""unable to refresh the port allocations: etcdserver: request timed out"" logger=""UnhandledError""",2
+b36b7093,"""requeuing"" err=""rpc error: code = Unavailable desc = keepalive ping failed to receive ACK within timeout"" key=""&ObjectMeta{Name:sync status,GenerateName:,Namespace:,SelfLink:,UID:,ResourceVersion:,Generation:<*>,CreationTimestamp:<*>-<*>-<*> <*>:<*>:<*> <*> UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{},Annotations:map[string]string{},OwnerReferences:[]OwnerReference{},Finalizers:[],ManagedFields:[]ManagedFieldsEntry{},}""",1
+c12fc070,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.104908ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+e6cdc412,"""Failed to update lease"" err=""Operation cannot be fulfilled on leases.coordination.k8s.io \""ingress-nginx-leader\"": the object has been modified; please apply your changes to the latest version and try again"" lock=""ingress-nginx/ingress-nginx-leader""",1
+b399af0c,"""Waiting for caches to sync"" controller=""node_authorizer""",1
+e0afd540,Adding GroupVersion networking.k8s.io v1 to ResourceManager,2
+271b5ede,Adding GroupVersion policy v1 to ResourceManager,1
+1ec03b43,"API group ""storagemigration.k8s.io"" is not enabled, skipping.",1
+1adcdfe4,"""Starting controller"" name=""serving-cert::/etc/kubernetes/pki/apiserver.crt::/etc/kubernetes/pki/apiserver.key""",1
+b2edac86,"""Starting controller"" name=""aggregator-proxy-cert::/etc/kubernetes/pki/front-proxy-client.crt::/etc/kubernetes/pki/front-proxy-client.key""",1
+585203c6,Waiting for caches to sync for RemoteAvailability controller,1
+6b35785e,Starting CRDFinalizer,2
+347b534e,"""Waiting for caches to sync"" controller=""crd-autoregister""",1
+c1329c75,Adding GroupVersion node.k8s.io v1 to ResourceManager,1
+ea8f39cb,Adding GroupVersion scheduling.k8s.io v1 to ResourceManager,1
+6bc7e25a,Adding GroupVersion apps v1 to ResourceManager,1
+6346d7a8,created ClusterIP allocator for Service CIDR <*>/<*>,2
+f301aff3,"""Caches are synced"" controller=""ipallocator-repair-controller""",1
+165f527d,Adding GroupVersion metrics.k8s.io v1beta1 to ResourceManager,1
+17742a73,Serving securely on [::]:<*>,1
+a4ca3ade,Adding GroupVersion status.gatekeeper.sh v1alpha1 to ResourceManager,1
+9561d45a,Adding GroupVersion kyverno.io v2beta1 to ResourceManager,1
+9447a623,Caches are synced for APIServiceRegistrationController controller,1
+b97aa12f,Adding GroupVersion externaldata.gatekeeper.sh v1alpha1 to ResourceManager,1
+22e86d5b,"""Unhandled Error"" err=""encountered error syncing policies: failed to find resource referenced by paramKind: 'constraints.gatekeeper.sh/v1beta1, Kind=K8sPSPAppArmor'. Rescheduling policy sync"" logger=""UnhandledError""",8
+5e2e8a0f,"""Will retry updating lease"" err=""failed <*> attempts to update lease"" interval=""10s""",6
+8abb358b,Caches are synced for autoregister controller,1
+5fc25855,Adding GroupVersion velero.io v1 to ResourceManager,1
+938578ea,Adding GroupVersion hub.traefik.io v1alpha1 to ResourceManager,1
+46f08820,Adding GroupVersion policies.kyverno.io v1 to ResourceManager,1
+03e7e0f3,Adding GroupVersion nvidia.com v1alpha1 to ResourceManager,1
+84c406dd,Adding GroupVersion templates.gatekeeper.sh v1 to ResourceManager,1
+2d570da7,"""Failed to update lease"" err=""leases.coordination.k8s.io \""apiserver-645gi2i5vbfsgt5pwyh6gudjiq\"" is forbidden: ValidatingAdmissionPolicy 'gatekeeper-k8spspapparmor' denied request: failed to configure policy: failed to find resource referenced by paramKind: 'constraints.gatekeeper.sh/v1beta1, Kind=K8sPSPAppArmor'""",3
+6a28a04a,"""Unhandled Error"" err=""unable to sync kubernetes service: endpoints \""kubernetes\"" is forbidden: ValidatingAdmissionPolicy 'gatekeeper-k8spspapparmor' denied request: failed to configure policy: failed to find resource referenced by paramKind: 'constraints.gatekeeper.sh/v1beta1, Kind=K8sPSPAppArmor'"" logger=""UnhandledError""",1
+9ba68444,quota admission added evaluator for: endpointslices.discovery.k8s.io,1
+f131673b,"oidc authenticator: initializing plugin: Get ""https://dex.backman.dev-ck8s.com/.well-known/openid-configuration"": tls: failed to verify certificate: x509: certificate signed by unknown authority",49
+24635564,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.458755ms"" method=""GET"" path=""/api/v1/namespaces/kyverno/secrets/kyverno-svc.kyverno.svc.kyverno-tls-ca"" result=null",1
+b757268c,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.985893ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+1855e0ab,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.413649ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+dbfc6a18,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.586209ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler"" result=null",1
+f5f8fa28,"""Unable to authenticate the request"" err=""[invalid bearer token, oidc: verify token: failed to verify signature: fetching keys oidc: get keys failed Get \""https://dex.backman.dev-ck8s.com/keys\"": tls: failed to verify certificate: x509: certificate signed by unknown authority]""",2
+6c487b50,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.881389ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler"" result=null",1
+b4562637,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.57281ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+c9850f6e,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.733415ms"" method=""PUT"" path=""/apis/coordination.k8s.io/v1/namespaces/kyverno/leases/kyverno-health"" result=null",1
+451ddad9,"""Failed to scrape node"" err=""Get \""https:/<*>/metrics/resource\"": read tcp <*>-><*> read: connection reset by peer"" node=""backman-wc-worker-small-5xcc8-5tsnj""",1
+5d691d3e,quota admission added evaluator for: constrainttemplatepodstatuses.status.gatekeeper.sh,1
+f37a16a6,quota admission added evaluator for: configpodstatuses.status.gatekeeper.sh,1
+e3ca79e5,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.44115ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+bea11373,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.235401ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cluster-autoscaler"" result=null",1
+4124b038,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.071196ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock"" result=null",1
+c40b88a5,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.762892ms"" method=""GET"" path=""/api/v1/namespaces/kube-system/configmaps/cluster-autoscaler-status"" result=null",1
+bc2ef2e2,Error proxying data from backend to client: write tcp <*>-><*> write: broken pipe,2
+4bb7a386,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.968525ms"" method=""PUT"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+0df45be1,"""Unhandled Error"" err=""FinishRequest: post-timeout activity - time-elapsed: <*>.<*>µs, panicked: false, err: etcdserver: request timed out, panic-reason: <nil>"" logger=""UnhandledError""",1
+38085f56,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.451365ms"" method=""GET"" path=""/api/v1/namespaces/kyverno/secrets/kyverno-svc.kyverno.svc.kyverno-tls-ca"" result=null",1
+00e6d90f,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.901973ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/cert-manager/leases/trust-manager-leader-election"" result=null",1
+26184b99,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.788811ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+4a4a8ac0,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.342224ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager"" result=null",1
+d70e399d,"""Starting kube-state-metrics""",1
+1bc42e45,"""Used resources"" resources=[""resourcequotas"",""validatingwebhookconfigurations"",""configmaps"",""jobs"",""mutatingwebhookconfigurations"",""persistentvolumeclaims"",""persistentvolumes"",""pods"",""replicationcontrollers"",""secrets"",""certificatesigningrequests"",""cronjobs"",""daemonsets"",""ingresses"",""networkpolicies"",""services"",""statefulsets"",""storageclasses"",""endpointslices"",""leases"",""namespaces"",""nodes"",""volumeattachments"",""deployments"",""horizontalpodautoscalers"",""limitranges"",""poddisruptionbudgets"",""replicasets""]",1
+64475670,"""Using all namespaces""",1
+c7f1357e,"""Metric allow-denylisting"" allowDenyStatus=""Excluding the following lists that were on denylist: """,1
+cc00c559,"""Tested communication with server""",1
+e73b0ee6,"""Run with Kubernetes cluster version"" major=""<*>"" minor=""<*>"" gitVersion=""v1.<*>.<*>"" gitTreeState=""clean"" gitCommit=""1e09fec02ac194c1044224e45e60d249e98cd092"" platform=""linux/amd64""",1
+eac4904f,"""Communication with server successful""",1
+90b01f4f,"""Using annotations allowlist"" annotationsAllowList={}",1
+fb1778c8,"""Using labels allowlist"" labelsAllowList={""nodes"":[""topology.kubernetes.io/zone"",""elastisys.io/node-group"",""node.kubernetes.io/instance-type"",""node-restriction.kubernetes.io/autoscaled-node-type""]}",1
+603642bf,"""Started metrics server"" metricsServerAddress=""[::]:<*>""",1
+62ddc5ad,"""Autosharding disabled""",1
+6227b485,"""Listening on"" address=""[::]:<*>""",2
+15e632a7,"""TLS is disabled."" http2=false address=""[::]:<*>""",2
+39533989,"""Started kube-state-metrics self metrics server"" telemetryAddress=""[::]:<*>""",1
+a4f9d491,"""Active resources"" activeStoreNames=""certificatesigningrequests,configmaps,cronjobs,daemonsets,deployments,endpointslices,horizontalpodautoscalers,ingresses,jobs,leases,limitranges,mutatingwebhookconfigurations,namespaces,networkpolicies,nodes,persistentvolumeclaims,persistentvolumes,poddisruptionbudgets,pods,replicasets,replicationcontrollers,resourcequotas,secrets,services,statefulsets,storageclasses,validatingwebhookconfigurations,volumeattachments""",1
+37c1ed9d,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.282787ms"" method=""GET"" path=""/api/v1/namespaces/kyverno/secrets/kyverno-svc.kyverno.svc.kyverno-tls-ca"" result=null",1
+89443959,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.476183ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/cert-manager/leases/trust-manager-leader-election"" result=null",1
+22033475,"""New leader elected"" identity=""ingress-nginx-controller-bbzrr""",1
+a1167e97,"""configured acme dns01 nameservers"" logger=""cert-manager.controller.build-context"" nameservers=[""<*>""]",1
+6025642f,"""Feature gate default state"" feature=""WatchListClient"" enabled=false",1
+a9feb06f,"""enabled controllers: [certificaterequests-approver certificaterequests-issuer-acme certificaterequests-issuer-ca certificaterequests-issuer-selfsigned certificaterequests-issuer-vault certificaterequests-issuer-venafi certificates-issuing certificates-key-manager certificates-metrics certificates-readiness certificates-request-manager certificates-revision-manager certificates-trigger challenges clusterissuers ingress-shim issuers orders]"" logger=""cert-manager.controller""",1
+01594684,"""listening for insecure connections"" logger=""cert-manager.controller"" address=""<*>""",1
+5b6188a7,"""starting leader election"" logger=""cert-manager.controller""",1
+29c7115a,"""starting metrics server"" logger=""cert-manager.controller"" address=""[::]:<*>""",1
+1d260dda,"""starting healthz server"" logger=""cert-manager.controller"" address=""[::]:<*>""",1
+550eca89,"""skipping disabled controller"" logger=""cert-manager.controller"" controller=""certificatesigningrequests-issuer-vault""",1
+f3a10603,"""skipping disabled controller"" logger=""cert-manager.controller"" controller=""certificatesigningrequests-issuer-venafi""",1
+ce2c09a8,"""skipping disabled controller"" logger=""cert-manager.controller"" controller=""certificatesigningrequests-issuer-acme""",1
+db0b72ce,"""skipping disabled controller"" logger=""cert-manager.controller"" controller=""certificatesigningrequests-issuer-ca""",1
+40ff0baf,"""skipping disabled controller"" logger=""cert-manager.controller"" controller=""certificatesigningrequests-issuer-selfsigned""",1
+11eb533c,"""skipping disabled controller"" logger=""cert-manager.controller"" controller=""gateway-shim""",1
+21f74f06,"""starting controller"" logger=""cert-manager.controller"" controller=""challenges""",1
+81329c1b,"""owning resource not found in cache"" logger=""cert-manager.controller.certificaterequests-issuer-acme.handleOwnedResource"" <*> <*> resource_kind=""Order"" resource_version=""v1"" <*> <*> related_resource_kind=""CertificateRequest""",3
+f268ae60,Caches populated for *v1.PartialObjectMetadata from k8s.io/client-go@v0.<*>.<*>/tools/cache/reflector.go:<*>,1
+46aa78cc,"""re-queuing item due to error processing"" err=""ACME client for issuer not initialised/available"" logger=""cert-manager.controller""",3
+841d19b7,"""ACME server URL host and ACME private key registration host differ. Re-checking ACME account registration"" logger=""cert-manager.controller"" <*> resource_namespace="""" resource_kind=""ClusterIssuer"" resource_version=""v1"" <*> related_resource_namespace=""cert-manager"" related_resource_kind=""Secret""",4
+88e7eed5,"""verified existing registration with ACME server"" logger=""cert-manager.controller"" <*> resource_namespace="""" resource_kind=""ClusterIssuer"" resource_version=""v1"" <*> related_resource_namespace=""cert-manager"" related_resource_kind=""Secret""",4
+4f8003a1,Failed to contact API server for /livez: got <*>,2
+94f7c703,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.214851ms"" method=""GET"" path=""/api/v1/namespaces/kyverno/secrets/kyverno-svc.kyverno.svc.kyverno-tls-ca"" result=null",1
+24294e19,"""Starting Kubernetes Scheduler"" version=""v1.<*>.<*>""",3
+a81ab4c9,"""Starting DynamicServingCertificateController""",2
+4a05ce35,"""Post-timeout activity"" logger=""UnhandledError"" timeElapsed=""<*>.107828ms"" method=""GET"" path=""/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock"" result=null",1
+c9da397d,Generated self-signed cert in-memory,2
+985da6d7,"""Starting"" version=""v1.<*>.<*>""",3
+94df6f70,attempting to acquire leader lease kube-system/kube-controller-manager...,1
+8d78c17a,successfully acquired lease kube-system/kube-controller-manager,1
+47c9c458,"""Event occurred"" object=""kube-system/kube-controller-manager"" fieldPath="""" kind=""Lease"" apiVersion=""coordination.k8s.io/v1"" type=""Normal"" reason=""LeaderElection"" message=""backman-wc-control-plane-4qmtw_777c6792-9e9a-<*>-98b8-842a06fa4f65 became leader""",1
+f3818ec9,"""Controller is disabled by a feature gate"" <*> <*>",5
+5e43a5b1,"""Controller will reconcile labels"" logger=""node-lifecycle-controller""",1
+7fee64a3,"""Skipping a cloud provider controller"" controller=""cloud-node-lifecycle-controller""",1
+8cc9a406,"""Sending events to api server"" logger=""node-lifecycle-controller""",1
+283bd57a,"""Starting node controller"" logger=""node-lifecycle-controller""",1
+336c3d48,"""Starting endpoint controller"" logger=""endpoints-controller""",1
+e55f9195,"""Starting daemon sets controller"" logger=""daemonset-controller""",1
+a704edf9,"""Starting expand controller"" logger=""persistentvolume-expander-controller""",1
+982f8bbf,"""Starting ephemeral volume controller"" logger=""ephemeral-volume-controller""",1
+1342ac71,"""Started controller"" controller=""taint-eviction-controller""",1
+b5d6363b,"""Starting"" logger=""taint-eviction-controller"" controller=""taint-eviction-controller""",1
+9e3ca004,"""Sending events to api server"" logger=""taint-eviction-controller""",1
+7cefcf4c,"""Started controller"" controller=""namespace-controller""",1
+d772f954,"""Starting namespace controller"" logger=""namespace-controller""",1
+fb543a89,"""Starting service account controller"" logger=""serviceaccount-controller""",1
+4a28cb31,"""Starting job controller"" logger=""job-controller""",1
+cca7821c,"""Starting attach detach controller"" logger=""persistentvolume-attach-detach-controller""",1
+e73eff43,"""Starting legacy service account token cleaner controller"" logger=""legacy-serviceaccount-token-cleaner-controller""",1
+9888ea49,"""Starting EndpointSliceMirroring controller"" logger=""endpointslice-mirroring-controller""",1
+70b3a907,"""Starting stateful set controller"" logger=""statefulset-controller""",1
+267e7810,"""Started controller"" controller=""cronjob-controller""",1
+a73b9d29,"""Starting cronjob controller v2"" logger=""cronjob-controller""",1
+a7ff584b,"""Waiting for caches to sync"" controller=""cronjob""",1
+3d4b878b,"""Skipping a cloud provider controller"" controller=""node-route-controller""",1
+fc24843d,"""Starting TTL controller"" logger=""ttl-controller""",1
+d84054f0,"""Starting ClusterRoleAggregator controller"" logger=""clusterrole-aggregation-controller""",1
+437507a1,"""Starting"" logger=""service-cidr-controller"" controller=""service-cidr-controller""",1
+eb88c9d5,"""Starting controller"" logger=""deployment-controller"" controller=""deployment""",1
+53efb4a9,"""Starting certificate controller"" logger=""certificatesigningrequest-approving-controller"" name=""csrapproving""",1
+be16d15a,"""No Secondary Service CIDR provided. Skipping filtering out secondary service addresses"" logger=""node-ipam-controller""",1
+880728db,"""Starting ipam controller"" logger=""node-ipam-controller""",1
+b0a7fbea,"""Starting root CA cert publisher controller"" logger=""root-ca-certificate-publisher-controller""",1
+6df619c7,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""statefulsets.apps""",1
+25bd7a07,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""connections.connection.gatekeeper.sh""",1
+bfac36d9,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""aiservices.hub.traefik.io""",1
+ea22158c,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""ephemeralreports.reports.kyverno.io""",1
+8cd208ec,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""ingresses.networking.k8s.io""",1
+8c778b49,"""Warning: resync period is smaller than resync check period and the informer has already started. Changing it to the resync check period"" <*> resyncCheckPeriod=""23h9m31.7596093s""",2
+b7c8a03c,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""policyexceptions.kyverno.io""",1
+49f314af,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""backupstoragelocations.velero.io""",1
+b1b65ad1,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""limitranges""",1
+2602f279,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""sbomreports.aquasecurity.github.io""",1
+c6c912eb,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""constraintpodstatuses.status.gatekeeper.sh""",1
+6fad3c7d,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""endpoints""",1
+8765721a,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""datauploads.velero.io""",1
+97772807,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""exposedsecretreports.aquasecurity.github.io""",1
+ccc982d0,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""expansiontemplatepodstatuses.status.gatekeeper.sh""",1
+b21651a1,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""ciliumendpoints.cilium.io""",1
+5af50891,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" resource=""scrapeconfigs.monitoring.coreos.com""",1
+3a360e15,"""Starting resource quota controller"" logger=""resourcequota-controller""",1
+ad8b5f18,"""QuotaMonitor running"" logger=""resourcequota-controller""",1
+efafc217,"""Starting controller"" logger=""garbage-collector-controller"" controller=""garbagecollector""",1
+7348fde1,"""Started controller"" controller=""replicaset-controller""",1
+33acbdbb,"""Starting controller"" logger=""replicaset-controller"" name=""replicaset""",1
+ee981724,"""Starting HPA controller"" logger=""horizontal-pod-autoscaler-controller""",1
+948d99b5,"""Starting persistent volume controller"" logger=""persistentvolume-binder-controller""",1
+4e65298f,"""Waiting for caches to sync"" controller=""persistent volume""",1
+f32e03f3,"""Warning: controller is disabled"" controller=""selinux-warning-controller""",1
+185859c1,"""Starting controller"" logger=""replicationcontroller-controller"" name=""replicationcontroller""",1
+1e2035bd,"""Starting CSR cleaner controller"" logger=""certificatesigningrequest-cleaner-controller""",1
+77d71a1a,"""Skipping a cloud provider controller"" controller=""service-lb-controller""",1
+554fb7ec,"""Starting token cleaner controller"" logger=""token-cleaner-controller""",1
+d02ea8f5,"""Starting TTL after finished controller"" logger=""ttl-after-finished-controller""",1
+b710bbd3,"""Waiting for caches to sync"" controller=""TTL after finished""",1
+b3ec5edb,"""Started controller"" controller=""endpointslice-controller""",1
+48d036ce,"""Starting endpoint slice controller"" logger=""endpointslice-controller""",1
+91973c4a,"""Starting GC controller"" logger=""pod-garbage-collector-controller""",1
+133696b9,"""Sending events to api server."" logger=""disruption-controller""",1
+7dbda17f,"""Starting disruption controller"" logger=""disruption-controller""",1
+6e03b994,"""Starting certificate controller"" logger=""certificatesigningrequest-signing-controller"" name=""csrsigning-kubelet-serving""",1
+518f1400,"""Starting certificate controller"" logger=""certificatesigningrequest-signing-controller"" name=""csrsigning-kubelet-client""",1
+c55b93ce,"""Starting certificate controller"" logger=""certificatesigningrequest-signing-controller"" name=""csrsigning-kube-apiserver-client""",1
+9845923e,"""Starting certificate controller"" logger=""certificatesigningrequest-signing-controller"" name=""csrsigning-legacy-unknown""",1
+27158ff4,"""Starting PVC protection controller"" logger=""persistentvolumeclaim-protection-controller""",1
+7860dcfc,"""Starting PV protection controller"" logger=""persistentvolume-protection-controller""",1
+70fce84e,"""Failed to update statusUpdateNeeded field in actual state of world"" logger=""persistentvolume-attach-detach-controller"" err=""Failed to set statusUpdateNeeded to needed true, because <*> does not exist""",6
+8f984f6c,"""Caches are synced"" controller=""cronjob""",1
+a7b991ff,"""Caches are synced"" controller=""node""",1
+0f47f5ec,"""Sending events to api server"" logger=""node-ipam-controller""",1
+33cf7a93,"""Starting range CIDR allocator"" logger=""node-ipam-controller""",1
+ffc352d7,"""Caches are synced"" controller=""certificate-csrapproving""",1
+22f6458e,"""Initializing eviction metric for zone"" logger=""node-lifecycle-controller"" zone=""RegionOne:\x00:nova""",1
+951e8c59,"""Missing timestamp for Node. Assuming now as a timestamp"" logger=""node-lifecycle-controller"" <*>",6
+412e3406,"""Controller detected that zone is now in new state"" logger=""node-lifecycle-controller"" zone=""RegionOne:\x00:nova"" newState=""Normal""",1
+893557cf,"""Caches are synced"" controller=""job""",1
+5b10ece9,"""Caches are synced"" controller=""ReplicationController""",1
+166e581b,"""Garbage collector: all resource monitors have synced"" logger=""garbage-collector-controller""",1
+8ffda49a,"""Proceeding to collect garbage"" logger=""garbage-collector-controller""",1
+f0da66cf,"""Caches are synced"" controller=""garbage collector""",1
+2eb6b701,"""attacherDetacher.DetachVolume started"" logger=""persistentvolume-attach-detach-controller"" node=""backman-wc-elastisys-pvl5f-mvm56"" volumeName=""kubernetes.io/csi/cinder.csi.openstack.org^21c9e6f0-f124-4ada-a5e9-4998e0e3b665""",3
+395b4f50,Verified volume is safe to detach for volume <*> (UniqueName: <*> on node <*>,5
+50f636d2,"Operation for <*> podName: nodeName:}"" failed. No retries permitted until <*>-<*>-<*> <*>:<*>:<*>.<*> <*> UTC m=<*>.<*> (durationBeforeRetry <*> Error: DetachVolume.Detach failed for volume <*> (UniqueName: <*> on node <*> : timed out waiting for external-attacher of unknown CSI driver to detach volume <*>",31
+77cbe863,"""attacherDetacher.DetachVolume started"" logger=""persistentvolume-attach-detach-controller"" node=""backman-wc-elastisys-pvl5f-kdtgf"" volumeName=""kubernetes.io/csi/cinder.csi.openstack.org^c2f5f6e0-<*>-440b-<*>-47f68285ecde""",2
+de64f6c2,kubernetes.io/csi: Detach timeout after 2m0s [volume=21c9e6f0-f124-4ada-a5e9-4998e0e3b665; attachment.ID=csi-3aa47e748ef10402c2da3d4c1573c2e8d13fa43b3fc2f19dbfc64cd737231339],20
+24335635,"""attacherDetacher.DetachVolume started: this volume is not safe to detach, but maxWaitForUnmountDuration expired, force detaching"" logger=""persistentvolume-attach-detach-controller"" duration=""6m0s"" <*> <*>",33
+25589e81,kubernetes.io/csi: Detach timeout after 2m0s [volume=c2f5f6e0-<*>-440b-<*>-47f68285ecde; attachment.ID=csi-4689f6ab265c5b9ad8a356e4f30ded596f0419e279039b12837dc62704d417f0],11
+a349d60f,attempting to acquire leader lease kube-system/kube-scheduler...,1
+869a1468,"error retrieving resource lock kube-system/kube-scheduler: Get ""https:/<*>/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler?timeout=5s"": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",1
+b39c726d,"error retrieving resource lock kube-system/kube-controller-manager: Get ""https:/<*>/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s"": net/http: request canceled (Client.Timeout exceeded while awaiting headers)",3
+f436a124,"""Waiting for caches to sync"" controller=""client-ca::kube-system::extension-apiserver-authentication::client-ca-file""",1
+64809b8f,Serving securely on <*>,1
+775cfa83,successfully acquired lease kube-system/kube-scheduler,1
+c185e485,"error retrieving resource lock kube-system/kube-scheduler: Get ""https:/<*>/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler?timeout=5s"": context deadline exceeded",1
+9aded31c,Version: v7.<*>.<*>,1
+b7ac2799,Metrics path successfully registered at /metrics,1
+2f657068,"Metrics http server successfully started on :<*>, /metrics",1
+08ff6e10,attempting to acquire leader lease kube-system/snapshot-controller-leader...,1
+7ee11938,successfully acquired lease kube-system/snapshot-controller-leader,1
+c5e1c4bd,Starting snapshot controller,1
+737aea09,"Waited for <*> due to client-side throttling, not priority and fairness, request: <*>",3

@@ -1,0 +1,23 @@
+I0325 06:16:40.943842       1 feature_gate.go:385] feature gates: {map[]}
+I0325 06:16:40.943978       1 main.go:131] "Version" version="v4.10.0"
+I0325 06:16:40.944507       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+I0325 06:16:40.944543       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+I0325 06:16:40.944552       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+I0325 06:16:40.944560       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+I0325 06:16:40.944569       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+I0325 06:16:40.950938       1 common.go:143] "Probing CSI driver for readiness"
+I0325 06:16:40.954774       1 main.go:192] "CSI driver name" driver="cinder.csi.openstack.org"
+I0325 06:16:40.956773       1 common.go:143] "Probing CSI driver for readiness"
+I0325 06:16:40.959022       1 main.go:276] "CSI driver supports ControllerPublishUnpublish, using real CSI handler" driver="cinder.csi.openstack.org"
+I0325 06:16:40.959108       1 main.go:284] "CSI driver supports list volumes published nodes. Using capability to reconcile volume attachment objects with actual backend state" driver="cinder.csi.openstack.org"
+I0325 06:16:40.960033       1 leaderelection.go:257] attempting to acquire leader lease openstack-system/external-attacher-leader-cinder-csi-openstack-org...
+I0325 06:16:41.005741       1 leaderelection.go:271] successfully acquired lease openstack-system/external-attacher-leader-cinder-csi-openstack-org
+I0325 06:16:41.006194       1 leader_election.go:194] "became leader, starting"
+I0325 06:16:41.006260       1 controller.go:132] "Starting CSI attacher"
+I0325 06:16:41.017784       1 reflector.go:436] "Caches populated" type="*v1.VolumeAttachment" reflector="k8s.io/client-go/informers/factory.go:160"
+I0325 06:16:41.017985       1 reflector.go:436] "Caches populated" type="*v1.PersistentVolume" reflector="k8s.io/client-go/informers/factory.go:160"
+I0325 06:16:41.018328       1 reflector.go:436] "Caches populated" type="*v1.CSINode" reflector="k8s.io/client-go/informers/factory.go:160"
+E0326 06:22:03.190705       1 leaderelection.go:441] Failed to update lock optimistically: etcdserver: request timed out, falling back to slow path
+E0326 06:22:06.178582       1 leaderelection.go:448] error retrieving resource lock openstack-system/external-attacher-leader-cinder-csi-openstack-org: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/openstack-system/leases/external-attacher-leader-cinder-csi-openstack-org": context deadline exceeded
+I0326 06:22:06.178732       1 leaderelection.go:297] failed to renew lease openstack-system/external-attacher-leader-cinder-csi-openstack-org: context deadline exceeded
+E0326 06:22:06.178985       1 leader_election.go:198] "Stopped leading"

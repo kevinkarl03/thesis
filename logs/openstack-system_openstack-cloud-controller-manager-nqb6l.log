@@ -1,0 +1,165 @@
+2026/03/26 03:57:13 Running command:
+Command env: (log-file=, also-stdout=false, redirect-stderr=true)
+Run from directory: 
+Executable path: /bin/openstack-cloud-controller-manager
+Args (comma-delimited): /bin/openstack-cloud-controller-manager,--v=2,--cloud-config=/etc/config/cloud.conf,--cluster-name=backman-wc,--cloud-provider=openstack,--use-service-account-credentials=false,--controllers=cloud-node,cloud-node-lifecycle,route,service,--bind-address=0.0.0.0
+2026/03/26 03:57:13 Now listening for interrupts
+I0326 03:57:14.378670      11 serving.go:386] Generated self-signed cert in-memory
+I0326 03:57:14.568840      11 serving.go:386] Generated self-signed cert in-memory
+W0326 03:57:14.568920      11 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+I0326 03:57:15.120988      11 requestheader_controller.go:255] Loaded a new request header values for RequestHeaderAuthRequestController
+I0326 03:57:15.418521      11 controllermanager.go:160] Version: v1.34.1
+I0326 03:57:15.436768      11 requestheader_controller.go:180] Starting RequestHeaderAuthRequestController
+I0326 03:57:15.436909      11 shared_informer.go:349] "Waiting for caches to sync" controller="RequestHeaderAuthRequestController"
+I0326 03:57:15.437016      11 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0326 03:57:15.437028      11 shared_informer.go:349] "Waiting for caches to sync" controller="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0326 03:57:15.437082      11 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0326 03:57:15.437099      11 shared_informer.go:349] "Waiting for caches to sync" controller="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0326 03:57:15.438513      11 tlsconfig.go:203] "Loaded serving cert" certName="Generated self signed cert" certDetail="\"localhost@1774497434\" [serving] validServingFor=[127.0.0.1,localhost,localhost] issuer=\"localhost-ca@1774497434\" (2026-03-26 02:57:14 +0000 UTC to 2027-03-26 02:57:14 +0000 UTC (now=2026-03-26 03:57:15.438477377 +0000 UTC))"
+I0326 03:57:15.439106      11 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1774497435\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1774497434\" (2026-03-26 02:57:14 +0000 UTC to 2029-03-26 02:57:14 +0000 UTC (now=2026-03-26 03:57:15.439085393 +0000 UTC))"
+I0326 03:57:15.439284      11 secure_serving.go:211] Serving securely on [::]:10258
+I0326 03:57:15.439398      11 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+I0326 03:57:15.440337      11 leaderelection.go:257] attempting to acquire leader lease kube-system/cloud-controller-manager...
+I0326 03:57:15.441139      11 reflector.go:436] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0326 03:57:15.442413      11 reflector.go:436] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0326 03:57:15.443728      11 reflector.go:436] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0326 03:57:15.538088      11 shared_informer.go:356] "Caches are synced" controller="RequestHeaderAuthRequestController"
+I0326 03:57:15.538271      11 shared_informer.go:356] "Caches are synced" controller="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0326 03:57:15.538535      11 tlsconfig.go:181] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubernetes\" [] issuer=\"<self>\" (2026-01-15 08:30:53 +0000 UTC to 2036-01-13 08:35:53 +0000 UTC (now=2026-03-26 03:57:15.538499056 +0000 UTC))"
+I0326 03:57:15.538828      11 tlsconfig.go:203] "Loaded serving cert" certName="Generated self signed cert" certDetail="\"localhost@1774497434\" [serving] validServingFor=[127.0.0.1,localhost,localhost] issuer=\"localhost-ca@1774497434\" (2026-03-26 02:57:14 +0000 UTC to 2027-03-26 02:57:14 +0000 UTC (now=2026-03-26 03:57:15.538810339 +0000 UTC))"
+I0326 03:57:15.539154      11 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1774497435\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1774497434\" (2026-03-26 02:57:14 +0000 UTC to 2029-03-26 02:57:14 +0000 UTC (now=2026-03-26 03:57:15.539139597 +0000 UTC))"
+I0326 03:57:15.539432      11 shared_informer.go:356] "Caches are synced" controller="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0326 03:57:15.539843      11 tlsconfig.go:181] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubernetes\" [] issuer=\"<self>\" (2026-01-15 08:30:53 +0000 UTC to 2036-01-13 08:35:53 +0000 UTC (now=2026-03-26 03:57:15.539824817 +0000 UTC))"
+I0326 03:57:15.539883      11 tlsconfig.go:181] "Loaded client CA" index=1 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubernetes\" [] issuer=\"<self>\" (2026-01-15 08:30:53 +0000 UTC to 2036-01-13 08:35:53 +0000 UTC (now=2026-03-26 03:57:15.5398757 +0000 UTC))"
+I0326 03:57:15.540292      11 tlsconfig.go:203] "Loaded serving cert" certName="Generated self signed cert" certDetail="\"localhost@1774497434\" [serving] validServingFor=[127.0.0.1,localhost,localhost] issuer=\"localhost-ca@1774497434\" (2026-03-26 02:57:14 +0000 UTC to 2027-03-26 02:57:14 +0000 UTC (now=2026-03-26 03:57:15.540275484 +0000 UTC))"
+I0326 03:57:15.540568      11 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1774497435\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1774497434\" (2026-03-26 02:57:14 +0000 UTC to 2029-03-26 02:57:14 +0000 UTC (now=2026-03-26 03:57:15.540540723 +0000 UTC))"
+I0326 03:57:32.718341      11 leaderelection.go:271] successfully acquired lease kube-system/cloud-controller-manager
+I0326 03:57:32.721663      11 event.go:389] "Event occurred" object="kube-system/cloud-controller-manager" fieldPath="" kind="Lease" apiVersion="coordination.k8s.io/v1" type="Normal" reason="LeaderElection" message="backman-wc-control-plane-4qmtw_84f36bbf-ef1d-4930-938b-f338854e11dc became leader"
+I0326 03:57:32.728022      11 openstack.go:424] Setting up informers for Cloud
+I0326 03:57:32.728472      11 controllermanager.go:310] Starting "node-route-controller"
+W0326 03:57:32.788745      11 openstack.go:408] Error initialising Routes support: router-id not set in cloud provider config
+W0326 03:57:32.788802      11 core.go:111] --configure-cloud-routes is set, but cloud provider does not support routes. Will not configure cloud provider routes.
+W0326 03:57:32.788820      11 controllermanager.go:317] Skipping "node-route-controller"
+I0326 03:57:32.788834      11 controllermanager.go:310] Starting "cloud-node-controller"
+I0326 03:57:32.793632      11 controllermanager.go:329] Started "cloud-node-controller"
+I0326 03:57:32.794381      11 controllermanager.go:310] Starting "cloud-node-lifecycle-controller"
+I0326 03:57:32.794195      11 node_controller.go:176] Sending events to api server.
+I0326 03:57:32.795025      11 node_controller.go:185] Waiting for informer caches to sync
+I0326 03:57:32.799431      11 controllermanager.go:329] Started "cloud-node-lifecycle-controller"
+I0326 03:57:32.799460      11 controllermanager.go:310] Starting "service-lb-controller"
+I0326 03:57:32.800018      11 node_lifecycle_controller.go:112] Sending events to api server
+W0326 03:57:32.829254      11 openstack.go:362] Failed to create an OpenStack Secret client: unable to initialize keymanager client for region RegionOne: No suitable endpoint could be found in the service catalog.
+I0326 03:57:32.829307      11 openstack.go:373] Claiming to support LoadBalancer
+I0326 03:57:32.829413      11 controllermanager.go:329] Started "service-lb-controller"
+I0326 03:57:32.832329      11 controller.go:235] Starting service controller
+I0326 03:57:32.832392      11 shared_informer.go:349] "Waiting for caches to sync" controller="service"
+I0326 03:57:32.843191      11 reflector.go:436] "Caches populated" type="*v1.Service" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0326 03:57:32.843788      11 reflector.go:436] "Caches populated" type="*v1.Node" reflector="k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I0326 03:57:32.933378      11 shared_informer.go:356] "Caches are synced" controller="service"
+I0326 03:57:32.933640      11 controller.go:723] Syncing backends for all LB services.
+I0326 03:57:32.933648      11 controller.go:402] Ensuring load balancer for service ingress-nginx/ingress-nginx-controller
+I0326 03:57:32.933933      11 controller.go:727] Successfully updated 1 out of 1 load balancers to direct traffic to the updated set of nodes
+I0326 03:57:32.934171      11 controller.go:723] Syncing backends for all LB services.
+I0326 03:57:32.934361      11 controller.go:727] Successfully updated 1 out of 1 load balancers to direct traffic to the updated set of nodes
+I0326 03:57:32.934383      11 controller.go:723] Syncing backends for all LB services.
+I0326 03:57:32.934467      11 controller.go:727] Successfully updated 1 out of 1 load balancers to direct traffic to the updated set of nodes
+I0326 03:57:32.934591      11 controller.go:723] Syncing backends for all LB services.
+I0326 03:57:32.934695      11 controller.go:727] Successfully updated 1 out of 1 load balancers to direct traffic to the updated set of nodes
+I0326 03:57:32.934748      11 controller.go:723] Syncing backends for all LB services.
+I0326 03:57:32.935040      11 controller.go:727] Successfully updated 1 out of 1 load balancers to direct traffic to the updated set of nodes
+I0326 03:57:32.935092      11 controller.go:723] Syncing backends for all LB services.
+I0326 03:57:32.935274      11 controller.go:727] Successfully updated 1 out of 1 load balancers to direct traffic to the updated set of nodes
+I0326 03:57:32.936160      11 event.go:389] "Event occurred" object="ingress-nginx/ingress-nginx-controller" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuringLoadBalancer" message="Ensuring load balancer"
+I0326 03:57:33.039834      11 loadbalancer.go:1863] "EnsureLoadBalancer" cluster="backman-wc" service="ingress-nginx/ingress-nginx-controller"
+I0326 03:57:33.858526      11 controller.go:402] Ensuring load balancer for service traefik-system/traefik
+I0326 03:57:33.858580      11 loadbalancer.go:1863] "EnsureLoadBalancer" cluster="backman-wc" service="traefik-system/traefik"
+I0326 03:57:33.861069      11 event.go:389] "Event occurred" object="ingress-nginx/ingress-nginx-controller" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuredLoadBalancer" message="Ensured load balancer"
+I0326 03:57:33.861287      11 event.go:389] "Event occurred" object="traefik-system/traefik" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuringLoadBalancer" message="Ensuring load balancer"
+I0326 03:57:34.235679      11 node_controller.go:271] Update 6 nodes status took 1.339987687s.
+I0326 03:57:34.655464      11 event.go:389] "Event occurred" object="traefik-system/traefik" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuredLoadBalancer" message="Ensured load balancer"
+I0326 04:02:35.485876      11 node_controller.go:271] Update 6 nodes status took 1.249466217s.
+I0326 04:07:36.898364      11 node_controller.go:271] Update 6 nodes status took 1.410212392s.
+I0326 04:12:38.214723      11 node_controller.go:271] Update 6 nodes status took 1.314825417s.
+I0326 04:17:39.485795      11 node_controller.go:271] Update 6 nodes status took 1.26984499s.
+I0326 04:22:40.721784      11 node_controller.go:271] Update 6 nodes status took 1.234809787s.
+I0326 04:27:42.290536      11 node_controller.go:271] Update 6 nodes status took 1.5681391s.
+I0326 04:32:43.643853      11 node_controller.go:271] Update 6 nodes status took 1.352535522s.
+I0326 04:37:44.838066      11 node_controller.go:271] Update 6 nodes status took 1.193679392s.
+I0326 04:42:46.142713      11 node_controller.go:271] Update 6 nodes status took 1.303798394s.
+I0326 04:47:47.382784      11 node_controller.go:271] Update 6 nodes status took 1.239425659s.
+I0326 04:52:48.618128      11 node_controller.go:271] Update 6 nodes status took 1.234302181s.
+I0326 04:57:49.928888      11 node_controller.go:271] Update 6 nodes status took 1.309678153s.
+I0326 05:02:51.232114      11 node_controller.go:271] Update 6 nodes status took 1.301807106s.
+I0326 05:07:52.449940      11 node_controller.go:271] Update 6 nodes status took 1.217179229s.
+I0326 05:12:54.048869      11 node_controller.go:271] Update 6 nodes status took 1.598419895s.
+I0326 05:17:56.504642      11 node_controller.go:271] Update 6 nodes status took 2.455461174s.
+I0326 05:22:57.732530      11 node_controller.go:271] Update 6 nodes status took 1.227742855s.
+I0326 05:27:58.994736      11 node_controller.go:271] Update 6 nodes status took 1.262050051s.
+I0326 05:33:00.429681      11 node_controller.go:271] Update 6 nodes status took 1.43405899s.
+I0326 05:38:02.010084      11 node_controller.go:271] Update 6 nodes status took 1.579416947s.
+I0326 05:43:03.406350      11 node_controller.go:271] Update 6 nodes status took 1.394931061s.
+I0326 05:48:04.872793      11 node_controller.go:271] Update 6 nodes status took 1.465227027s.
+I0326 05:53:06.250730      11 node_controller.go:271] Update 6 nodes status took 1.377472173s.
+I0326 05:58:07.845489      11 node_controller.go:271] Update 6 nodes status took 1.590278914s.
+I0326 06:03:09.131880      11 node_controller.go:271] Update 6 nodes status took 1.28614523s.
+I0326 06:08:10.347096      11 node_controller.go:271] Update 6 nodes status took 1.214279044s.
+I0326 06:13:11.716204      11 node_controller.go:271] Update 6 nodes status took 1.367955215s.
+I0326 06:18:12.979750      11 node_controller.go:271] Update 6 nodes status took 1.262918521s.
+E0326 06:19:41.443954      11 leaderelection.go:441] Failed to update lock optimistically: Put "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": read tcp 172.16.1.153:42124->10.233.0.1:443: read: connection reset by peer, falling back to slow path
+I0326 06:23:15.105375      11 node_controller.go:271] Update 6 nodes status took 2.111054045s.
+I0326 06:28:16.553711      11 node_controller.go:271] Update 6 nodes status took 1.439239449s.
+I0326 06:33:17.923671      11 node_controller.go:271] Update 6 nodes status took 1.369728698s.
+I0326 06:38:19.286233      11 node_controller.go:271] Update 6 nodes status took 1.361314833s.
+I0326 06:43:27.343436      11 node_controller.go:271] Update 6 nodes status took 8.056444706s.
+I0326 06:48:29.040964      11 node_controller.go:271] Update 6 nodes status took 1.696693907s.
+I0326 06:53:30.466625      11 node_controller.go:271] Update 6 nodes status took 1.425350937s.
+I0326 06:58:32.947342      11 node_controller.go:271] Update 6 nodes status took 2.479649262s.
+I0326 07:03:34.136824      11 node_controller.go:271] Update 6 nodes status took 1.188403085s.
+I0326 07:08:35.826892      11 node_controller.go:271] Update 6 nodes status took 1.689176111s.
+I0326 07:13:37.278745      11 node_controller.go:271] Update 6 nodes status took 1.451383646s.
+I0326 07:18:38.898680      11 node_controller.go:271] Update 6 nodes status took 1.619607229s.
+I0326 07:23:40.355768      11 node_controller.go:271] Update 6 nodes status took 1.455590192s.
+I0326 07:28:41.636811      11 node_controller.go:271] Update 6 nodes status took 1.280158169s.
+I0326 07:33:43.133603      11 node_controller.go:271] Update 6 nodes status took 1.495478647s.
+I0326 07:38:44.502125      11 node_controller.go:271] Update 6 nodes status took 1.367835106s.
+I0326 07:43:46.003127      11 node_controller.go:271] Update 6 nodes status took 1.500014663s.
+I0326 07:48:47.289671      11 node_controller.go:271] Update 6 nodes status took 1.285446308s.
+I0326 07:53:48.786659      11 node_controller.go:271] Update 6 nodes status took 1.496063098s.
+I0326 07:58:50.130986      11 node_controller.go:271] Update 6 nodes status took 1.343225974s.
+I0326 08:03:51.693241      11 node_controller.go:271] Update 6 nodes status took 1.561668045s.
+I0326 08:08:53.067133      11 node_controller.go:271] Update 6 nodes status took 1.37363285s.
+I0326 08:13:54.403878      11 node_controller.go:271] Update 6 nodes status took 1.335827895s.
+I0326 08:18:56.237819      11 node_controller.go:271] Update 6 nodes status took 1.833113501s.
+I0326 08:23:57.594480      11 node_controller.go:271] Update 6 nodes status took 1.356061588s.
+I0326 08:28:58.853980      11 node_controller.go:271] Update 6 nodes status took 1.258493048s.
+I0326 08:34:00.256714      11 node_controller.go:271] Update 6 nodes status took 1.401476835s.
+I0326 08:39:01.999916      11 node_controller.go:271] Update 6 nodes status took 1.74197789s.
+I0326 08:44:03.377177      11 node_controller.go:271] Update 6 nodes status took 1.37664988s.
+I0326 08:49:04.713474      11 node_controller.go:271] Update 6 nodes status took 1.33572237s.
+I0326 08:54:06.004180      11 node_controller.go:271] Update 6 nodes status took 1.28964397s.
+I0326 08:59:07.415016      11 node_controller.go:271] Update 6 nodes status took 1.409634517s.
+I0326 09:04:08.689085      11 node_controller.go:271] Update 6 nodes status took 1.272766497s.
+E0326 09:07:01.198263      11 leaderelection.go:441] Failed to update lock optimistically: Put "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers), falling back to slow path
+I0326 09:09:09.935375      11 node_controller.go:271] Update 6 nodes status took 1.245314303s.
+I0326 09:14:11.284502      11 node_controller.go:271] Update 6 nodes status took 1.348603891s.
+I0326 09:19:12.613636      11 node_controller.go:271] Update 6 nodes status took 1.328573867s.
+I0326 09:24:15.031907      11 node_controller.go:271] Update 6 nodes status took 2.416677011s.
+E0326 09:27:04.705361      11 leaderelection.go:441] Failed to update lock optimistically: Put "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers), falling back to slow path
+I0326 09:29:16.564883      11 node_controller.go:271] Update 6 nodes status took 1.531276755s.
+I0326 09:34:17.934786      11 node_controller.go:271] Update 6 nodes status took 1.369676064s.
+I0326 09:39:19.784927      11 node_controller.go:271] Update 6 nodes status took 1.849083391s.
+I0326 09:44:21.190708      11 node_controller.go:271] Update 6 nodes status took 1.405340764s.
+I0326 09:49:22.488539      11 node_controller.go:271] Update 6 nodes status took 1.297050795s.
+I0326 09:54:29.585286      11 node_controller.go:271] Update 6 nodes status took 7.096042398s.
+I0326 09:59:30.930921      11 node_controller.go:271] Update 6 nodes status took 1.344728106s.
+E0326 10:02:06.279282      11 leaderelection.go:441] Failed to update lock optimistically: Put "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers), falling back to slow path
+I0326 10:04:32.273181      11 node_controller.go:271] Update 6 nodes status took 1.341199254s.
+E0326 10:07:05.521499      11 leaderelection.go:441] Failed to update lock optimistically: Put "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": context deadline exceeded, falling back to slow path
+I0326 10:09:33.577436      11 node_controller.go:271] Update 6 nodes status took 1.303471021s.
+I0326 10:14:35.290566      11 node_controller.go:271] Update 6 nodes status took 1.711917761s.
+I0326 10:19:36.678147      11 node_controller.go:271] Update 6 nodes status took 1.38657716s.
+E0326 10:22:08.605660      11 leaderelection.go:441] Failed to update lock optimistically: Put "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": net/http: request canceled (Client.Timeout exceeded while awaiting headers), falling back to slow path
+E0326 10:22:13.605950      11 leaderelection.go:448] error retrieving resource lock kube-system/cloud-controller-manager: Get "https://10.233.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s": context deadline exceeded
+I0326 10:22:13.606023      11 leaderelection.go:297] failed to renew lease kube-system/cloud-controller-manager: context deadline exceeded
+E0326 10:22:13.620508      11 controllermanager.go:265] "leaderelection lost"
+2026/03/26 10:22:13 running command: exit status 1
