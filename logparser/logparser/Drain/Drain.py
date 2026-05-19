@@ -28,6 +28,7 @@ class Logcluster:
         if logIDL is None:
             logIDL = []
         self.logIDL = logIDL
+        
 
 
 class Node:
@@ -50,6 +51,7 @@ class LogParser:
         maxChild=100,
         rex=[],
         keep_para=True,
+        custom_klog_parser=False
     ):
         """
         Attributes
@@ -72,6 +74,7 @@ class LogParser:
         self.log_format = log_format
         self.rex = rex
         self.keep_para = keep_para
+        self.custom_klog_parser = custom_klog_parser # Bool
 
     def hasNumbers(self, s):
         return any(char.isdigit() for char in s)
@@ -282,7 +285,16 @@ class LogParser:
         count = 0
         for idx, line in self.df_log.iterrows():
             logID = line["LineId"]
-            logmessageL = self.preprocess(line["Content"]).strip().split()
+            if self.custom_klog_parser:
+                # TODO: Implement custom KLogParser logic
+                if count == 0:
+                    print("Custom KLogParser is enabled.")
+                logmessageL = self.preprocess(line["Content"]).strip().split()
+
+                pass
+            else:
+                logmessageL = self.preprocess(line["Content"]).strip().split()
+
             matchCluster = self.treeSearch(rootNode, logmessageL)
 
             # Match no existing log cluster
