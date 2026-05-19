@@ -21,6 +21,9 @@ import pandas as pd
 import hashlib
 from datetime import datetime
 
+from klog_helper import preprocess_klog_message
+
+
 
 class Logcluster:
     def __init__(self, logTemplate="", logIDL=None):
@@ -289,7 +292,7 @@ class LogParser:
                 # TODO: Implement custom KLogParser logic
                 if count == 0:
                     print("Custom KLogParser is enabled.")
-                logmessageL = self.preprocess(line["Content"]).strip().split()
+                logmessageL = self.preprocess(preprocess_klog_message(line["Content"]).strip().split())
 
                 pass
             else:
