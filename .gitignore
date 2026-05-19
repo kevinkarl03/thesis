@@ -6,6 +6,8 @@
 loghub/
 */plots/
 *.png
+__pycache__
+*.pyc
 
 
 # Byte-compiled / optimized / DLL files

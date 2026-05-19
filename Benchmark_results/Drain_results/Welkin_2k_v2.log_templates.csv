@@ -117,10 +117,9 @@ e1dabf75,"ignoring ingress <*> in <*> based on annotation : no object matching k
 a9039f3e,"Failed calling webhook, failing <*> <*> failed calling webhook <*> failed to call webhook: Post <*> dial tcp <*> connect: connection refused",3
 615494b1,"""Unhandled Error"" err=""failed calling webhook <*> failed to call webhook: Post <*> dial tcp <*> connect: connection refused"" logger=""UnhandledError""",2
 556f6443,"""POD is not ready"" pod=""ingress-nginx/ingress-nginx-controller-kkf7g"" node=""backman-wc-worker-small-5xcc8-5tsnj""",3
-0bdce4c9,"""updating Ingress status"" <*> <*> currentValue=[{""ip"":""<*>""},{""ip"":""<*>""},{""ip"":""<*>""}] newValue=[{""ip"":""<*>""},{""ip"":""<*>""}]",3
+47816434,"""updating Ingress status"" <*> <*> <*> <*>",6
 3799b987,"""Failed to scrape node, timeout to access kubelet"" err=""Get \""https:/<*>/metrics/resource\"": context deadline exceeded"" <*> timeout=""<*>""",5
 6620b2c4,"""Caches are synced"" <*> <*>",3
-893a37b8,"""updating Ingress status"" <*> <*> currentValue=[{""ip"":""<*>""},{""ip"":""<*>""}] newValue=[{""ip"":""<*>""},{""ip"":""<*>""},{""ip"":""<*>""}]",3
 54b5ec5d,"""error running poll"" err=""context canceled""",9
 9b4ed7e0,"""Unhandled Error"" err=""apiserver received an error that is not an metav1.Status: rpctypes.EtcdError{code:0xe, desc:\""etcdserver: request timed out\""}: etcdserver: request timed out"" logger=""UnhandledError""",10
 f9b13494,"""Failed to update lease optimistically, falling back to slow path"" err=""etcdserver: request timed out"" lock=""ingress-nginx/ingress-nginx-leader""",19
@@ -139,9 +138,8 @@ e66e327c,"<*> watch of <*> ended with: an error on the server (""unable to decod
 51461eab,"""Unhandled Error"" err=""k<*>.io/client-go@v0.<*>.<*>/tools/cache/reflector.go:<*>: Failed to watch *v1.Secret: failed to list *v1.Secret: Get \""https:/<*>/api/v1/namespaces/cert-manager/secrets?fieldSelector=metadata.name%3Dcert-manager-webhook-ca&resourceVersion=<*>\"": net/http: TLS handshake timeout"" logger=""UnhandledError""",5
 7e93d2ec,"""Failed probe"" probe=""metric-storage-ready"" err=""no metrics to serve""",2
 aa1fb515,"github.com/kubernetes-csi/external-snapshotter/client/v7/informers/externalversions/factory.go:<*>: Failed to watch *v1.VolumeSnapshotClass: failed to list *v1.VolumeSnapshotClass: Get ""https:/<*>/apis/snapshot.storage.k<*>.io/v1/volumesnapshotclasses?resourceVersion=<*>"": net/http: TLS handshake timeout",5
-e061f2b3,"""Unhandled Error"" err=""unable to sync kubernetes service: etcdserver: request timed out"" logger=""UnhandledError""",5
+686113d7,"""Unhandled Error"" err=""unable to <*> <*> <*> <*> <*> <*> <*> logger=""UnhandledError""",6
 3e38dd74,"""Unable to authenticate the request"" err=""[invalid bearer token, context canceled]""",5
-5e423d24,"""Unhandled Error"" err=""unable to refresh the port allocations: etcdserver: leader changed"" logger=""UnhandledError""",1
 7338ce58,"""Registering a reconciler for injectable"" logger=""cert-manager"" <*>",3
 72466188,Caches populated for <*> from k<*>.io/client-go@v0.<*>.<*>/tools/cache/reflector.go:<*>,3
 611cd5d0,"""cert-manager-cainjector-d666d4d-vwj4m_d3486405-f4fe-4bb5-96d0-8d08d27fb7c2 <*> <*> logger=""cert-manager.events"" type=""Normal"" object={""kind"":""Lease"",""namespace"":""kube-system"",""name"":""cert-manager-cainjector-leader-election"",""uid"":""3f49e57c-88aa-446c-acd0-3879536c239d"",""apiVersion"":""coordination.k<*>.io/v1"",""resourceVersion"":""<*>""} reason=""LeaderElection""",2
@@ -267,14 +265,10 @@ f3818ec9,"""Controller is disabled by a feature gate"" <*> <*>",5
 7a77e1b1,"""Skipping a cloud provider controller"" <*>",3
 3fb43f7b,"""Sending events to api <*> <*>",4
 adac633c,"""Starting <*> controller"" <*>",12
-e55f9195,"""Starting daemon sets controller"" logger=""daemonset-controller""",1
-9804dfb1,"""Starting <*> volume controller"" <*>",2
+59a33cc3,"""Starting <*> <*> controller"" <*>",11
 098619f4,"""Started controller"" <*>",5
 b5d6363b,"""Starting"" logger=""taint-eviction-controller"" controller=""taint-eviction-controller""",1
-fb543a89,"""Starting service account controller"" logger=""serviceaccount-controller""",1
-cca7821c,"""Starting attach detach controller"" logger=""persistentvolume-attach-detach-controller""",1
 e73eff43,"""Starting legacy service account token cleaner controller"" logger=""legacy-serviceaccount-token-cleaner-controller""",1
-70b3a907,"""Starting stateful set controller"" logger=""statefulset-controller""",1
 a73b9d29,"""Starting cronjob controller v2"" logger=""cronjob-controller""",1
 437507a1,"""Starting"" logger=""service-cidr-controller"" controller=""service-cidr-controller""",1
 3210f5b9,"""Starting controller"" <*> <*>",4
@@ -283,13 +277,10 @@ be16d15a,"""No Secondary Service CIDR provided. Skipping filtering out secondary
 b0a7fbea,"""Starting root CA cert publisher controller"" logger=""root-ca-certificate-publisher-controller""",1
 2921bf76,"""QuotaMonitor created object count evaluator"" logger=""resourcequota-controller"" <*>",16
 03497b35,"""Warning: resync period is smaller than resync check period and the informer has already started. Changing it to the resync check period"" <*> resyncCheckPeriod=""23h9m<*>""",2
-3a360e15,"""Starting resource quota controller"" logger=""resourcequota-controller""",1
 ad8b5f18,"""QuotaMonitor running"" logger=""resourcequota-controller""",1
 f32e03f3,"""Warning: controller is disabled"" controller=""selinux-warning-controller""",1
-d696ecc9,"""Starting <*> cleaner controller"" <*>",2
 d02ea8f5,"""Starting TTL after finished controller"" logger=""ttl-after-finished-controller""",1
 b710bbd3,"""Waiting for caches to sync"" controller=""TTL after finished""",1
-ea3e20cd,"""Starting <*> protection controller"" <*>",2
 70fce84e,"""Failed to update statusUpdateNeeded field in actual state of world"" logger=""persistentvolume-attach-detach-controller"" err=""Failed to set statusUpdateNeeded to needed true, because <*> does not exist""",6
 33cf7a93,"""Starting range CIDR allocator"" logger=""node-ipam-controller""",1
 22f6458e,"""Initializing eviction metric for zone"" logger=""node-lifecycle-controller"" zone=""RegionOne:\x00:nova""",1
