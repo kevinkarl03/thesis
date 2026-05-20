@@ -240,9 +240,19 @@ class LogParser:
             self.df_log["ParameterList"] = self.df_log.apply(
                 self.get_parameter_list, axis=1
             )
-        self.df_log.to_csv(
-            os.path.join(self.savePath, self.logName + "_structured.csv"), index=False
-        )
+
+        if self.custom_klog_parser:
+            self.df_log.to_csv(
+                os.path.join(self.savePath, self.logName + "_custom_structured.csv"), 
+                index=False, 
+                quoting=1  # csv.QUOTE_ALL - quote all fields consistently
+            )
+        else:
+            self.df_log.to_csv(
+                os.path.join(self.savePath, self.logName + "_structured.csv"), 
+                index=False,
+                quoting=1  # csv.QUOTE_ALL - quote all fields consistently
+            )
 
         occ_dict = dict(self.df_log["EventTemplate"].value_counts())
         df_event = pd.DataFrame()
@@ -289,12 +299,16 @@ class LogParser:
         for idx, line in self.df_log.iterrows():
             logID = line["LineId"]
             if self.custom_klog_parser:
-                # TODO: Implement custom KLogParser logic
                 if count == 0:
                     print("Custom KLogParser is enabled.")
-                logmessageL = self.preprocess(preprocess_klog_message(line["Content"]).strip().split())
-
-                pass
+                # First preprocess and split into tokens
+                initial_tokens = self.preprocess(line["Content"]).strip().split()
+                # Join back into a string for preprocess_klog_message
+                initial_string = " ".join(initial_tokens)
+                # Apply custom preprocessing
+                processed_string = preprocess_klog_message(initial_string)
+                # Split again into tokens for template matching
+                logmessageL = processed_string.strip().split()
             else:
                 logmessageL = self.preprocess(line["Content"]).strip().split()
 
