@@ -9,12 +9,14 @@ Key features:
 - No consecutive repeated EventIds (guaranteed via ordered deque interleaving)
 - EventTemplate retains the actual template text with <*> wildcards
 - Templates renumbered sequentially as EventId (E1, E2, E3, ...)
+- Each ground truth CSV also has a corresponding .log file that parsers can process
 """
 
 import csv
 import random
 import os
 from collections import defaultdict, OrderedDict, deque
+
 
 def read_original_log(filepath):
     templates = defaultdict(list)
@@ -28,6 +30,7 @@ def read_original_log(filepath):
                 templates[template].append(row)
     return header, templates
 
+
 def generate_unique_times(num_times):
     times = set()
     while len(times) < num_times:
@@ -37,6 +40,7 @@ def generate_unique_times(num_times):
         micro = random.randint(0, 999999)
         times.add(f"{hour:02d}:{minute:02d}:{second:02d}.{micro:06d}")
     return sorted(times)
+
 
 def interleave_rows(rows):
     """
@@ -104,7 +108,29 @@ def interleave_rows(rows):
     
     return result
 
-def generate_ground_truth_file(header, templates, target_templates, output_path):
+
+def reconstruct_log_line(row):
+    """
+    Reconstruct a raw log line from a structured CSV row.
+    
+    Original log format (klog style):
+        {LevelDate} {Time}{Pid:>8} {Source}] {Content}
+    
+    Example:
+        I0317 14:46:27.815342       1 main.go:154] "Version" version="v2.15.0"
+    """
+    level_date = row[1]  # e.g. "I0317"
+    time_val = row[2]    # e.g. "14:46:27.815342"
+    pid = row[3]         # e.g. "1"
+    source = row[4]      # e.g. "main.go:154"
+    content = row[5]     # e.g. '"Version" version="v2.15.0"'
+    
+    # Pid is right-aligned in 8 chars (matching original klog format)
+    # Format: LevelDate + space + Time + Pid(>8) + space + Source + "] " + Content
+    return f"{level_date} {time_val}{pid:>8} {source}] {content}"
+
+
+def generate_ground_truth_file(header, templates, target_templates, output_csv_path):
     # Select templates
     available_templates = list(templates.keys())
     if target_templates > len(available_templates):
@@ -167,28 +193,44 @@ def generate_ground_truth_file(header, templates, target_templates, output_path)
     # Generate unique times
     unique_times = generate_unique_times(2000)
     
-    # Write output
-    with open(output_path, 'w', newline='', encoding='utf-8') as f:
+    # Build all output rows (so we can reuse for both CSV and .log)
+    output_rows = []
+    for i, row in enumerate(final_rows, 1):
+        original_template = row[7].strip()
+        new_event_id = template_renumbering[original_template]
+        
+        new_row = [
+            str(i),                      # LineId (sequential)
+            row[1],                      # LevelDate (original)
+            unique_times[i-1],           # Unique time
+            row[3],                      # Pid (original)
+            row[4],                      # Source (original)
+            row[5],                      # Content (original)
+            new_event_id,                # EventId (renumbered)
+            original_template            # EventTemplate (original text)
+        ]
+        output_rows.append(new_row)
+    
+    # Write CSV
+    with open(output_csv_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(header)
-        
-        for i, row in enumerate(final_rows, 1):
-            original_template = row[7].strip()
-            new_event_id = template_renumbering[original_template]
-            
-            new_row = [
-                i,                         # LineId (sequential)
-                row[1],                    # LevelDate (original)
-                unique_times[i-1],         # Unique time
-                row[3],                    # Pid (original)
-                row[4],                    # Source (original)
-                row[5],                    # Content (original)
-                new_event_id,              # EventId (renumbered)
-                original_template          # EventTemplate (original text)
-            ]
+        for new_row in output_rows:
             writer.writerow(new_row)
     
+    # Write corresponding .log file
+    output_log_path = output_csv_path.replace('.log_structured.csv', '.log')
+    # Also handle case where file is just .csv (for ground truth variants)
+    if output_log_path == output_csv_path:
+        output_log_path = output_csv_path.replace('.csv', '.log')
+    
+    with open(output_log_path, 'w', encoding='utf-8') as f:
+        for new_row in output_rows:
+            log_line = reconstruct_log_line(new_row)
+            f.write(log_line + '\n')
+    
     return len(selected_templates)
+
 
 def main():
     input_file = "logparser/data/loghub_2k/Welkin_v3/Welkin_2k_v3.log_structured.csv"
@@ -213,6 +255,8 @@ def main():
         print(f"  Lines: 2000")
     
     print(f"\n✓ All 5 ground truth files generated in '{output_dir}' directory")
+    print(f"  Each CSV has a corresponding .log file for parser input")
+
 
 if __name__ == "__main__":
     random.seed(42)

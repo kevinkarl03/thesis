@@ -82,6 +82,137 @@ benchmark_settings = {
     },
 
 
+    "Welkin_2k_100templates_custom": {
+        "log_file": "Welkin_synthetic/Welkin_2k_100templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.5,
+        "depth": 4,
+        "custom_klog_parser": True,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+    "Welkin_2k_100templates": {
+        "log_file": "Welkin_synthetic/Welkin_2k_100templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.4,
+        "depth": 4,
+        "custom_klog_parser": False,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+    "Welkin_2k_150templates_custom": {
+        "log_file": "Welkin_synthetic/Welkin_2k_150templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.5,
+        "depth": 4,
+        "custom_klog_parser": True,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+    "Welkin_2k_150templates": {
+        "log_file": "Welkin_synthetic/Welkin_2k_150templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.4,
+        "depth": 4,
+        "custom_klog_parser": False,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+    "Welkin_2k_200templates_custom": {
+        "log_file": "Welkin_synthetic/Welkin_2k_200templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.5,
+        "depth": 4,
+        "custom_klog_parser": True,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+    "Welkin_2k_200templates": {
+        "log_file": "Welkin_synthetic/Welkin_2k_200templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.4,
+        "depth": 4,
+        "custom_klog_parser": False,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+    "Welkin_2k_250templates_custom": {
+        "log_file": "Welkin_synthetic/Welkin_2k_250templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.5,
+        "depth": 4,
+        "custom_klog_parser": True,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+    "Welkin_2k_250templates": {
+        "log_file": "Welkin_synthetic/Welkin_2k_250templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.4,
+        "depth": 4,
+        "custom_klog_parser": False,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+    "Welkin_2k_300templates_custom": {
+        "log_file": "Welkin_synthetic/Welkin_2k_300templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.5,
+        "depth": 4,
+        "custom_klog_parser": True,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+    "Welkin_2k_300templates": {
+        "log_file": "Welkin_synthetic/Welkin_2k_300templates.log",
+        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
+        "regex": [
+            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
+            r'(?<=="")([^""]+)(?="")',
+            r'\d+(\.\d+)?(s|ms|µs|ns)',
+            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
+            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
+        "st": 0.4,
+        "depth": 4,
+        "custom_klog_parser": False,  # This is a custom flag to indicate that this parser uses a custom KLogParser implementation
+    },
+ 
     # "HDFS": {
     #     "log_file": "HDFS/HDFS_2k.log",
     #     "log_format": "<Date> <Time> <Pid> <Level> <Component>: <Content>",
