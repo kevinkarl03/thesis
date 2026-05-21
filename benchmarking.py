@@ -85,13 +85,63 @@ def run_parser(parser_name):
 
             # Evaluation
             groundtruth = os.path.join(indir, log_file + "_structured.csv")
-            parsed_result = os.path.join(output_dir, log_file + "_structured.csv")
-            
+
+            if parser_instance.custom_klog_parser:
+                parsed_result = os.path.join(output_dir, log_file + "_custom_structured.csv")
+            else:
+                parsed_result = os.path.join(output_dir, log_file + "_structured.csv")
+
             f1_measure, accuracy, precision, recall = evaluator.evaluate(
                 groundtruth=groundtruth,
                 parsedresult=parsed_result,
             )
             benchmark_result.append([dataset, f1_measure, accuracy, precision, recall])
+            
+            # Generate detailed per-line comparison
+            print(f"\nGenerating detailed comparison for {dataset}...")
+            try:
+                groundtruth_df = pd.read_csv(groundtruth)
+                parsed_df = pd.read_csv(parsed_result)
+                
+                # Merge on LineId to compare templates
+                if 'LineId' in groundtruth_df.columns and 'LineId' in parsed_df.columns:
+                    comparison_df = pd.merge(
+                        groundtruth_df[['LineId', 'Content', 'EventTemplate']],
+                        parsed_df[['LineId', 'EventTemplate']],
+                        on='LineId',
+                        suffixes=('_groundtruth', '_parsed')
+                    )
+                    
+                    # Normalize templates by stripping surrounding quotes for fair comparison
+                    def normalize_template(t):
+                        if isinstance(t, str):
+                            # Strip leading/trailing quotes that are CSV artifacts
+                            return t.strip('"').strip("'")
+                        return t
+                    
+                    groundtruth_norm = comparison_df['EventTemplate_groundtruth'].apply(normalize_template)
+                    parsed_norm = comparison_df['EventTemplate_parsed'].apply(normalize_template)
+                    comparison_df['Correct'] = groundtruth_norm == parsed_norm
+                    
+                    # Save detailed comparison
+                    detailed_file = os.path.join(output_dir, log_file + "_detailed_comparison.csv")
+                    comparison_df.to_csv(detailed_file, index=False)
+                    print(f"Detailed comparison saved to: {detailed_file}")
+                    print(f"Total lines: {len(comparison_df)}")
+                    print(f"Correct matches: {comparison_df['Correct'].sum()}")
+                    print(f"Incorrect matches: {(~comparison_df['Correct']).sum()}")
+                    
+                    # Show some examples of incorrect matches
+                    incorrect = comparison_df[~comparison_df['Correct']]
+                    # if len(incorrect) > 0:
+                    #     print(f"\nFirst 10 incorrect matches:")
+                    #     for _, row in incorrect.head(10).iterrows():
+                    #         print(f"\n  Line {row['LineId']}:")
+                    #         print(f"    Content: {row['Content'][:100]}...")
+                    #         print(f"    Expected: {row['EventTemplate_groundtruth']}")
+                    #         print(f"    Got:      {row['EventTemplate_parsed']}")
+            except Exception as e:
+                print(f"Warning: Could not generate detailed comparison: {e}")
             
         except Exception as e:
             print(f"Failed to parse {dataset}: {e}")

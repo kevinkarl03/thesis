@@ -123,8 +123,8 @@ if __name__ == "__main__":
     # Dina fil-sökvägar
     STRUCTURED = 'Benchmark_results/Drain_results/Welkin_2k.log_structured.csv'
     
-    GROUND_TRUTH = 'audit_sheet_READY_TO_EDIT.xlsx'
-    OUTPUT = 'Welkin_2k_dataset_v2.csv'
+    GROUND_TRUTH = 'audit_sheet_READY_TO_EDIT.ods'
+    OUTPUT = 'Welkin_2k_dataset_v3.csv'
 
     merge_manual_labels(STRUCTURED, GROUND_TRUTH, OUTPUT)
     clean_csv_quotations(OUTPUT, OUTPUT)
