@@ -24,6 +24,16 @@ from datetime import datetime
 from klog_helper import preprocess_klog_message
 
 
+def parse_kv_token(token):
+    """Splits a token into a (key, value) tuple if it matches a key=value pattern."""
+    if not isinstance(token, str):
+        return None
+    # Matches keys like logger="...", name=pod-1, or GOGC=""
+    match = re.match(r'^([\w\.\-]+)=(.*)$', token)
+    if match:
+        return match.group(1), match.group(2)
+    return None
+
 
 class Logcluster:
     def __init__(self, logTemplate="", logIDL=None):
@@ -211,11 +221,29 @@ class LogParser:
             if word == seq2[i]:
                 retVal.append(word)
             else:
-                retVal.append("<*>")
+                # Preserve empty string values (e.g., KEY="" or KEY='')
+                # These should not be replaced with wildcards
+                if self._is_empty_string_token(word) or self._is_empty_string_token(seq2[i]):
+                    # Keep the token that has the empty string value
+                    if self._is_empty_string_token(word):
+                        retVal.append(word)
+                    else:
+                        retVal.append(seq2[i])
+                else:
+                    retVal.append("<*>")
 
             i += 1
 
         return retVal
+
+    def _is_empty_string_token(self, token):
+        """Check if a token represents a key=value pair with an empty string value.
+        Examples: GOGC="", mode='', KEY=""
+        """
+        if not isinstance(token, str):
+            return False
+        # Match patterns like KEY="" or KEY=''
+        return bool(re.match(r'^\w+=""$', token) or re.match(r"^\w+=''$", token))
 
     def outputResult(self, logClustL):
         log_templates = [0] * self.df_log.shape[0]

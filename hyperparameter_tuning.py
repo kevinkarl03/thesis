@@ -37,7 +37,8 @@ from logparser.logparser.utils import evaluator  # noqa: E402
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-PARSERS = ["Brain", "Drain", "LenMa", "Logram", "SHISO", "Spell"]
+# PARSERS = ["Brain", "Drain", "LenMa", "Logram", "SHISO", "Spell"]
+PARSERS = ["Drain"]
 DATASETS = ["Welkin_v2"]
 
 INPUT_DIR_ROOT = "logparser/data/loghub_2k/"
@@ -64,6 +65,7 @@ PARAM_GRIDS = {
         # depth: depth of the parse-tree
         "st":    [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
         "depth": [3, 4, 5, 6],
+        "custom_klog_parser": [True],  # Whether to apply klog_helper preprocessing
     },
     "LenMa": {
         # threshold: cosine-similarity threshold for token-length vectors
@@ -193,6 +195,8 @@ def run_one(LogParser, setting: dict, dataset: str,
         # Drain
         "st":             setting.get("st", 0.5),
         "depth":          setting.get("depth", 4),
+        "custom_klog_parser": setting.get("custom_klog_parser", False),
+
         # SHISO
         "mergeThreshold": setting.get("mergeThreshold", 0.5),
         # Logram
@@ -217,8 +221,12 @@ def run_one(LogParser, setting: dict, dataset: str,
         print(f"FAILED (parse: {exc})")
         return None
 
+    
     structured_out = os.path.join(outdir, log_fname + "_structured.csv")
-    if not os.path.exists(structured_out):
+    custom_out = os.path.join(outdir, log_fname + "_custom_structured.csv")
+    if os.path.exists(custom_out):
+        structured_out = custom_out
+    elif not os.path.exists(structured_out):
         print("FAILED (no structured output)")
         return None
 
