@@ -29,6 +29,8 @@ class LogParser:
         doubleThreshold=15,
         triThreshold=10,
         rex=[],
+        custom_klog_parser=False
+
     ):
         self.indir = indir
         self.outdir = outdir
@@ -36,7 +38,8 @@ class LogParser:
         self.triThreshold = triThreshold
         self.log_format = log_format
         self.rex = rex
-
+        self.custom_klog_parser = custom_klog_parser
+        
     def parse(self, log_file_basename):
         log_file = os.path.join(self.indir, log_file_basename)
         print("Parsing file: " + log_file)

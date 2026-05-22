@@ -32,6 +32,8 @@ class LogParser(object):
         threshold=0.9,
         predefined_templates=None,
         rex=[],
+        custom_klog_parser=False
+
     ):
         self.path = indir
         self.savePath = outdir
@@ -44,6 +46,7 @@ class LogParser(object):
             threshold=threshold, predefined_templates=predefined_templates
         )
         self.logname = None
+        self.custom_klog_parser = custom_klog_parser
 
     def parse(self, logname):
         print("Parsing file: " + os.path.join(self.path, logname))
@@ -118,7 +121,7 @@ class LogParser(object):
         regex = ""
         for k in range(len(splitters)):
             if k % 2 == 0:
-                splitter = re.sub(" +", "\s+", splitters[k])
+                splitter = re.sub(" +", "\\\s+", splitters[k])
                 regex += splitter
             else:
                 header = splitters[k].strip("<").strip(">")

@@ -48,6 +48,8 @@ class LogParser:
         formatLookupThreshold=0.3,
         superFormatThreshold=0.85,
         rex=[],
+        custom_klog_parser=False
+
     ):
         """
         Attributes
@@ -69,6 +71,7 @@ class LogParser:
         self.formatLookupThreshold = formatLookupThreshold
         self.superFormatThreshold = superFormatThreshold
         self.rex = rex
+        self.custom_klog_parser = custom_klog_parser
 
         if formatTable is None:
             formatTable = dict()
@@ -421,7 +424,7 @@ class LogParser:
         regex = ""
         for k in range(len(splitters)):
             if k % 2 == 0:
-                splitter = re.sub(" +", "\s+", splitters[k])
+                splitter = re.sub(" +", "\\\s+", splitters[k])
                 regex += splitter
             else:
                 header = splitters[k].strip("<").strip(">")

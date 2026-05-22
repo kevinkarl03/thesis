@@ -36,6 +36,8 @@ class LogParser:
         threshold=2,
         delimeter=[],
         rex=[],
+        custom_klog_parser=False
+
     ):
         self.logformat = log_format
         self.path = indir
@@ -45,6 +47,7 @@ class LogParser:
         self.logname = logname
         self.threshold = threshold
         self.delimeter = delimeter
+        self.custom_klog_parser = custom_klog_parser
 
     def parse(self, logName):
         print("Parsing file: " + os.path.join(self.path, logName))

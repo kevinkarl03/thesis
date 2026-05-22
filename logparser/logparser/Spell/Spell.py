@@ -58,6 +58,8 @@ class LogParser:
         tau=0.5,
         rex=[],
         keep_para=True,
+        custom_klog_parser=False
+
     ):
         self.path = indir
         self.logName = None
@@ -67,6 +69,7 @@ class LogParser:
         self.df_log = None
         self.rex = rex
         self.keep_para = keep_para
+        self.custom_klog_parser = custom_klog_parser
 
     def LCS(self, seq1, seq2):
         lengths = [[0 for j in range(len(seq2) + 1)] for i in range(len(seq1) + 1)]
@@ -343,7 +346,7 @@ class LogParser:
         regex = ""
         for k in range(len(splitters)):
             if k % 2 == 0:
-                splitter = re.sub(" +", "\s+", splitters[k])
+                splitter = re.sub(" +", "\\\s+", splitters[k])
                 regex += splitter
             else:
                 header = splitters[k].strip("<").strip(">")

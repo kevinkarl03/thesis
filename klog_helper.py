@@ -65,3 +65,24 @@ def preprocess_klog_content(content):
     Alias for preprocess_klog_message for compatibility with Drain parser.
     """
     return preprocess_klog_message(content)
+
+
+# Regex pattern that matches a key-value pair in a log line.
+# Matches both quoted (key="value") and unquoted (key=value) forms.
+_KV_PAIR_RE = re.compile(r'\w+="[^"]*"|\w+=[a-zA-Z0-9_./-]+')
+
+
+def contains_kv_pair(content):
+    """
+    Check if a log line contains a key=value pair matching the same pattern
+    used by the custom klog preprocessor.
+
+    Args:
+        content: The log message content string (or NaN / None).
+
+    Returns:
+        True if the line contains at least one key-value pair, False otherwise.
+    """
+    if not isinstance(content, str) or not content:
+        return False
+    return bool(_KV_PAIR_RE.search(content))

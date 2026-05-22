@@ -12,18 +12,7 @@ benchmark_settings = {
         "doubleThreshold": 10,
         "triThreshold": 2,
     },
-    "Welkin_v2": {
-        "log_file": "Welkin_v2/Welkin_2k_v2.log",
-        "log_format": "<LevelDate> <Time>       <Pid> <Source>] <Content>",
-        "regex": [
-            r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}(\.\d+)?\s\+\d{4}\sUTC',
-            r'(?<=="")([^""]+)(?="")',
-            r'\d+(\.\d+)?(s|ms|µs|ns)',
-            r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)',
-            r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$'],
-        "doubleThreshold": 10,
-        "triThreshold": 2,
-    },
+    
     "HDFS": {
         "log_file": "HDFS/HDFS_2k.log",
         "log_format": "<Date> <Time> <Pid> <Level> <Component>: <Content>",

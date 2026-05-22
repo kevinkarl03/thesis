@@ -253,7 +253,18 @@ def run_one(LogParser, setting: dict, dataset: str,
             groundtruth=aligned_gt,
             parsedresult=aligned_parsed,
         )
-        return {"accuracy": round(float(accuracy), 4), "f1": round(float(f1), 4)}
+        # Count lines containing "=" in the Content column
+        gt_df = pd.read_csv(gt_to_use)
+        gt_eq_count = gt_df["Content"].str.contains("=", na=False).sum()
+        gt_total = len(gt_df)
+        gt_eq_pct = round(100 * gt_eq_count / gt_total, 1) if gt_total > 0 else 0.0
+        return {
+            "accuracy": round(float(accuracy), 4),
+            "f1": round(float(f1), 4),
+            "gt_total": gt_total,
+            "gt_eq_count": gt_eq_count,
+            "gt_eq_pct": gt_eq_pct,
+        }
     except Exception as exc:
         print(f"FAILED (eval: {exc})")
         return None

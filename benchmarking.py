@@ -3,12 +3,21 @@
 # be able to run some selected parsers on all datasets, making for easy 
 # comparison of accuracy.
 # =========================================================================
+import re
 import sys
 import importlib
 import os
 import pandas as pd
 import inspect
 from logparser.logparser.utils import evaluator
+
+# When True, skip all "-key-value" dataset variants so only the base
+# (non-key-value) datasets are benchmarked.
+SKIP_KEY_VALUE_VARIANTS = True
+
+# Regex matching a key=value pair used by the custom klog preprocessor.
+# Matches both quoted (key="value") and unquoted (key=value) forms.
+_KV_PAIR_RE = re.compile(r'\w+="[^"]*"|\w+=[a-zA-Z0-9_./-]+')
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 if project_root not in sys.path:
@@ -52,8 +61,13 @@ def run_parser(parser_name):
     benchmark_result = []
 
     for dataset, setting in benchmark_settings.items():
+        # Skip key-value variants when the flag is enabled
+        if SKIP_KEY_VALUE_VARIANTS and dataset.endswith("-key-value"):
+            print(f"  Skipping {dataset} (key-value variant disabled)")
+            continue
+
         print(f"\n--- Processing {dataset} ---")
-        
+
         indir = os.path.join(input_dir_root, os.path.dirname(setting["log_file"]))
         log_file = os.path.basename(setting["log_file"])
 
@@ -95,7 +109,19 @@ def run_parser(parser_name):
                 groundtruth=groundtruth,
                 parsedresult=parsed_result,
             )
-            benchmark_result.append([dataset, f1_measure, accuracy, precision, recall])
+
+            # Count lines containing key=value pairs in the Content column
+            groundtruth_df = pd.read_csv(groundtruth)
+            gt_kv_count = groundtruth_df["Content"].dropna().apply(
+                lambda x: bool(_KV_PAIR_RE.search(str(x)))
+            ).sum()
+            gt_total = len(groundtruth_df)
+            gt_kv_pct = round(100 * gt_kv_count / gt_total, 1) if gt_total > 0 else 0.0
+
+            benchmark_result.append([
+                dataset, f1_measure, accuracy, precision, recall,
+                gt_total, gt_kv_count, gt_kv_pct,
+            ])
             
             # Generate detailed per-line comparison
             print(f"\nGenerating detailed comparison for {dataset}...")
@@ -134,7 +160,7 @@ def run_parser(parser_name):
                     # Show some examples of incorrect matches
                     incorrect = comparison_df[~comparison_df['Correct']]
                     # if len(incorrect) > 0:
-                    #     print(f"\nFirst 10 incorrect matches:")
+                    #     print(f"\nFirst 10  incorrect matches:")
                     #     for _, row in incorrect.head(10).iterrows():
                     #         print(f"\n  Line {row['LineId']}:")
                     #         print(f"    Content: {row['Content'][:100]}...")
@@ -146,7 +172,10 @@ def run_parser(parser_name):
         except Exception as e:
             print(f"Failed to parse {dataset}: {e}")
 
-    df_result = pd.DataFrame(benchmark_result, columns=["Dataset", "F1_measure", "Accuracy", "Precision", "Recall"])
+    df_result = pd.DataFrame(benchmark_result, columns=[
+        "Dataset", "F1_measure", "Accuracy", "Precision", "Recall",
+        "Total_lines", "KV_lines", "KV_pct",
+    ])
     print(f"\nResults for {parser_name}:")
     print(df_result)
     
@@ -163,11 +192,11 @@ if __name__ == "__main__":
 
     # Simpler parsers that i can run out of the box
     # parsers_to_run = ["AEL", "Brain", "Drain", "IPLoM", "LenMa", "LFA", "LogCluster", "LogMine", "Logram", "LogSig", "MoLFI", "SHISO", "SLCT", "Spell"]
-    # online_parsers = ["Brain", "Drain", "LenMa", "Logram", "SHISO", "Spell"]
-    drain = ["Drain"]
+    online_parsers = ["Brain", "Drain", "LenMa", "Logram", "SHISO", "Spell"]
+    # drain = ["Drain"]
     
 
-    for name in drain:
+    for name in online_parsers:
         run_parser(name)
     
     print("\n" + "#"*50)
