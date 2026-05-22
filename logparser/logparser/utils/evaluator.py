@@ -14,8 +14,19 @@
 # limitations under the License.
 # =========================================================================
 
+import re
+
 import pandas as pd
 from scipy.special import comb
+
+# Regex matching a key=value pair used by the custom klog preprocessor.
+# Matches both quoted (key="value") and unquoted (key=value) forms.
+_KV_PAIR_RE = re.compile(r'\w+="[^"]*"|\w+=[a-zA-Z0-9_./-]+')
+
+
+def _count_kv_lines(series):
+    """Count how many lines in the series contain a key=value pair."""
+    return series.dropna().apply(lambda x: bool(_KV_PAIR_RE.search(str(x)))).sum()
 
 
 def evaluate(groundtruth, parsedresult):
@@ -33,8 +44,15 @@ def evaluate(groundtruth, parsedresult):
         f_measure : float
         accuracy : float
     """
+    import os
+
     df_groundtruth = pd.read_csv(groundtruth)
     df_parsedlog = pd.read_csv(parsedresult)
+
+    # Count lines containing key=value pairs in the Content column
+    gt_kv_count = _count_kv_lines(df_groundtruth["Content"])
+    parsed_kv_count = _count_kv_lines(df_parsedlog["Content"])
+
     # Remove invalid groundtruth event Ids
     non_empty_log_ids = df_groundtruth[~df_groundtruth["EventId"].isnull()].index
     df_groundtruth = df_groundtruth.loc[non_empty_log_ids]
@@ -47,6 +65,30 @@ def evaluate(groundtruth, parsedresult):
             precision, recall, f_measure, accuracy
         )
     )
+    print(
+        "KV-pair ground truth: {} / {} ({:.1f}%)\t"
+        "KV-pair parsed result: {} / {} ({:.1f}%)".format(
+            gt_kv_count, len(df_groundtruth) if not df_groundtruth.empty else 0,
+            100*gt_kv_count/len(df_groundtruth) if not df_groundtruth.empty else 0.0,
+            parsed_kv_count, len(df_parsedlog) if not df_parsedlog.empty else 0,
+            100*parsed_kv_count/len(df_parsedlog) if not df_parsedlog.empty else 0.0,
+        )
+    )
+
+    # Write key-value pair stats to a companion file next to parsedresult
+    kv_stats_file = parsedresult.rstrip(".csv") + "_kv_stats.csv"
+    df_stats = pd.DataFrame([{
+        "groundtruth_file": os.path.basename(groundtruth),
+        "parsedresult_file": os.path.basename(parsedresult),
+        "gt_total_lines": len(df_groundtruth),
+        "gt_kv_lines": gt_kv_count,
+        "gt_kv_pct": round(100*gt_kv_count/len(df_groundtruth), 1) if not df_groundtruth.empty else 0.0,
+        "parsed_total_lines": len(df_parsedlog),
+        "parsed_kv_lines": parsed_kv_count,
+        "parsed_kv_pct": round(100*parsed_kv_count/len(df_parsedlog), 1) if not df_parsedlog.empty else 0.0,
+    }])
+    df_stats.to_csv(kv_stats_file, index=False)
+
     return f_measure, accuracy, precision, recall
 
 
