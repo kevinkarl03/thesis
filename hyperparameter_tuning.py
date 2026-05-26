@@ -37,9 +37,9 @@ from logparser.logparser.utils import evaluator  # noqa: E402
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-# PARSERS = ["Brain", "Drain", "LenMa", "Logram", "SHISO", "Spell"]
-PARSERS = ["Drain"]
-DATASETS = ["Welkin_v2"]
+PARSERS = ["Brain", "Drain", "LenMa", "Logram", "SHISO", "Spell"]
+# PARSERS = ["Drain"]
+DATASETS = ["Welkin"]
 
 INPUT_DIR_ROOT = "logparser/data/loghub_2k/"
 OUTPUT_CSV = "hyperparameter_results.csv"
@@ -65,7 +65,7 @@ PARAM_GRIDS = {
         # depth: depth of the parse-tree
         "st":    [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
         "depth": [3, 4, 5, 6],
-        "custom_klog_parser": [True],  # Whether to apply klog_helper preprocessing
+        "custom_klog_parser": [True, False],  # Whether to apply klog_helper preprocessing
     },
     "LenMa": {
         # threshold: cosine-similarity threshold for token-length vectors

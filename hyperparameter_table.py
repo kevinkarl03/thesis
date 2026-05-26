@@ -1,0 +1,204 @@
+import csv
+import io
+
+def generate_latex_table(csv_data):
+    # Load the CSV data
+    reader = csv.DictReader(io.StringIO(csv_data.strip()))
+    rows = list(reader)
+
+    output = []
+    
+    # Table Header setup
+    output.append(r"\begin{small}")
+    output.append(r"\begin{longtable}{llccc}")
+    output.append(r"\caption{Complete Hyperparameter Tuning Results for Welkin Dataset} \label{app:tuning_data} \\")
+    output.append(r"\toprule")
+    output.append(r"\textbf{Parser} & \textbf{Parameters} & \textbf{KV Opt} & \textbf{Acc} & \textbf{F1} \\ \midrule")
+    output.append(r"\endhead")
+    output.append(r"\bottomrule")
+    output.append(r"\endfoot")
+
+    current_parser = None
+
+    for row in rows:
+        parser = row['parser']
+        
+        # Add a visual separator when the parser changes
+        if current_parser and parser != current_parser:
+            output.append(r"\midrule")
+        current_parser = parser
+
+        # Combine parameters into one string based on what isn't empty
+        params = []
+        if row.get('threshold'): params.append(f"thr: {row['threshold']}")
+        if row.get('st'): params.append(f"st: {row['st']}")
+        if row.get('depth'): params.append(f"depth: {row['depth']}")
+        if row.get('doubleThreshold'): params.append(f"dThr: {row['doubleThreshold']}")
+        if row.get('triThreshold'): params.append(f"tThr: {row['triThreshold']}")
+        if row.get('tau'): params.append(f"tau: {row['tau']}")
+        
+        param_str = ", ".join(params)
+        kv_opt = row.get('custom_klog_parser', 'False')
+        acc = f"{float(row['accuracy']):.3f}"
+        f1 = f"{float(row['f1']):.3f}"
+        is_best = row['best'].strip().lower() == 'true'
+
+        # Formatting values
+        kv_display = "True" if kv_opt.lower() == 'true' else "False"
+        
+        # Build the row
+        line = f"{parser} & {param_str} & {kv_display} & {acc} & {f1} \\\\"
+        
+        # Bold the best row
+        if is_best:
+            line = r"\textbf{" + parser + r"} & \textbf{" + param_str + r"} & \textbf{" + kv_display + r"} & \textbf{" + acc + r"} & \textbf{" + f1 + r"} \\\\"
+        
+        output.append(line)
+
+    output.append(r"\end{longtable}")
+    output.append(r"\end{small}")
+
+    return "\n".join(output)
+
+# Copy-paste your CSV raw text here
+raw_csv = """parser,dataset,tune_rows,threshold,accuracy,f1,st,depth,custom_klog_parser,doubleThreshold,triThreshold,mergeThreshold,tau,best
+Brain,Welkin,500,2.0,0.878,0.9604,,,,,,,,False
+Brain,Welkin,500,3.0,0.852,0.9687,,,,,,,,True
+Brain,Welkin,500,4.0,0.782,0.9489,,,,,,,,False
+Brain,Welkin,500,5.0,0.77,0.9313,,,,,,,,False
+Brain,Welkin,500,6.0,0.77,0.9313,,,,,,,,False
+Brain,Welkin,500,7.0,0.758,0.9276,,,,,,,,False
+Brain,Welkin,500,8.0,0.758,0.9276,,,,,,,,False
+Drain,Welkin,500,,0.864,0.9595,0.3,3.0,True,,,,,False
+Drain,Welkin,500,,0.848,0.9573,0.3,3.0,False,,,,,False
+Drain,Welkin,500,,0.868,0.9598,0.3,4.0,True,,,,,False
+Drain,Welkin,500,,0.852,0.9575,0.3,4.0,False,,,,,False
+Drain,Welkin,500,,0.848,0.9354,0.3,5.0,True,,,,,False
+Drain,Welkin,500,,0.832,0.9329,0.3,5.0,False,,,,,False
+Drain,Welkin,500,,0.838,0.9211,0.3,6.0,True,,,,,False
+Drain,Welkin,500,,0.818,0.9183,0.3,6.0,False,,,,,False
+Drain,Welkin,500,,0.888,0.9629,0.4,3.0,True,,,,,False
+Drain,Welkin,500,,0.876,0.9608,0.4,3.0,False,,,,,False
+Drain,Welkin,500,,0.892,0.9631,0.4,4.0,True,,,,,True
+Drain,Welkin,500,,0.88,0.9611,0.4,4.0,False,,,,,True
+Drain,Welkin,500,,0.848,0.9354,0.4,5.0,True,,,,,False
+Drain,Welkin,500,,0.832,0.9329,0.4,5.0,False,,,,,False
+Drain,Welkin,500,,0.838,0.9211,0.4,6.0,True,,,,,False
+Drain,Welkin,500,,0.818,0.9183,0.4,6.0,False,,,,,False
+Drain,Welkin,500,,0.888,0.9629,0.5,3.0,True,,,,,False
+Drain,Welkin,500,,0.864,0.9588,0.5,3.0,False,,,,,False
+Drain,Welkin,500,,0.892,0.9631,0.5,4.0,True,,,,,False
+Drain,Welkin,500,,0.868,0.959,0.5,4.0,False,,,,,False
+Drain,Welkin,500,,0.848,0.9354,0.5,5.0,True,,,,,False
+Drain,Welkin,500,,0.82,0.9307,0.5,5.0,False,,,,,False
+Drain,Welkin,500,,0.838,0.9211,0.5,6.0,True,,,,,False
+Drain,Welkin,500,,0.806,0.916,0.5,6.0,False,,,,,False
+Drain,Welkin,500,,0.88,0.9596,0.6,3.0,True,,,,,False
+Drain,Welkin,500,,0.856,0.9554,0.6,3.0,False,,,,,False
+Drain,Welkin,500,,0.884,0.9598,0.6,4.0,True,,,,,False
+Drain,Welkin,500,,0.86,0.9556,0.6,4.0,False,,,,,False
+Drain,Welkin,500,,0.848,0.9354,0.6,5.0,True,,,,,False
+Drain,Welkin,500,,0.82,0.9307,0.6,5.0,False,,,,,False
+Drain,Welkin,500,,0.838,0.9211,0.6,6.0,True,,,,,False
+Drain,Welkin,500,,0.806,0.916,0.6,6.0,False,,,,,False
+Drain,Welkin,500,,0.862,0.9506,0.7,3.0,True,,,,,False
+Drain,Welkin,500,,0.828,0.9456,0.7,3.0,False,,,,,False
+Drain,Welkin,500,,0.866,0.9509,0.7,4.0,True,,,,,False
+Drain,Welkin,500,,0.832,0.9458,0.7,4.0,False,,,,,False
+Drain,Welkin,500,,0.844,0.9296,0.7,5.0,True,,,,,False
+Drain,Welkin,500,,0.806,0.9242,0.7,5.0,False,,,,,False
+Drain,Welkin,500,,0.838,0.9211,0.7,6.0,True,,,,,False
+Drain,Welkin,500,,0.796,0.9153,0.7,6.0,False,,,,,False
+Drain,Welkin,500,,0.83,0.9268,0.8,3.0,True,,,,,False
+Drain,Welkin,500,,0.788,0.9203,0.8,3.0,False,,,,,False
+Drain,Welkin,500,,0.83,0.9268,0.8,4.0,True,,,,,False
+Drain,Welkin,500,,0.788,0.9203,0.8,4.0,False,,,,,False
+Drain,Welkin,500,,0.83,0.9268,0.8,5.0,True,,,,,False
+Drain,Welkin,500,,0.788,0.9203,0.8,5.0,False,,,,,False
+Drain,Welkin,500,,0.82,0.918,0.8,6.0,True,,,,,False
+Drain,Welkin,500,,0.778,0.9114,0.8,6.0,False,,,,,False
+Drain,Welkin,500,,0.782,0.9065,0.9,3.0,True,,,,,False
+Drain,Welkin,500,,0.75,0.8999,0.9,3.0,False,,,,,False
+Drain,Welkin,500,,0.782,0.9065,0.9,4.0,True,,,,,False
+Drain,Welkin,500,,0.75,0.8999,0.9,4.0,False,,,,,False
+Drain,Welkin,500,,0.782,0.9065,0.9,5.0,True,,,,,False
+Drain,Welkin,500,,0.75,0.8999,0.9,5.0,False,,,,,False
+Drain,Welkin,500,,0.776,0.9057,0.9,6.0,True,,,,,False
+Drain,Welkin,500,,0.744,0.8991,0.9,6.0,False,,,,,False
+LenMa,Welkin,500,0.5,0.83,0.9413,,,,,,,,False
+LenMa,Welkin,500,0.6,0.836,0.9417,,,,,,,,False
+LenMa,Welkin,500,0.7,0.836,0.9417,,,,,,,,False
+LenMa,Welkin,500,0.8,0.88,0.9596,,,,,,,,True
+LenMa,Welkin,500,0.9,0.88,0.9596,,,,,,,,False
+Logram,Welkin,500,,0.752,0.9119,,,,10.0,2.0,,,True
+Logram,Welkin,500,,0.644,0.7884,,,,10.0,5.0,,,False
+Logram,Welkin,500,,0.466,0.6061,,,,10.0,10.0,,,False
+Logram,Welkin,500,,0.466,0.6061,,,,10.0,15.0,,,False
+Logram,Welkin,500,,0.466,0.6061,,,,10.0,20.0,,,False
+Logram,Welkin,500,,0.466,0.6061,,,,10.0,25.0,,,False
+Logram,Welkin,500,,0.722,0.9063,,,,15.0,2.0,,,False
+Logram,Welkin,500,,0.596,0.7443,,,,15.0,5.0,,,False
+Logram,Welkin,500,,0.384,0.4978,,,,15.0,10.0,,,False
+Logram,Welkin,500,,0.398,0.5017,,,,15.0,15.0,,,False
+Logram,Welkin,500,,0.398,0.5017,,,,15.0,20.0,,,False
+Logram,Welkin,500,,0.398,0.5017,,,,15.0,25.0,,,False
+Logram,Welkin,500,,0.722,0.9063,,,,20.0,2.0,,,False
+Logram,Welkin,500,,0.59,0.7427,,,,20.0,5.0,,,False
+Logram,Welkin,500,,0.378,0.4954,,,,20.0,10.0,,,False
+Logram,Welkin,500,,0.392,0.4992,,,,20.0,15.0,,,False
+Logram,Welkin,500,,0.358,0.4971,,,,20.0,20.0,,,False
+Logram,Welkin,500,,0.358,0.4971,,,,20.0,25.0,,,False
+Logram,Welkin,500,,0.722,0.9063,,,,30.0,2.0,,,False
+Logram,Welkin,500,,0.588,0.7218,,,,30.0,5.0,,,False
+Logram,Welkin,500,,0.376,0.4506,,,,30.0,10.0,,,False
+Logram,Welkin,500,,0.384,0.4531,,,,30.0,15.0,,,False
+Logram,Welkin,500,,0.35,0.4514,,,,30.0,20.0,,,False
+Logram,Welkin,500,,0.302,0.4043,,,,30.0,25.0,,,False
+Logram,Welkin,500,,0.722,0.9063,,,,40.0,2.0,,,False
+Logram,Welkin,500,,0.588,0.7218,,,,40.0,5.0,,,False
+Logram,Welkin,500,,0.376,0.4506,,,,40.0,10.0,,,False
+Logram,Welkin,500,,0.384,0.4531,,,,40.0,15.0,,,False
+Logram,Welkin,500,,0.35,0.4514,,,,40.0,20.0,,,False
+Logram,Welkin,500,,0.302,0.4043,,,,40.0,25.0,,,False
+Logram,Welkin,500,,0.722,0.9063,,,,50.0,2.0,,,False
+Logram,Welkin,500,,0.588,0.7218,,,,50.0,5.0,,,False
+Logram,Welkin,500,,0.376,0.4506,,,,50.0,10.0,,,False
+Logram,Welkin,500,,0.384,0.4531,,,,50.0,15.0,,,False
+Logram,Welkin,500,,0.35,0.4514,,,,50.0,20.0,,,False
+Logram,Welkin,500,,0.302,0.4043,,,,50.0,25.0,,,False
+Logram,Welkin,500,,0.722,0.9063,,,,75.0,2.0,,,False
+Logram,Welkin,500,,0.588,0.7218,,,,75.0,5.0,,,False
+Logram,Welkin,500,,0.376,0.4506,,,,75.0,10.0,,,False
+Logram,Welkin,500,,0.384,0.4531,,,,75.0,15.0,,,False
+Logram,Welkin,500,,0.35,0.4514,,,,75.0,20.0,,,False
+Logram,Welkin,500,,0.302,0.4043,,,,75.0,25.0,,,False
+Logram,Welkin,500,,0.722,0.9063,,,,90.0,2.0,,,False
+Logram,Welkin,500,,0.588,0.7218,,,,90.0,5.0,,,False
+Logram,Welkin,500,,0.376,0.4506,,,,90.0,10.0,,,False
+Logram,Welkin,500,,0.384,0.4531,,,,90.0,15.0,,,False
+Logram,Welkin,500,,0.35,0.4514,,,,90.0,20.0,,,False
+Logram,Welkin,500,,0.302,0.4043,,,,90.0,25.0,,,False
+Logram,Welkin,500,,0.722,0.9063,,,,100.0,2.0,,,False
+Logram,Welkin,500,,0.588,0.7218,,,,100.0,5.0,,,False
+Logram,Welkin,500,,0.376,0.4506,,,,100.0,10.0,,,False
+Logram,Welkin,500,,0.384,0.4531,,,,100.0,15.0,,,False
+Logram,Welkin,500,,0.35,0.4514,,,,100.0,20.0,,,False
+Logram,Welkin,500,,0.302,0.4043,,,,100.0,25.0,,,False
+SHISO,Welkin,500,,0.75,0.9264,,,,,,0.001,,False
+SHISO,Welkin,500,,0.768,0.9359,,,,,,0.005,,False
+SHISO,Welkin,500,,0.784,0.9377,,,,,,0.01,,True
+SHISO,Welkin,500,,0.35,0.3595,,,,,,0.05,,False
+SHISO,Welkin,500,,0.212,0.3163,,,,,,0.1,,False
+SHISO,Welkin,500,,0.062,0.2929,,,,,,0.2,,False
+SHISO,Welkin,500,,0.04,0.2927,,,,,,0.3,,False
+Spell,Welkin,500,,0.65,0.8336,,,,,,,0.3,False
+Spell,Welkin,500,,0.65,0.843,,,,,,,0.4,False
+Spell,Welkin,500,,0.65,0.843,,,,,,,0.5,False
+Spell,Welkin,500,,0.728,0.8591,,,,,,,0.6,False
+Spell,Welkin,500,,0.74,0.8532,,,,,,,0.7,False
+Spell,Welkin,500,,0.816,0.9231,,,,,,,0.8,True
+Spell,Welkin,500,,0.712,0.8932,,,,,,,0.9,False
+"""
+
+# Print the result
+print(generate_latex_table(raw_csv))
