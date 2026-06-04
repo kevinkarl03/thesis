@@ -123,9 +123,11 @@ def analyze_content_errors(ground_truth_path, parsed_result_path, output_file="c
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Compare parsed log results with ground truth")
-    parser.add_argument("--parsed", default="Benchmark_results/Drain_results/Welkin_2k_v2.log_custom_structured.csv",
+    # parser.add_argument("--parsed", default="Benchmark_results/Drain_results/Welkin_2k_v2.log_custom_structured.csv",
+    #                    help="Path to parsed result CSV")
+    parser.add_argument("--parsed", default="Benchmark_results/Drain_results/Welkin_2k.log_structured.csv",
                        help="Path to parsed result CSV")
-    parser.add_argument("--ground-truth", default="logparser/data/loghub_2k/Welkin_v2/Welkin_2k_v2.log_structured.csv",
+    parser.add_argument("--ground-truth", default="logparser/data/loghub_2k/Welkin/Welkin_2k.log_structured.csv",
                        help="Path to ground truth CSV")
     parser.add_argument("--output", default="template_diff_analysis.csv",
                        help="Output file for differences")

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .problem-container {
+            width: 900px;
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #0f172a;
+            font-size: 20px;
+            margin-bottom: 25px;
+            border-left: 5px solid #ef4444;
+            padding-left: 15px;
+        }
+
+        .step {
+            margin-bottom: 30px;
+        }
+
+        .step-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        /* Token Visualization */
+        .token-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 10px;
+        }
+
+        .token {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #334155;
+        }
+
+        .token.conflict {
+            background: #fee2e2;
+            border-color: #ef4444;
+            color: #b91c1c;
+            font-weight: 700;
+        }
+
+        /* Logic Explanation */
+        .explanation-box {
+            background: #fff1f2;
+            border-left: 4px solid #ef4444;
+            padding: 15px;
+            margin: 20px 0;
+            color: #9f1239;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .result-line {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .wildcard {
+            color: #fbbf24;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="problem-container">
+    <h2>The Drain Tokenization Problem</h2>
+
+    <div class="step">
+        <div class="step-label">1. Input Log Lines</div>
+        <div class="token-row">Line A: "This is a log line where version=1"</div>
+        <div class="token-row">Line B: "This is a log line where logger=log_logger"</div>
+    </div>
+
+    <div class="step">
+        <div class="step-label">2. Tokenization (Splitting on Whitespace)</div>
+        <div class="token-row">
+            <span class="token">This</span> <span class="token">is</span> <span class="token">a</span> <span class="token">log</span> <span class="token">line</span> <span class="token">where</span> <span class="token conflict">version=1</span>
+        </div>
+        <div class="token-row">
+            <span class="token">This</span> <span class="token">is</span> <span class="token">a</span> <span class="token">log</span> <span class="token">line</span> <span class="token">where</span> <span class="token conflict">logger=log_logger</span>
+        </div>
+    </div>
+
+    <div class="explanation-box">
+        <strong>The Logic Gap:</strong><br>
+        Because Drain treats the entire Key-Value pair as a <u>single token</u>, it cannot differentiate between the static key and the dynamic value. Since the tokens <code>version=1</code> and <code>logger=log_logger</code> are different, the parser assumes the entire position is variable.
+    </div>
+
+    <div class="step">
+        <div class="step-label">3. Resulting Template (Information Loss)</div>
+        <div class="result-line">
+            This is a log line where <span class="wildcard">&lt;*&gt;</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

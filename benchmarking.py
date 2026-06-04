@@ -13,7 +13,7 @@ from logparser.logparser.utils import evaluator
 
 # When True, skip all "-key-value" dataset variants so only the base
 # (non-key-value) datasets are benchmarked.
-SKIP_KEY_VALUE_VARIANTS = True
+SKIP_KEY_VALUE_VARIANTS = False
 
 # Regex matching a key=value pair used by the custom klog preprocessor.
 # Matches both quoted (key="value") and unquoted (key=value) forms.

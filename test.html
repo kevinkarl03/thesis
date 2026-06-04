@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .terminal-container {
+            width: 850px;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+            border: 2px solid #475569;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .terminal-header {
+            background-color: #2d3748;
+            padding: 12px 16px;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            border-bottom: 1px solid #1a202c;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background-color: #ff5f56; }
+        .yellow { background-color: #ffbd2e; }
+        .green { background-color: #27c93f; }
+
+        .terminal-title {
+            color: #94a3b8;
+            font-size: 12px;
+            margin-left: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .code-area {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px; /* Avstånd mellan sektionerna */
+        }
+
+        /* Varje logg-block-sektion */
+        .log-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Snygga etiketter (Badges) */
+        .badge {
+            align-self: flex-start;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        /* Unika färger för dina fyra steg */
+        .bg-asis       { background-color: rgba(148, 163, 184, 0.15); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.3); }
+        .bg-filtered   { background-color: rgba(56, 189, 248, 0.15);  color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .bg-wrong      { background-color: rgba(244, 63, 94, 0.15);   color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.3); }
+        .bg-correct    { background-color: rgba(16, 185, 129, 0.15);  color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+        /* Logg-rader stajling */
+        .log-lines {
+            color: #d4d4d4;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            padding-left: 8px;
+        }
+
+        /* Token Highlighting (Samma som tidigare) */
+        .hl-meta { color: #569cd6; } 
+        .hl-file { color: #4ec9b0; } 
+        .hl-msg  { color: #ce9178; } 
+        .hl-kv   { color: #f43f5e; font-weight: bold; }
+        .hl-wildcard { color: #f59e0b; background: rgba(245, 158, 11, 0.15); padding: 0 2px; border-radius: 2px; }
+        .hl-json { color: #a78bfa; }
+    </style>
+</head>
+<body>
+
+<div class="terminal-container">
+    <div class="terminal-header">
+        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+        <span class="terminal-title">Log Parsing Pipeline Execution Flow</span>
+    </div>
+    
+    <div class="code-area">
+        
+        <!-- BLOCK 1: AS IS -->
+        <div class="log-section">
+            <span class="badge bg-asis">As-Is Line (Raw klog Output)</span>
+            <div class="log-lines">
+<span class="hl-meta">I0317 14:46:27.815342       1</span> <span class="hl-file">main.go:154]</span> <span class="hl-msg">"Version"</span> <span class="hl-kv">version="v2.15.0"</span>
+<span class="hl-meta">I0317 14:46:27.815533       1</span> <span class="hl-file">main.go:155]</span> <span class="hl-msg">"Running node-driver-registrar"</span> <span class="hl-kv">mode=""</span>
+<span class="hl-meta">I0317 14:46:27.815548       1</span> <span class="hl-file">main.go:176]</span> <span class="hl-msg">"Attempting to open a gRPC connection"</span> <span class="hl-kv">csiAddress="/csi/csi.sock"</span>
+<span class="hl-meta">I0317 14:46:28.914222       1</span> <span class="hl-file">server_linux.go:63]</span> <span class="hl-msg">"Using iptables proxy"</span>
+<span class="hl-meta">I0317 14:46:30.089683       1</span> <span class="hl-file">conntrack.go:60]</span> <span class="hl-msg">"Setting nf_conntrack_max"</span> <span class="hl-kv">nfConntrackMax=131072</span></div>
+        </div>
+
+        <!-- BLOCK 2: FILTERED -->
+        <div class="log-section">
+            <span class="badge bg-filtered">Metadata Stripped Line</span>
+            <div class="log-lines">
+<span class="hl-msg">"Version"</span> <span class="hl-kv">version="v2.15.0"</span>
+<span class="hl-msg">"Running node-driver-registrar"</span> <span class="hl-kv">mode=""</span>
+<span class="hl-msg">"Attempting to open a gRPC connection"</span> <span class="hl-kv">csiAddress="/csi/csi.sock"</span>
+<span class="hl-msg">"Using iptables proxy"</span>
+<span class="hl-msg">"Setting nf_conntrack_max"</span> <span class="hl-kv">nfConntrackMax=131072</span></div>
+        </div>
+
+        <!-- BLOCK 3: WRONGLY PARSED -->
+        <div class="log-section">
+            <span class="badge bg-wrong">Wrongly Parsed Line </span>
+            <div class="log-lines">
+<span class="hl-msg">"Version"</span> <span class="hl-wildcard">&lt;*&gt;</span>
+<span class="hl-msg">"Running node-driver-registrar"</span> <span class="hl-wildcard">&lt;*&gt;</span>
+<span class="hl-msg">"Attempting to open a gRPC connection"</span> <span class="hl-wildcard">&lt;*&gt;</span>
+<span class="hl-msg">"Using iptables proxy"</span>
+<span class="hl-msg">"Setting nf_conntrack_max"</span> <span class="hl-wildcard">&lt;*&gt;</span></div>
+        </div>
+
+        <!-- BLOCK 4: CORRECTLY PARSED -->
+        
+        <div class="log-section">
+            <span class="badge bg-correct">Correctly Parsed Line</span>
+            <div class="log-lines">
+<span class="hl-msg">"Version"</span> <span class="hl-kv">version=<*></span>
+<span class="hl-msg">"Running node-driver-registrar"</span> <span class="hl-kv">mode=<*></span>
+<span class="hl-msg">"Attempting to open a gRPC connection"</span> <span class="hl-kv">csiAddress=<*></span>
+<span class="hl-msg">"Using iptables proxy"</span>
+<span class="hl-msg">"Setting nf_conntrack_max"</span> <span class="hl-kv">nfConntrackMax=<*></span></div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

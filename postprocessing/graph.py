@@ -251,6 +251,123 @@ def graph_drain_kv_vs_improvement(merged, output_dir='../../postprocessing/plots
     print(f"  Saved drain_kv_vs_improvement.png")
 
 
+def graph_welkin_vs_loghub(df_all, output_dir='../../postprocessing/plots'):
+    """
+    Grouped bar chart comparing each parser's average performance on LogHub vs Welkin.
+    Welkin bars colored blue if better than LogHub avg, red if worse.
+    Also prints all datasets used in the evaluation (excluding key-value variants).
+    """
+    # Exclude key-value datasets (e.g. "Android-key-value")
+    df_clean = df_all[~df_all['Dataset'].str.endswith('-key-value')].copy()
+
+    # Print all datasets in the evaluation
+    all_datasets = sorted(df_clean['Dataset'].unique())
+    print(f"\n  Datasets used in evaluation ({len(all_datasets)} total):")
+    for ds in all_datasets:
+        print(f"    - {ds}")
+
+    # Separate Welkin data from the rest of LogHub
+    welkin_mask = df_clean['Dataset'].str.contains('Welkin', case=False)
+    welkin_data = df_clean[welkin_mask]
+    loghub_data = df_clean[~welkin_mask]
+
+    if welkin_data.empty:
+        print("  No Welkin data found, skipping Welkin vs LogHub plot.")
+        return
+    if loghub_data.empty:
+        print("  No LogHub data found, skipping Welkin vs LogHub plot.")
+        return
+
+    # Compute per-parser averages for both groups
+    loghub_avg = loghub_data.groupby('Parser')[['Accuracy', 'F1_measure']].mean().reset_index()
+    welkin_avg = welkin_data.groupby('Parser')[['Accuracy', 'F1_measure']].mean().reset_index()
+
+    # Stack the data for a grouped bar chart
+    loghub_avg['Group'] = 'LogHub Average'
+    welkin_avg['Group'] = 'Welkin'
+
+    combined = pd.concat([
+        loghub_avg.melt(id_vars=['Parser', 'Group'], var_name='Metric', value_name='Score'),
+        welkin_avg.melt(id_vars=['Parser', 'Group'], var_name='Metric', value_name='Score'),
+    ], ignore_index=True)
+
+    # Determine ordering: sort parsers by overall average accuracy desc across both groups
+    parser_order = (
+        combined[combined['Metric'] == 'Accuracy']
+        .groupby('Parser')['Score']
+        .mean()
+        .sort_values(ascending=False)
+        .index
+        .tolist()
+    )
+
+    # Create grouped bar chart — one subplot for Accuracy, one for F1
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharey=False)
+
+    for ax_idx, metric in enumerate(['Accuracy', 'F1_measure']):
+        ax = axes[ax_idx]
+        metric_data = combined[combined['Metric'] == metric].copy()
+
+        # Set up bar positions
+        n_parsers = len(parser_order)
+        x = range(n_parsers)
+        width = 0.35
+
+        # Extract scores per group, in parser_order
+        loghub_scores = [
+            metric_data[(metric_data['Parser'] == p) & (metric_data['Group'] == 'LogHub Average')]['Score'].values[0]
+            for p in parser_order
+        ]
+        welkin_scores = [
+            metric_data[(metric_data['Parser'] == p) & (metric_data['Group'] == 'Welkin')]['Score'].values[0]
+            for p in parser_order
+        ]
+
+        # Color Welkin bars: blue if better than LogHub avg, red if worse
+        welkin_colors = [
+            '#1f77b4' if w >= l else '#1f77b4'
+            for w, l in zip(welkin_scores, loghub_scores)
+        ]
+
+        # Plot bars
+        ax.bar([xi - width/2 for xi in x], loghub_scores, width, label='LogHub Average',
+               color='#7f7f7f', edgecolor='white', linewidth=0.5)
+        ax.bar([xi + width/2 for xi in x], welkin_scores, width, label='Welkin',
+               color=welkin_colors, edgecolor='white', linewidth=0.5)
+
+        ax.set_xticks(x)
+        ax.set_xticklabels(parser_order, rotation=45, ha='right', fontsize=9)
+        ax.set_ylabel('Score', fontsize=11)
+        ax.set_title(f'{metric.replace("_", "-")}', fontsize=13, fontweight='bold')
+        ax.set_ylim(0, 1)
+        ax.legend(fontsize=10)
+        ax.axhline(0, color='black', linewidth=0.5)
+
+    fig.suptitle('Parser Performance: LogHub Average vs Welkin', fontsize=15, fontweight='bold')
+    plt.tight_layout()
+    os.makedirs(output_dir, exist_ok=True)
+    plt.savefig(os.path.join(output_dir, 'welkin_vs_loghub.png'), dpi=150, bbox_inches='tight')
+    plt.close()
+    print(f"  Saved welkin_vs_loghub.png")
+
+    # Console summary with deltas
+    merged = loghub_avg.merge(welkin_avg, on='Parser', suffixes=('_loghub', '_welkin'))
+    merged['Accuracy_diff'] = merged['Accuracy_welkin'] - merged['Accuracy_loghub']
+    merged['F1_diff'] = merged['F1_measure_welkin'] - merged['F1_measure_loghub']
+    merged = merged.sort_values('Accuracy_diff', ascending=False).reset_index(drop=True)
+
+    print(f"\n  LogHub datasets used (excluding Welkin & key-value): {loghub_data['Dataset'].nunique()}")
+    print(f"  Welkin datasets used: {welkin_data['Dataset'].nunique()}")
+    print(f"\n  Accuracy Δ (Welkin − LogHub avg):")
+    for _, row in merged.iterrows():
+        arrow = '+' if row['Accuracy_diff'] > 0 else ''
+        print(f"    {row['Parser']:15s}  {arrow}{row['Accuracy_diff']:.4f}")
+    print(f"\n  F1 Δ (Welkin − LogHub avg):")
+    for _, row in merged.iterrows():
+        arrow = '+' if row['F1_diff'] > 0 else ''
+        print(f"    {row['Parser']:15s}  {arrow}{row['F1_diff']:.4f}")
+
+
 def graph_drain_keyvalue_comparison(df_all, output_dir='../../postprocessing/plots'):
     """Generate all plots for Drain key-value comparison."""
     drain_data = df_all[df_all['Parser'] == 'Drain'].copy()
@@ -302,6 +419,8 @@ if __name__ == "__main__":
     graph_overall_ranking(df_all, output_directory)
 
     graph_welkin_ranking(df_all, output_directory)
+
+    graph_welkin_vs_loghub(df_all, output_directory)
 
     graph_drain_keyvalue_comparison(df_all, output_directory)
 
